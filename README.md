@@ -1,3 +1,7 @@
+[![CI](https://github.com/rggen/rggen-veryl/actions/workflows/ci.yml/badge.svg)](https://github.com/rggen/rggen-veryl/actions/workflows/ci.yml)
+[![Maintainability](https://api.codeclimate.com/v1/badges/679372a22641b5de9a7a/maintainability)](https://codeclimate.com/github/rggen/rggen-veryl/maintainability)
+[![codecov](https://codecov.io/gh/rggen/rggen-veryl/graph/badge.svg?token=iYlaqhSjat)](https://codecov.io/gh/rggen/rggen-veryl)
+
 # RgGen::Veryl
 
 RgGen::Veryl is a RgGen plugin to generate RTL code written in [Veryl](https://veryl-lang.org).
