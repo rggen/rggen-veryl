@@ -4,6 +4,8 @@ module RgGen
   module Veryl
     module Utility
       class InterfaceInstance < SystemVerilog::Common::Utility::InterfaceInstance
+        alias_method :param_values, :parameter_values
+
         def instantiation
           [
             'inst',
@@ -18,7 +20,7 @@ module RgGen
           [
             interface_type,
             array_size_notation,
-            parameter_assignments
+            param_assignments
           ].join
         end
 
@@ -28,10 +30,10 @@ module RgGen
           "[#{array_size.join(', ')}]"
         end
 
-        def parameter_assignments
-          return if (parameter_values&.size || 0).zero?
+        def param_assignments
+          return if (param_values&.size || 0).zero?
 
-          "#(#{parameter_values.map { |k, v| "#{k}: #{v}" }.join(', ')})"
+          "#(#{param_values.map { |k, v| "#{k}: #{v}" }.join(', ')})"
         end
       end
     end
