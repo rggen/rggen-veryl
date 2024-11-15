@@ -45,6 +45,18 @@ RSpec.shared_context 'veryl common' do
     have_declaration(layer, :variable, interface.declaration).and have_identifier(handler, interface.identifier)
   end
 
+  def not_have_interface(*args, &body)
+    layer, handler, attributes =
+      case args.size
+      when 3 then args[0..2]
+      when 2 then [nil, args[0], args[1]]
+      else [nil, args[0], {}]
+      end
+    attributes = { name: handler }.merge(attributes)
+    interface = RgGen::Veryl::Utility::InterfaceInstance.new(**attributes, &body)
+    not_have_declaration(layer, :variable, interface.declaration).and not_have_identifier(handler, interface.identifier)
+  end
+
   before(:all) do
     @veryl_factory ||= []
   end
