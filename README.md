@@ -1,6 +1,7 @@
 [![CI](https://github.com/rggen/rggen-veryl/actions/workflows/ci.yml/badge.svg)](https://github.com/rggen/rggen-veryl/actions/workflows/ci.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/1babafbe1df4a1d7414f/maintainability)](https://codeclimate.com/github/rggen/rggen-veryl/maintainability)
 [![codecov](https://codecov.io/gh/rggen/rggen-veryl/graph/badge.svg?token=iYlaqhSjat)](https://codecov.io/gh/rggen/rggen-veryl)
+[![Gitter](https://badges.gitter.im/rggen/rggen.svg)](https://gitter.im/rggen/rggen?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 # RgGen::Veryl
 
