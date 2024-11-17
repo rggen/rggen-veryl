@@ -13,3 +13,4 @@ inherit_from:
 Metrics/BlockLength:
   AllowedMethods:
     - define_simple_feature
+    - veryl

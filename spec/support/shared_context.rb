@@ -33,6 +33,30 @@ RSpec.shared_context 'veryl common' do
     have_declaration(layer, :port, port.declaration).and have_identifier(handler, port.identifier)
   end
 
+  def have_param(*args, &body)
+    layer, handler, attributes =
+      case args.size
+      when 3 then args[0..2]
+      when 2 then [nil, args[0], args[1]]
+      else [nil, args[0], {}]
+      end
+    attributes = { name: handler }.merge(attributes)
+    param = RgGen::Veryl::Utility::DataObject.new(:param, **attributes, &body)
+    have_declaration(layer, :parameter, param.declaration).and have_identifier(handler, param.identifier)
+  end
+
+  def have_const(*args, &body)
+    layer, handler, attributes =
+      case args.size
+      when 3 then args[0..2]
+      when 2 then [nil, args[0], args[1]]
+      else [nil, args[0], {}]
+      end
+    attributes = { name: handler }.merge(attributes)
+    const = RgGen::Veryl::Utility::DataObject.new(:const, **attributes, &body)
+    have_declaration(layer, :parameter, const.declaration).and have_identifier(handler, const.identifier)
+  end
+
   def have_interface(*args, &body)
     layer, handler, attributes =
       case args.size

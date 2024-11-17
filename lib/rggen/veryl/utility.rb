@@ -16,6 +16,14 @@ module RgGen
           .new(attributes.merge(name: name), &block)
           .to_code
       end
+
+      def repeat(count, expression)
+        "{#{expression} repeat #{count}}"
+      end
+
+      def array(expressions)
+        concat(expressions.reverse)
+      end
     end
   end
 end
