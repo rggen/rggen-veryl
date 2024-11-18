@@ -23,6 +23,7 @@ RgGen.setup_plugin :'rggen-veryl' do |plugin|
 
   plugin.files [
     'veryl/bit_field/type',
+    'veryl/bit_field/type/ro_rotrg',
     'veryl/bit_field/type/rw_rwtrg_w1',
     'veryl/bit_field/veryl_top',
     'veryl/register/veryl_top',

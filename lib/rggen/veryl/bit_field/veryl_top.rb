@@ -23,6 +23,12 @@ RgGen.define_simple_feature(:bit_field, :veryl_top) do
       }
     end
 
+    export def value(offsets = nil, width = nil)
+      value_lsb = bit_field.lsb(offsets&.last || local_index)
+      value_width = width || bit_field.width
+      register_if(offsets&.[](0..-2)).value[value_lsb, value_width]
+    end
+
     private
 
     def initial_value_name
@@ -55,6 +61,11 @@ RgGen.define_simple_feature(:bit_field, :veryl_top) do
 
     def sized_initial_values
       bit_field.initial_values.map { |v| hex(v, bit_field.width) }
+    end
+
+    def register_if(offsets)
+      index = register.index(offsets || register.local_indices)
+      register_block.register_if[index]
     end
   end
 end
