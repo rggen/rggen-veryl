@@ -81,7 +81,32 @@ RSpec.shared_context 'veryl common' do
     not_have_declaration(layer, :variable, interface.declaration).and not_have_identifier(handler, interface.identifier)
   end
 
+  def delete_veryl_factory
+    @veryl_factory.clear
+  end
+
   before(:all) do
     @veryl_factory ||= []
+  end
+end
+
+RSpec.shared_context 'bit field common' do
+  include_context 'veryl common'
+
+  before(:all) do
+    RgGen.enable(:global, [:bus_width, :address_width, :enable_wide_register])
+    RgGen.enable(:register_block, :byte_size)
+    RgGen.enable(:register_file, [:name, :size, :offset_address])
+    RgGen.enable(:register, [:name, :size, :type, :offset_address])
+    RgGen.enable(:bit_field, [:name, :bit_assignment, :initial_value, :reference, :type])
+    RgGen.enable(:register_block, :veryl_top)
+    RgGen.enable(:register_file, :veryl_top)
+    RgGen.enable(:register, :veryl_top)
+    RgGen.enable(:bit_field, :veryl_top)
+  end
+
+  def create_bit_fields(&body)
+    configuration = create_configuration(enable_wide_register: true)
+    create_veryl(configuration, &body).bit_fields
   end
 end

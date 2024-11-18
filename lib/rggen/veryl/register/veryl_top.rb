@@ -2,6 +2,8 @@
 
 RgGen.define_simple_feature(:register, :veryl_top) do
   veryl do
+    include RgGen::SystemVerilog::RTL::RegisterIndex
+
     build do
       unless register.bit_fields.empty?
         interface :bit_field_if, {

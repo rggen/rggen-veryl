@@ -24,6 +24,10 @@ module RgGen
       def array(expressions)
         concat(expressions.reverse)
       end
+
+      def unused
+        '_'
+      end
     end
   end
 end
