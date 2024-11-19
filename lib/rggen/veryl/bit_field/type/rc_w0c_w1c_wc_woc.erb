@@ -1,0 +1,21 @@
+inst u_bit_field: rggen_bit_field #(
+  WIDTH:            <%= width %>,
+  INITIAL_VALUE:    <%= initial_value %>,
+  SW_READ_ACTION:   rggen_sw_action::<%= read_action %>,
+  SW_WRITE_ACTION:  rggen_sw_action::<%= write_action %>
+)(
+  i_clk:              <%= clock %>,
+  i_rst:              <%= reset %>,
+  bit_field_if:       <%= bit_field_if %>,
+  o_write_trigger:    _,
+  o_read_trigger:     _,
+  i_sw_write_enable:  <%= sw_write_enable %>,
+  i_hw_write_enable:  '0,
+  i_hw_write_data:    '0,
+  i_hw_set:           <%= set[loop_variables] %>,
+  i_hw_clear:         '0,
+  i_value:            '0,
+  i_mask:             <%= mask %>,
+  o_value:            <%= value_out[loop_variables] %>,
+  o_value_unmasked:   <%= value_out_unmasked_singal %>
+);

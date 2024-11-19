@@ -43,6 +43,10 @@ RgGen.define_list_feature(:bit_field, :type) do
           .value(bit_field.local_indices, bit_field.reference_width)
       end
 
+      def mask
+        reference_bit_field || all_bits_1
+      end
+
       def loop_variables
         bit_field.loop_variables
       end
