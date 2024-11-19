@@ -1,0 +1,10 @@
+inst u_bit_field: rggen_bit_field_w01trg #(
+  TRIGGER_VALUE:  <%= trigger_value %>,
+  WIDTH:          <%= width %>
+)(
+  i_clk:        <%= clock %>,
+  i_rst:        <%= reset %>,
+  bit_field_if: <%= bit_field_if %>,
+  i_value:      <%= value_in_signal %>,
+  o_trigger:    <%= trigger[loop_variables] %>
+);

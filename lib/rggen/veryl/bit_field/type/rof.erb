@@ -1,0 +1,20 @@
+inst u_bit_field: rggen_bit_field #(
+  WIDTH:              <%= width %>,
+  STORAGE:            0,
+  EXTERNAL_READ_DATA: 1
+)(
+  i_clk:              '0,
+  i_rst:              '0,
+  bit_field_if:       <%= bit_field_if %>,
+  o_write_trigger:    _,
+  o_read_trigger:     _,
+  i_sw_write_enable:  '0,
+  i_hw_write_enable:  '0,
+  i_hw_write_data:    '0,
+  i_hw_set:           '0,
+  i_hw_clear:         '0,
+  i_value:            <%= initial_value %>,
+  i_mask:             '1,
+  o_value:            _,
+  o_value_unmasked:   _
+);
