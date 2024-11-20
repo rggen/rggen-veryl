@@ -34,6 +34,7 @@ RgGen.setup_plugin :'rggen-veryl' do |plugin|
     'veryl/bit_field/type/rwc',
     'veryl/bit_field/type/rwe_rwl',
     'veryl/bit_field/type/rwhw',
+    'veryl/bit_field/type/rws',
     'veryl/bit_field/veryl_top',
     'veryl/register/veryl_top',
     'veryl/register_file/veryl_top',
