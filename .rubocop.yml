@@ -13,11 +13,14 @@ inherit_from:
 Metrics/BlockLength:
   AllowedMethods:
     - base_feature
+    - build
     - define_list_feature
     - define_list_item_feature
     - define_simple_feature
+    - setup_plugin
     - veryl
 
 Naming/VariableNumber:
   AllowedIdentifiers:
     - w1
+    - wo1
