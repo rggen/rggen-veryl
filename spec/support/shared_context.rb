@@ -45,6 +45,18 @@ RSpec.shared_context 'veryl common' do
     not_have_declaration(layer, :port, port.declaration).and not_have_identifier(handler, port.identifier)
   end
 
+  def have_modport(*args, &body)
+    layer, handler, attributes =
+      case args.size
+      when 3 then args[0..2]
+      when 2 then [nil, args[0], args[1]]
+      else [nil, args[0], {}]
+      end
+    attributes = { name: handler }.merge(attributes)
+    modport = RgGen::Veryl::Utility::Modport.new(**attributes, &body)
+    have_declaration(layer, :port, modport.declaration).and have_identifier(handler, modport.identifier)
+  end
+
   def have_param(*args, &body)
     layer, handler, attributes =
       case args.size

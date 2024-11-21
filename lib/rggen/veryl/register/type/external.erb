@@ -1,0 +1,13 @@
+inst u_register: rggen_external_register #(
+  ADDRESS_WIDTH:  <%= address_width %>,
+  BUS_WIDTH:      <%= bus_width %>,
+  VALUE_WIDTH:    <%= value_width %>,
+  STROBE_WIDTH:   <%= strobe_width %>,
+  START_ADDRESS:  <%= start_address %>,
+  BYTE_SIZE:      <%= byte_size %>
+)(
+  i_clk:        <%= register_block.clock %>,
+  i_rst:        <%= register_block.reset %>,
+  register_if:  <%= register_if %>,
+  bus_if:       <%= bus_if %>
+);
