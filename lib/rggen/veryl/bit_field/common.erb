@@ -1,0 +1,8 @@
+always_comb {
+  <%= bit_field_if.valid %> = <%= register.bit_field_if.valid %>;
+  <%= bit_field_if.read_mask %> = <%= register.bit_field_if.read_mask[lsb, width] %>;
+  <%= bit_field_if.write_mask %> = <%= register.bit_field_if.write_mask[lsb, width] %>;
+  <%= bit_field_if.write_data %> = <%= register.bit_field_if.write_data[lsb, width] %>;
+  <%= register.bit_field_if.read_data[lsb, width] %> = <%= bit_field_if.read_data %>;
+  <%= register.bit_field_if.value[lsb, width] %> = <%= bit_field_if.value %>;
+}

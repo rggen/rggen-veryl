@@ -321,4 +321,642 @@ RSpec.describe 'bit_field/veryl_top' do
       )
     end
   end
+
+  describe '#generate_code' do
+    it 'ビットフィールド階層のコードを出力する' do
+      bit_fields = create_bit_fields do
+        name 'block_0'
+        byte_size 256
+
+        register do
+          name 'register_0'
+          offset_address 0x00
+          bit_field { name 'bit_field_0'; bit_assignment lsb: 0; type :rw; initial_value 0 }
+          bit_field { name 'bit_field_1'; bit_assignment lsb: 8, width: 8; type :rw; initial_value 0 }
+          bit_field { name 'bit_field_2'; bit_assignment lsb: 16, sequence_size: 2; type :rw; initial_value 0 }
+          bit_field { name 'bit_field_3'; bit_assignment lsb: 20, width: 2, sequence_size: 2; type :rw; initial_value default: 0 }
+          bit_field { name 'bit_field_4'; bit_assignment lsb: 24, width: 2, sequence_size: 2, step: 4; type :rw; initial_value [0, 1] }
+        end
+
+        register do
+          name 'register_1'
+          offset_address 0x10
+          size [4]
+          bit_field { name 'bit_field_0'; bit_assignment lsb: 0; type :rw; initial_value 0 }
+          bit_field { name 'bit_field_1'; bit_assignment lsb: 8, width: 8; type :rw; initial_value 0 }
+          bit_field { name 'bit_field_2'; bit_assignment lsb: 16, sequence_size: 2; type :rw; initial_value 0 }
+          bit_field { name 'bit_field_3'; bit_assignment lsb: 20, width: 2, sequence_size: 2; type :rw; initial_value default: 0 }
+          bit_field { name 'bit_field_4'; bit_assignment lsb: 24, width: 2, sequence_size: 2, step: 4; type :rw; initial_value [0, 1] }
+        end
+
+        register do
+          name 'register_2'
+          offset_address 0x20
+          size [2, 2]
+          bit_field { name 'bit_field_0'; bit_assignment lsb: 0; type :rw; initial_value 0 }
+          bit_field { name 'bit_field_1'; bit_assignment lsb: 8, width: 8; type :rw; initial_value 0 }
+          bit_field { name 'bit_field_2'; bit_assignment lsb: 16, sequence_size: 2; type :rw; initial_value 0 }
+          bit_field { name 'bit_field_3'; bit_assignment lsb: 20, width: 2, sequence_size: 2; type :rw; initial_value default: 0 }
+          bit_field { name 'bit_field_4'; bit_assignment lsb: 24, width: 2, sequence_size: 2, step: 4; type :rw; initial_value [0, 1] }
+        end
+
+        register do
+          name 'register_3'
+          offset_address 0x30
+          bit_field { bit_assignment lsb: 0, width: 32; type :rw; initial_value 0 }
+        end
+      end
+
+      expect(bit_fields[0]).to generate_code(:register, :top_down, <<~'VERYL')
+        :g_bit_field_0 {
+          const INITIAL_VALUE: bit<1> = 1'h0;
+          inst bit_field_sub_if: rggen_bit_field_if#(WIDTH: 1);
+          always_comb {
+            bit_field_sub_if.valid = bit_field_if.valid;
+            bit_field_sub_if.read_mask = bit_field_if.read_mask[0+:1];
+            bit_field_sub_if.write_mask = bit_field_if.write_mask[0+:1];
+            bit_field_sub_if.write_data = bit_field_if.write_data[0+:1];
+            bit_field_if.read_data[0+:1] = bit_field_sub_if.read_data;
+            bit_field_if.value[0+:1] = bit_field_sub_if.value;
+          }
+          inst u_bit_field: rggen_bit_field #(
+            WIDTH:          1,
+            INITIAL_VALUE:  INITIAL_VALUE,
+            SW_WRITE_ONCE:  0,
+            TRIGGER:        0
+          )(
+            i_clk:              i_clk,
+            i_rst:              i_rst,
+            bit_field_if:       bit_field_sub_if,
+            o_write_trigger:    _,
+            o_read_trigger:     _,
+            i_sw_write_enable:  '1,
+            i_hw_write_enable:  '0,
+            i_hw_write_data:    '0,
+            i_hw_set:           '0,
+            i_hw_clear:         '0,
+            i_value:            '0,
+            i_mask:             '1,
+            o_value:            o_register_0_bit_field_0,
+            o_value_unmasked:   _
+          );
+        }
+      VERYL
+
+      expect(bit_fields[1]).to generate_code(:register, :top_down, <<~'VERYL')
+        :g_bit_field_1 {
+          const INITIAL_VALUE: bit<8> = 8'h00;
+          inst bit_field_sub_if: rggen_bit_field_if#(WIDTH: 8);
+          always_comb {
+            bit_field_sub_if.valid = bit_field_if.valid;
+            bit_field_sub_if.read_mask = bit_field_if.read_mask[8+:8];
+            bit_field_sub_if.write_mask = bit_field_if.write_mask[8+:8];
+            bit_field_sub_if.write_data = bit_field_if.write_data[8+:8];
+            bit_field_if.read_data[8+:8] = bit_field_sub_if.read_data;
+            bit_field_if.value[8+:8] = bit_field_sub_if.value;
+          }
+          inst u_bit_field: rggen_bit_field #(
+            WIDTH:          8,
+            INITIAL_VALUE:  INITIAL_VALUE,
+            SW_WRITE_ONCE:  0,
+            TRIGGER:        0
+          )(
+            i_clk:              i_clk,
+            i_rst:              i_rst,
+            bit_field_if:       bit_field_sub_if,
+            o_write_trigger:    _,
+            o_read_trigger:     _,
+            i_sw_write_enable:  '1,
+            i_hw_write_enable:  '0,
+            i_hw_write_data:    '0,
+            i_hw_set:           '0,
+            i_hw_clear:         '0,
+            i_value:            '0,
+            i_mask:             '1,
+            o_value:            o_register_0_bit_field_1,
+            o_value_unmasked:   _
+          );
+        }
+      VERYL
+
+      expect(bit_fields[2]).to generate_code(:register, :top_down, <<~'VERYL')
+        :g_bit_field_2 {
+          for i in 0..2 :g {
+            const INITIAL_VALUE: bit<1> = 1'h0;
+            inst bit_field_sub_if: rggen_bit_field_if#(WIDTH: 1);
+            always_comb {
+              bit_field_sub_if.valid = bit_field_if.valid;
+              bit_field_sub_if.read_mask = bit_field_if.read_mask[16+1*i+:1];
+              bit_field_sub_if.write_mask = bit_field_if.write_mask[16+1*i+:1];
+              bit_field_sub_if.write_data = bit_field_if.write_data[16+1*i+:1];
+              bit_field_if.read_data[16+1*i+:1] = bit_field_sub_if.read_data;
+              bit_field_if.value[16+1*i+:1] = bit_field_sub_if.value;
+            }
+            inst u_bit_field: rggen_bit_field #(
+              WIDTH:          1,
+              INITIAL_VALUE:  INITIAL_VALUE,
+              SW_WRITE_ONCE:  0,
+              TRIGGER:        0
+            )(
+              i_clk:              i_clk,
+              i_rst:              i_rst,
+              bit_field_if:       bit_field_sub_if,
+              o_write_trigger:    _,
+              o_read_trigger:     _,
+              i_sw_write_enable:  '1,
+              i_hw_write_enable:  '0,
+              i_hw_write_data:    '0,
+              i_hw_set:           '0,
+              i_hw_clear:         '0,
+              i_value:            '0,
+              i_mask:             '1,
+              o_value:            o_register_0_bit_field_2[i],
+              o_value_unmasked:   _
+            );
+          }
+        }
+      VERYL
+
+      expect(bit_fields[3]).to generate_code(:register, :top_down, <<~'VERYL')
+        :g_bit_field_3 {
+          for i in 0..2 :g {
+            inst bit_field_sub_if: rggen_bit_field_if#(WIDTH: 2);
+            always_comb {
+              bit_field_sub_if.valid = bit_field_if.valid;
+              bit_field_sub_if.read_mask = bit_field_if.read_mask[20+2*i+:2];
+              bit_field_sub_if.write_mask = bit_field_if.write_mask[20+2*i+:2];
+              bit_field_sub_if.write_data = bit_field_if.write_data[20+2*i+:2];
+              bit_field_if.read_data[20+2*i+:2] = bit_field_sub_if.read_data;
+              bit_field_if.value[20+2*i+:2] = bit_field_sub_if.value;
+            }
+            inst u_bit_field: rggen_bit_field #(
+              WIDTH:          2,
+              INITIAL_VALUE:  REGISTER_0_BIT_FIELD_3_INITIAL_VALUE[i],
+              SW_WRITE_ONCE:  0,
+              TRIGGER:        0
+            )(
+              i_clk:              i_clk,
+              i_rst:              i_rst,
+              bit_field_if:       bit_field_sub_if,
+              o_write_trigger:    _,
+              o_read_trigger:     _,
+              i_sw_write_enable:  '1,
+              i_hw_write_enable:  '0,
+              i_hw_write_data:    '0,
+              i_hw_set:           '0,
+              i_hw_clear:         '0,
+              i_value:            '0,
+              i_mask:             '1,
+              o_value:            o_register_0_bit_field_3[i],
+              o_value_unmasked:   _
+            );
+          }
+        }
+      VERYL
+
+      expect(bit_fields[4]).to generate_code(:register, :top_down, <<~'VERYL')
+        :g_bit_field_4 {
+          for i in 0..2 :g {
+            const INITIAL_VALUE: bit<2, 2> = {2'h1, 2'h0};
+            inst bit_field_sub_if: rggen_bit_field_if#(WIDTH: 2);
+            always_comb {
+              bit_field_sub_if.valid = bit_field_if.valid;
+              bit_field_sub_if.read_mask = bit_field_if.read_mask[24+4*i+:2];
+              bit_field_sub_if.write_mask = bit_field_if.write_mask[24+4*i+:2];
+              bit_field_sub_if.write_data = bit_field_if.write_data[24+4*i+:2];
+              bit_field_if.read_data[24+4*i+:2] = bit_field_sub_if.read_data;
+              bit_field_if.value[24+4*i+:2] = bit_field_sub_if.value;
+            }
+            inst u_bit_field: rggen_bit_field #(
+              WIDTH:          2,
+              INITIAL_VALUE:  INITIAL_VALUE[i],
+              SW_WRITE_ONCE:  0,
+              TRIGGER:        0
+            )(
+              i_clk:              i_clk,
+              i_rst:              i_rst,
+              bit_field_if:       bit_field_sub_if,
+              o_write_trigger:    _,
+              o_read_trigger:     _,
+              i_sw_write_enable:  '1,
+              i_hw_write_enable:  '0,
+              i_hw_write_data:    '0,
+              i_hw_set:           '0,
+              i_hw_clear:         '0,
+              i_value:            '0,
+              i_mask:             '1,
+              o_value:            o_register_0_bit_field_4[i],
+              o_value_unmasked:   _
+            );
+          }
+        }
+      VERYL
+
+      expect(bit_fields[5]).to generate_code(:register, :top_down, <<~'VERYL')
+        :g_bit_field_0 {
+          const INITIAL_VALUE: bit<1> = 1'h0;
+          inst bit_field_sub_if: rggen_bit_field_if#(WIDTH: 1);
+          always_comb {
+            bit_field_sub_if.valid = bit_field_if.valid;
+            bit_field_sub_if.read_mask = bit_field_if.read_mask[0+:1];
+            bit_field_sub_if.write_mask = bit_field_if.write_mask[0+:1];
+            bit_field_sub_if.write_data = bit_field_if.write_data[0+:1];
+            bit_field_if.read_data[0+:1] = bit_field_sub_if.read_data;
+            bit_field_if.value[0+:1] = bit_field_sub_if.value;
+          }
+          inst u_bit_field: rggen_bit_field #(
+            WIDTH:          1,
+            INITIAL_VALUE:  INITIAL_VALUE,
+            SW_WRITE_ONCE:  0,
+            TRIGGER:        0
+          )(
+            i_clk:              i_clk,
+            i_rst:              i_rst,
+            bit_field_if:       bit_field_sub_if,
+            o_write_trigger:    _,
+            o_read_trigger:     _,
+            i_sw_write_enable:  '1,
+            i_hw_write_enable:  '0,
+            i_hw_write_data:    '0,
+            i_hw_set:           '0,
+            i_hw_clear:         '0,
+            i_value:            '0,
+            i_mask:             '1,
+            o_value:            o_register_1_bit_field_0[i],
+            o_value_unmasked:   _
+          );
+        }
+      VERYL
+
+      expect(bit_fields[6]).to generate_code(:register, :top_down, <<~'VERYL')
+        :g_bit_field_1 {
+          const INITIAL_VALUE: bit<8> = 8'h00;
+          inst bit_field_sub_if: rggen_bit_field_if#(WIDTH: 8);
+          always_comb {
+            bit_field_sub_if.valid = bit_field_if.valid;
+            bit_field_sub_if.read_mask = bit_field_if.read_mask[8+:8];
+            bit_field_sub_if.write_mask = bit_field_if.write_mask[8+:8];
+            bit_field_sub_if.write_data = bit_field_if.write_data[8+:8];
+            bit_field_if.read_data[8+:8] = bit_field_sub_if.read_data;
+            bit_field_if.value[8+:8] = bit_field_sub_if.value;
+          }
+          inst u_bit_field: rggen_bit_field #(
+            WIDTH:          8,
+            INITIAL_VALUE:  INITIAL_VALUE,
+            SW_WRITE_ONCE:  0,
+            TRIGGER:        0
+          )(
+            i_clk:              i_clk,
+            i_rst:              i_rst,
+            bit_field_if:       bit_field_sub_if,
+            o_write_trigger:    _,
+            o_read_trigger:     _,
+            i_sw_write_enable:  '1,
+            i_hw_write_enable:  '0,
+            i_hw_write_data:    '0,
+            i_hw_set:           '0,
+            i_hw_clear:         '0,
+            i_value:            '0,
+            i_mask:             '1,
+            o_value:            o_register_1_bit_field_1[i],
+            o_value_unmasked:   _
+          );
+        }
+      VERYL
+
+      expect(bit_fields[7]).to generate_code(:register, :top_down, <<~'VERYL')
+        :g_bit_field_2 {
+          for j in 0..2 :g {
+            const INITIAL_VALUE: bit<1> = 1'h0;
+            inst bit_field_sub_if: rggen_bit_field_if#(WIDTH: 1);
+            always_comb {
+              bit_field_sub_if.valid = bit_field_if.valid;
+              bit_field_sub_if.read_mask = bit_field_if.read_mask[16+1*j+:1];
+              bit_field_sub_if.write_mask = bit_field_if.write_mask[16+1*j+:1];
+              bit_field_sub_if.write_data = bit_field_if.write_data[16+1*j+:1];
+              bit_field_if.read_data[16+1*j+:1] = bit_field_sub_if.read_data;
+              bit_field_if.value[16+1*j+:1] = bit_field_sub_if.value;
+            }
+            inst u_bit_field: rggen_bit_field #(
+              WIDTH:          1,
+              INITIAL_VALUE:  INITIAL_VALUE,
+              SW_WRITE_ONCE:  0,
+              TRIGGER:        0
+            )(
+              i_clk:              i_clk,
+              i_rst:              i_rst,
+              bit_field_if:       bit_field_sub_if,
+              o_write_trigger:    _,
+              o_read_trigger:     _,
+              i_sw_write_enable:  '1,
+              i_hw_write_enable:  '0,
+              i_hw_write_data:    '0,
+              i_hw_set:           '0,
+              i_hw_clear:         '0,
+              i_value:            '0,
+              i_mask:             '1,
+              o_value:            o_register_1_bit_field_2[i][j],
+              o_value_unmasked:   _
+            );
+          }
+        }
+      VERYL
+
+      expect(bit_fields[8]).to generate_code(:register, :top_down, <<~'VERYL')
+        :g_bit_field_3 {
+          for j in 0..2 :g {
+            inst bit_field_sub_if: rggen_bit_field_if#(WIDTH: 2);
+            always_comb {
+              bit_field_sub_if.valid = bit_field_if.valid;
+              bit_field_sub_if.read_mask = bit_field_if.read_mask[20+2*j+:2];
+              bit_field_sub_if.write_mask = bit_field_if.write_mask[20+2*j+:2];
+              bit_field_sub_if.write_data = bit_field_if.write_data[20+2*j+:2];
+              bit_field_if.read_data[20+2*j+:2] = bit_field_sub_if.read_data;
+              bit_field_if.value[20+2*j+:2] = bit_field_sub_if.value;
+            }
+            inst u_bit_field: rggen_bit_field #(
+              WIDTH:          2,
+              INITIAL_VALUE:  REGISTER_1_BIT_FIELD_3_INITIAL_VALUE[j],
+              SW_WRITE_ONCE:  0,
+              TRIGGER:        0
+            )(
+              i_clk:              i_clk,
+              i_rst:              i_rst,
+              bit_field_if:       bit_field_sub_if,
+              o_write_trigger:    _,
+              o_read_trigger:     _,
+              i_sw_write_enable:  '1,
+              i_hw_write_enable:  '0,
+              i_hw_write_data:    '0,
+              i_hw_set:           '0,
+              i_hw_clear:         '0,
+              i_value:            '0,
+              i_mask:             '1,
+              o_value:            o_register_1_bit_field_3[i][j],
+              o_value_unmasked:   _
+            );
+          }
+        }
+      VERYL
+
+      expect(bit_fields[9]).to generate_code(:register, :top_down, <<~'VERYL')
+        :g_bit_field_4 {
+          for j in 0..2 :g {
+            const INITIAL_VALUE: bit<2, 2> = {2'h1, 2'h0};
+            inst bit_field_sub_if: rggen_bit_field_if#(WIDTH: 2);
+            always_comb {
+              bit_field_sub_if.valid = bit_field_if.valid;
+              bit_field_sub_if.read_mask = bit_field_if.read_mask[24+4*j+:2];
+              bit_field_sub_if.write_mask = bit_field_if.write_mask[24+4*j+:2];
+              bit_field_sub_if.write_data = bit_field_if.write_data[24+4*j+:2];
+              bit_field_if.read_data[24+4*j+:2] = bit_field_sub_if.read_data;
+              bit_field_if.value[24+4*j+:2] = bit_field_sub_if.value;
+            }
+            inst u_bit_field: rggen_bit_field #(
+              WIDTH:          2,
+              INITIAL_VALUE:  INITIAL_VALUE[j],
+              SW_WRITE_ONCE:  0,
+              TRIGGER:        0
+            )(
+              i_clk:              i_clk,
+              i_rst:              i_rst,
+              bit_field_if:       bit_field_sub_if,
+              o_write_trigger:    _,
+              o_read_trigger:     _,
+              i_sw_write_enable:  '1,
+              i_hw_write_enable:  '0,
+              i_hw_write_data:    '0,
+              i_hw_set:           '0,
+              i_hw_clear:         '0,
+              i_value:            '0,
+              i_mask:             '1,
+              o_value:            o_register_1_bit_field_4[i][j],
+              o_value_unmasked:   _
+            );
+          }
+        }
+      VERYL
+
+      expect(bit_fields[10]).to generate_code(:register, :top_down, <<~'VERYL')
+        :g_bit_field_0 {
+          const INITIAL_VALUE: bit<1> = 1'h0;
+          inst bit_field_sub_if: rggen_bit_field_if#(WIDTH: 1);
+          always_comb {
+            bit_field_sub_if.valid = bit_field_if.valid;
+            bit_field_sub_if.read_mask = bit_field_if.read_mask[0+:1];
+            bit_field_sub_if.write_mask = bit_field_if.write_mask[0+:1];
+            bit_field_sub_if.write_data = bit_field_if.write_data[0+:1];
+            bit_field_if.read_data[0+:1] = bit_field_sub_if.read_data;
+            bit_field_if.value[0+:1] = bit_field_sub_if.value;
+          }
+          inst u_bit_field: rggen_bit_field #(
+            WIDTH:          1,
+            INITIAL_VALUE:  INITIAL_VALUE,
+            SW_WRITE_ONCE:  0,
+            TRIGGER:        0
+          )(
+            i_clk:              i_clk,
+            i_rst:              i_rst,
+            bit_field_if:       bit_field_sub_if,
+            o_write_trigger:    _,
+            o_read_trigger:     _,
+            i_sw_write_enable:  '1,
+            i_hw_write_enable:  '0,
+            i_hw_write_data:    '0,
+            i_hw_set:           '0,
+            i_hw_clear:         '0,
+            i_value:            '0,
+            i_mask:             '1,
+            o_value:            o_register_2_bit_field_0[i][j],
+            o_value_unmasked:   _
+          );
+        }
+      VERYL
+
+      expect(bit_fields[11]).to generate_code(:register, :top_down, <<~'VERYL')
+        :g_bit_field_1 {
+          const INITIAL_VALUE: bit<8> = 8'h00;
+          inst bit_field_sub_if: rggen_bit_field_if#(WIDTH: 8);
+          always_comb {
+            bit_field_sub_if.valid = bit_field_if.valid;
+            bit_field_sub_if.read_mask = bit_field_if.read_mask[8+:8];
+            bit_field_sub_if.write_mask = bit_field_if.write_mask[8+:8];
+            bit_field_sub_if.write_data = bit_field_if.write_data[8+:8];
+            bit_field_if.read_data[8+:8] = bit_field_sub_if.read_data;
+            bit_field_if.value[8+:8] = bit_field_sub_if.value;
+          }
+          inst u_bit_field: rggen_bit_field #(
+            WIDTH:          8,
+            INITIAL_VALUE:  INITIAL_VALUE,
+            SW_WRITE_ONCE:  0,
+            TRIGGER:        0
+          )(
+            i_clk:              i_clk,
+            i_rst:              i_rst,
+            bit_field_if:       bit_field_sub_if,
+            o_write_trigger:    _,
+            o_read_trigger:     _,
+            i_sw_write_enable:  '1,
+            i_hw_write_enable:  '0,
+            i_hw_write_data:    '0,
+            i_hw_set:           '0,
+            i_hw_clear:         '0,
+            i_value:            '0,
+            i_mask:             '1,
+            o_value:            o_register_2_bit_field_1[i][j],
+            o_value_unmasked:   _
+          );
+        }
+      VERYL
+
+      expect(bit_fields[12]).to generate_code(:register, :top_down, <<~'VERYL')
+        :g_bit_field_2 {
+          for k in 0..2 :g {
+            const INITIAL_VALUE: bit<1> = 1'h0;
+            inst bit_field_sub_if: rggen_bit_field_if#(WIDTH: 1);
+            always_comb {
+              bit_field_sub_if.valid = bit_field_if.valid;
+              bit_field_sub_if.read_mask = bit_field_if.read_mask[16+1*k+:1];
+              bit_field_sub_if.write_mask = bit_field_if.write_mask[16+1*k+:1];
+              bit_field_sub_if.write_data = bit_field_if.write_data[16+1*k+:1];
+              bit_field_if.read_data[16+1*k+:1] = bit_field_sub_if.read_data;
+              bit_field_if.value[16+1*k+:1] = bit_field_sub_if.value;
+            }
+            inst u_bit_field: rggen_bit_field #(
+              WIDTH:          1,
+              INITIAL_VALUE:  INITIAL_VALUE,
+              SW_WRITE_ONCE:  0,
+              TRIGGER:        0
+            )(
+              i_clk:              i_clk,
+              i_rst:              i_rst,
+              bit_field_if:       bit_field_sub_if,
+              o_write_trigger:    _,
+              o_read_trigger:     _,
+              i_sw_write_enable:  '1,
+              i_hw_write_enable:  '0,
+              i_hw_write_data:    '0,
+              i_hw_set:           '0,
+              i_hw_clear:         '0,
+              i_value:            '0,
+              i_mask:             '1,
+              o_value:            o_register_2_bit_field_2[i][j][k],
+              o_value_unmasked:   _
+            );
+          }
+        }
+      VERYL
+
+      expect(bit_fields[13]).to generate_code(:register, :top_down, <<~'VERYL')
+        :g_bit_field_3 {
+          for k in 0..2 :g {
+            inst bit_field_sub_if: rggen_bit_field_if#(WIDTH: 2);
+            always_comb {
+              bit_field_sub_if.valid = bit_field_if.valid;
+              bit_field_sub_if.read_mask = bit_field_if.read_mask[20+2*k+:2];
+              bit_field_sub_if.write_mask = bit_field_if.write_mask[20+2*k+:2];
+              bit_field_sub_if.write_data = bit_field_if.write_data[20+2*k+:2];
+              bit_field_if.read_data[20+2*k+:2] = bit_field_sub_if.read_data;
+              bit_field_if.value[20+2*k+:2] = bit_field_sub_if.value;
+            }
+            inst u_bit_field: rggen_bit_field #(
+              WIDTH:          2,
+              INITIAL_VALUE:  REGISTER_2_BIT_FIELD_3_INITIAL_VALUE[k],
+              SW_WRITE_ONCE:  0,
+              TRIGGER:        0
+            )(
+              i_clk:              i_clk,
+              i_rst:              i_rst,
+              bit_field_if:       bit_field_sub_if,
+              o_write_trigger:    _,
+              o_read_trigger:     _,
+              i_sw_write_enable:  '1,
+              i_hw_write_enable:  '0,
+              i_hw_write_data:    '0,
+              i_hw_set:           '0,
+              i_hw_clear:         '0,
+              i_value:            '0,
+              i_mask:             '1,
+              o_value:            o_register_2_bit_field_3[i][j][k],
+              o_value_unmasked:   _
+            );
+          }
+        }
+      VERYL
+
+      expect(bit_fields[14]).to generate_code(:register, :top_down, <<~'VERYL')
+        :g_bit_field_4 {
+          for k in 0..2 :g {
+            const INITIAL_VALUE: bit<2, 2> = {2'h1, 2'h0};
+            inst bit_field_sub_if: rggen_bit_field_if#(WIDTH: 2);
+            always_comb {
+              bit_field_sub_if.valid = bit_field_if.valid;
+              bit_field_sub_if.read_mask = bit_field_if.read_mask[24+4*k+:2];
+              bit_field_sub_if.write_mask = bit_field_if.write_mask[24+4*k+:2];
+              bit_field_sub_if.write_data = bit_field_if.write_data[24+4*k+:2];
+              bit_field_if.read_data[24+4*k+:2] = bit_field_sub_if.read_data;
+              bit_field_if.value[24+4*k+:2] = bit_field_sub_if.value;
+            }
+            inst u_bit_field: rggen_bit_field #(
+              WIDTH:          2,
+              INITIAL_VALUE:  INITIAL_VALUE[k],
+              SW_WRITE_ONCE:  0,
+              TRIGGER:        0
+            )(
+              i_clk:              i_clk,
+              i_rst:              i_rst,
+              bit_field_if:       bit_field_sub_if,
+              o_write_trigger:    _,
+              o_read_trigger:     _,
+              i_sw_write_enable:  '1,
+              i_hw_write_enable:  '0,
+              i_hw_write_data:    '0,
+              i_hw_set:           '0,
+              i_hw_clear:         '0,
+              i_value:            '0,
+              i_mask:             '1,
+              o_value:            o_register_2_bit_field_4[i][j][k],
+              o_value_unmasked:   _
+            );
+          }
+        }
+      VERYL
+
+      expect(bit_fields[15]).to generate_code(:register, :top_down, <<~'VERYL')
+        :g_register_3 {
+          const INITIAL_VALUE: bit<32> = 32'h00000000;
+          inst bit_field_sub_if: rggen_bit_field_if#(WIDTH: 32);
+          always_comb {
+            bit_field_sub_if.valid = bit_field_if.valid;
+            bit_field_sub_if.read_mask = bit_field_if.read_mask[0+:32];
+            bit_field_sub_if.write_mask = bit_field_if.write_mask[0+:32];
+            bit_field_sub_if.write_data = bit_field_if.write_data[0+:32];
+            bit_field_if.read_data[0+:32] = bit_field_sub_if.read_data;
+            bit_field_if.value[0+:32] = bit_field_sub_if.value;
+          }
+          inst u_bit_field: rggen_bit_field #(
+            WIDTH:          32,
+            INITIAL_VALUE:  INITIAL_VALUE,
+            SW_WRITE_ONCE:  0,
+            TRIGGER:        0
+          )(
+            i_clk:              i_clk,
+            i_rst:              i_rst,
+            bit_field_if:       bit_field_sub_if,
+            o_write_trigger:    _,
+            o_read_trigger:     _,
+            i_sw_write_enable:  '1,
+            i_hw_write_enable:  '0,
+            i_hw_write_data:    '0,
+            i_hw_set:           '0,
+            i_hw_clear:         '0,
+            i_value:            '0,
+            i_mask:             '1,
+            o_value:            o_register_3,
+            o_value_unmasked:   _
+          );
+        }
+      VERYL
+    end
+  end
 end

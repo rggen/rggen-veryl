@@ -4,7 +4,7 @@ module RgGen
   module Veryl
     module Utility
       class InterfaceInstance < SystemVerilog::Common::Utility::InterfaceInstance
-        alias_method :param_values, :parameter_values
+        define_attribute :param_values
 
         def instantiation
           [
@@ -13,6 +13,8 @@ module RgGen
             type_notation
           ].join(' ')
         end
+
+        alias_method :declaration, :instantiation
 
         private
 

@@ -19,8 +19,20 @@ RgGen.define_simple_feature(:bit_field, :veryl_top) do
 
       interface :bit_field_sub_if, {
         name: 'bit_field_sub_if', interface_type: 'rggen_bit_field_if',
-        param_values: { WIDTH: bit_field.width }
+        param_values: { WIDTH: bit_field.width },
+        variables: [
+          'valid', 'read_mask', 'write_mask', 'write_data', 'read_data', 'value'
+        ]
       }
+    end
+
+    main_code :register do
+      local_scope("g_#{bit_field.name}") do |s|
+        s.loop_size loop_size
+        s.consts consts
+        s.variables variables
+        s.body { |c| body_code(c) }
+      end
     end
 
     export def value(offsets = nil, width = nil)
@@ -66,6 +78,25 @@ RgGen.define_simple_feature(:bit_field, :veryl_top) do
     def register_if(offsets)
       index = register.index(offsets || register.local_indices)
       register_block.register_if[index]
+    end
+
+    def loop_size
+      loop_variable = local_index
+      return unless loop_variable
+
+      { loop_variable => bit_field.sequence_size }
+    end
+
+    def consts
+      bit_field.declarations[:parameter]
+    end
+
+    def variables
+      bit_field.declarations[:variable]
+    end
+
+    def body_code(code)
+      bit_field.generate_code(code, :bit_field, :top_down)
     end
   end
 end

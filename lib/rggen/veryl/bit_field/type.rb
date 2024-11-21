@@ -3,6 +3,8 @@
 RgGen.define_list_feature(:bit_field, :type) do
   veryl do
     base_feature do
+      pre_code :bit_field, from_template: File.join(__dir__, 'common.erb')
+
       private
 
       def full_name
@@ -11,6 +13,10 @@ RgGen.define_list_feature(:bit_field, :type) do
 
       def width
         bit_field.width
+      end
+
+      def lsb
+        bit_field.lsb(bit_field.local_index)
       end
 
       def clock
