@@ -12,6 +12,14 @@ RgGen.define_simple_feature(:register_block, :veryl_top) do
       }
     end
 
+    export def value_width
+      register_block.registers.max_by(&:width)&.width
+    end
+
+    export def total_registers
+      register_block.files_and_registers.sum(&:count)
+    end
+
     private
 
     def param_values
@@ -24,14 +32,6 @@ RgGen.define_simple_feature(:register_block, :veryl_top) do
 
     def bus_width
       configuration.bus_width
-    end
-
-    def value_width
-      register_block.registers.max_by(&:width)&.width
-    end
-
-    def total_registers
-      register_block.files_and_registers.sum(&:count)
     end
   end
 end
