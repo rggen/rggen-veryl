@@ -34,7 +34,7 @@ $ rggen your_register_map.yml
 
 ## Contact
 
-Feedbacks, bus reports, questions and etc. are welcome! You can post them bu using following ways:
+Feedbacks, bus reports, questions and etc. are welcome! You can post them by using following ways:
 
 * [GitHub Issue Tracker](https://github.com/rggen/rggen/issues)
 * [GitHub Discussions](https://github.com/rggen/rggen/discussions)
