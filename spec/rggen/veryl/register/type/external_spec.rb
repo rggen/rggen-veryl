@@ -27,7 +27,7 @@ RSpec.describe 'register/type/external' do
     expect(registers[0])
       .to have_param(
         :register_block, :strobe_width,
-        name: 'REGISTER_0_STROBE_WIDTH', type: :int, default: 4
+        name: 'REGISTER_0_STROBE_WIDTH', type: :u32, default: 4
       )
   end
 
