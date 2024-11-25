@@ -48,6 +48,10 @@ RgGen.setup_plugin :'rggen-veryl' do |plugin|
     'veryl/register/type/rw',
     'veryl/register/veryl_top',
     'veryl/register_file/veryl_top',
+    'veryl/register_block/protocol',
+    'veryl/register_block/protocol/apb',
+    'veryl/register_block/protocol/axi4lite',
+    'veryl/register_block/protocol/wishbone',
     'veryl/register_block/veryl_top'
   ]
 end

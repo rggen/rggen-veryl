@@ -1,0 +1,19 @@
+inst u_adapter: rggen_axi4lite_adapter #(
+  ID_WIDTH:             <%= id_width %>,
+  ADDRESS_WIDTH:        <%= address_width %>,
+  LOCAL_ADDRESS_WIDTH:  <%= local_address_width %>,
+  BUS_WIDTH:            <%= bus_width %>,
+  REGISTERS:            <%= total_registers %>,
+  PRE_DECODE:           <%= pre_decode %>,
+  BASE_ADDRESS:         <%= base_address %>,
+  BYTE_SIZE:            <%= byte_size %>,
+  ERROR_STATUS:         <%= error_status %>,
+  DEFAULT_READ_DATA:    <%= default_read_data %>,
+  INSERT_SLICER:        <%= insert_slicer %>,
+  WRITE_FIRST:          <%= write_first %>
+)(
+  i_clk:        <%= register_block.clock %>,
+  i_rst:        <%= register_block.reset %>,
+  axi4lite_if:  <%= axi4lite_if %>,
+  register_if:  <%= register_block.register_if %>
+);
