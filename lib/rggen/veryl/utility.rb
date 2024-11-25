@@ -17,6 +17,10 @@ module RgGen
           .to_code
       end
 
+      def width_cast(expression, width)
+        "(#{expression} as #{width})"
+      end
+
       def repeat(count, expression)
         "{#{expression} repeat #{count}}"
       end

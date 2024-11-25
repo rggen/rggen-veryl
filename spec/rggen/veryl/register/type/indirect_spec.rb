@@ -209,7 +209,7 @@ RSpec.describe 'register/type/indirect' do
       VERYL
 
       expect(registers[5]).to generate_code(:register, :top_down, <<~'VERYL')
-        assign indirect_match = register_if[0].value[8+:2] == i as 2;
+        assign indirect_match = register_if[0].value[8+:2] == (i as 2);
         inst u_register: rggen_indirect_register #(
           READABLE:             1,
           WRITABLE:             1,
@@ -230,8 +230,8 @@ RSpec.describe 'register/type/indirect' do
       VERYL
 
       expect(registers[6]).to generate_code(:register, :top_down, <<~'VERYL')
-        assign indirect_match[0] = register_if[0].value[8+:2] == i as 2;
-        assign indirect_match[1] = register_if[0].value[16+:4] == j as 4;
+        assign indirect_match[0] = register_if[0].value[8+:2] == (i as 2);
+        assign indirect_match[1] = register_if[0].value[16+:4] == (j as 4);
         inst u_register: rggen_indirect_register #(
           READABLE:             1,
           WRITABLE:             1,
@@ -253,8 +253,8 @@ RSpec.describe 'register/type/indirect' do
 
       expect(registers[7]).to generate_code(:register, :top_down, <<~'VERYL')
         assign indirect_match[0] = register_if[0].value[0+:1] == 1'h0;
-        assign indirect_match[1] = register_if[0].value[8+:2] == i as 2;
-        assign indirect_match[2] = register_if[0].value[16+:4] == j as 4;
+        assign indirect_match[1] = register_if[0].value[8+:2] == (i as 2);
+        assign indirect_match[2] = register_if[0].value[16+:4] == (j as 4);
         inst u_register: rggen_indirect_register #(
           READABLE:             1,
           WRITABLE:             1,
@@ -317,7 +317,7 @@ RSpec.describe 'register/type/indirect' do
       VERYL
 
       expect(registers[10]).to generate_code(:register, :top_down, <<~'VERYL')
-        assign indirect_match[0] = register_if[1].value[0+:2] == i as 2;
+        assign indirect_match[0] = register_if[1].value[0+:2] == (i as 2);
         assign indirect_match[1] = register_if[2].value[0+:2] == 2'h0;
         inst u_register: rggen_indirect_register #(
           READABLE:             1,
@@ -340,8 +340,8 @@ RSpec.describe 'register/type/indirect' do
 
       expect(registers[11]).to generate_code(:register, :top_down, <<~'VERYL')
         assign indirect_match[0] = register_if[3].value[0+:1] == 1'h0;
-        assign indirect_match[1] = register_if[3].value[8+:2] == i as 2;
-        assign indirect_match[2] = register_if[3].value[16+:4] == j as 4;
+        assign indirect_match[1] = register_if[3].value[8+:2] == (i as 2);
+        assign indirect_match[2] = register_if[3].value[16+:4] == (j as 4);
         inst u_register: rggen_indirect_register #(
           READABLE:             1,
           WRITABLE:             1,
@@ -363,13 +363,13 @@ RSpec.describe 'register/type/indirect' do
 
       expect(registers[12]).to generate_code(:register, :top_down, <<~'VERYL')
         assign indirect_match[0] = register_if[0].value[0+:1] == 1'h0;
-        assign indirect_match[1] = register_if[0].value[8+:2] == k as 2;
-        assign indirect_match[2] = register_if[0].value[16+:4] == l as 4;
+        assign indirect_match[1] = register_if[0].value[8+:2] == (k as 2);
+        assign indirect_match[2] = register_if[0].value[16+:4] == (l as 4);
         inst u_register: rggen_indirect_register #(
           READABLE:             1,
           WRITABLE:             1,
           ADDRESS_WIDTH:        8,
-          OFFSET_ADDRESS:       8'h30+8'(8*(2*i+j)),
+          OFFSET_ADDRESS:       8'h30+(8*(2*i+j) as 8),
           BUS_WIDTH:            32,
           DATA_WIDTH:           32,
           VALUE_WIDTH:          32,
@@ -386,13 +386,13 @@ RSpec.describe 'register/type/indirect' do
 
       expect(registers[13]).to generate_code(:register, :top_down, <<~'VERYL')
         assign indirect_match[0] = register_if[3].value[0+:1] == 1'h0;
-        assign indirect_match[1] = register_if[3].value[8+:2] == k as 2;
-        assign indirect_match[2] = register_if[3].value[16+:4] == l as 4;
+        assign indirect_match[1] = register_if[3].value[8+:2] == (k as 2);
+        assign indirect_match[2] = register_if[3].value[16+:4] == (l as 4);
         inst u_register: rggen_indirect_register #(
           READABLE:             1,
           WRITABLE:             1,
           ADDRESS_WIDTH:        8,
-          OFFSET_ADDRESS:       8'h30+8'(8*(2*i+j))+8'h04,
+          OFFSET_ADDRESS:       8'h30+(8*(2*i+j) as 8)+8'h04,
           BUS_WIDTH:            32,
           DATA_WIDTH:           32,
           VALUE_WIDTH:          32,

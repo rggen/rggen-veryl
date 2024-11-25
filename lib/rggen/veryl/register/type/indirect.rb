@@ -16,7 +16,7 @@ RgGen.define_list_item_feature(:register, :type, :indirect) do
     private
 
     def array_index_value(value, width)
-      "#{value} as #{width}"
+      width_cast(value, width)
     end
   end
 end
