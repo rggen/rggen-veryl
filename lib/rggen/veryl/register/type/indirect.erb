@@ -1,0 +1,17 @@
+inst u_register: rggen_indirect_register #(
+  READABLE:             <%= readable %>,
+  WRITABLE:             <%= writable %>,
+  ADDRESS_WIDTH:        <%= address_width %>,
+  OFFSET_ADDRESS:       <%= offset_address %>,
+  BUS_WIDTH:            <%= bus_width %>,
+  DATA_WIDTH:           <%= width %>,
+  VALUE_WIDTH:          <%= value_width %>,
+  VALID_BITS:           <%= valid_bits %>,
+  INDIRECT_MATCH_WIDTH: <%= index_match_width %>
+)(
+  i_clk:            <%= register_block.clock %>,
+  i_rst:            <%= register_block.reset %>,
+  register_if:      <%= register_if %>,
+  i_indirect_match: <%= indirect_match %>,
+  bit_field_if:     <%= bit_field_if %>
+);

@@ -44,6 +44,8 @@ RgGen.setup_plugin :'rggen-veryl' do |plugin|
     'veryl/bit_field/veryl_top',
     'veryl/register/type',
     'veryl/register/type/external',
+    'veryl/register/type/indirect',
+    'veryl/register/type/rw',
     'veryl/register/veryl_top',
     'veryl/register_file/veryl_top',
     'veryl/register_block/veryl_top'

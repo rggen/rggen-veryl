@@ -1,0 +1,15 @@
+inst u_register: rggen_default_register #(
+  READABLE:       1,
+  WRITABLE:       1,
+  ADDRESS_WIDTH:  <%= address_width %>,
+  OFFSET_ADDRESS: <%= offset_address %>,
+  BUS_WIDTH:      <%= bus_width %>,
+  DATA_WIDTH:     <%= width %>,
+  VALUE_WIDTH:    <%= value_width %>,
+  VALID_BITS:     <%= valid_bits %>
+)(
+  i_clk:        <%= register_block.clock %>,
+  i_rst:        <%= register_block.reset %>,
+  register_if:  <%= register_if %>,
+  bit_field_if: <%= bit_field_if %>
+);

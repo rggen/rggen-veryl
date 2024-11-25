@@ -30,12 +30,17 @@ module RgGen
         DataObject.new(:const, attributes, &block)
       end
 
+      def create_var(_, attributes, &block)
+        DataObject.new(:var, attributes, &block)
+      end
+
       define_entity :input, :create_port, :port, -> { register_block }
       define_entity :output, :create_port, :port, -> { register_block }
       define_entity :modport, :create_modport, :port, -> { register_block }
       define_entity :interface, :create_if_instance, :variable, -> { component }
       define_entity :param, :create_param, :parameter, -> { register_block }
       define_entity :const, :create_const, :parameter, -> { component }
+      define_entity :var, :create_var, :variable, -> { component }
     end
   end
 end

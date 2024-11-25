@@ -105,6 +105,18 @@ RSpec.shared_context 'veryl common' do
     not_have_declaration(layer, :variable, interface.declaration).and not_have_identifier(handler, interface.identifier)
   end
 
+  def have_var(*args, &body)
+    layer, handler, attributes =
+      case args.size
+      when 3 then args[0..2]
+      when 2 then [nil, args[0], args[1]]
+      else [nil, args[0], {}]
+      end
+    attributes = { name: handler }.merge(attributes)
+    var = RgGen::Veryl::Utility::DataObject.new(:var, **attributes, &body)
+    have_declaration(layer, :variable, var.declaration).and have_identifier(handler, var.identifier)
+  end
+
   def delete_veryl_factory
     @veryl_factory.clear
   end
