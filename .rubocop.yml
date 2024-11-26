@@ -22,5 +22,6 @@ Metrics/BlockLength:
 
 Naming/VariableNumber:
   AllowedIdentifiers:
+    - u32
     - w1
     - wo1
