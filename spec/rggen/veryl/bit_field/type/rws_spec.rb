@@ -294,7 +294,7 @@ RSpec.describe 'bit_field/type/rws' do
           WIDTH:          1,
           INITIAL_VALUE:  INITIAL_VALUE,
           HW_SET_WIDTH:   1
-        ) u_bit_field (
+        )(
           i_clk:              i_clk,
           i_rst:              i_rst,
           bit_field_if:       bit_field_sub_if,
@@ -317,7 +317,7 @@ RSpec.describe 'bit_field/type/rws' do
           WIDTH:          1,
           INITIAL_VALUE:  INITIAL_VALUE,
           HW_SET_WIDTH:   1
-        ) u_bit_field (
+        )(
           i_clk:              i_clk,
           i_rst:              i_rst,
           bit_field_if:       bit_field_sub_if,
@@ -340,7 +340,7 @@ RSpec.describe 'bit_field/type/rws' do
           WIDTH:          2,
           INITIAL_VALUE:  INITIAL_VALUE,
           HW_SET_WIDTH:   1
-        ) u_bit_field (
+        )(
           i_clk:              i_clk,
           i_rst:              i_rst,
           bit_field_if:       bit_field_sub_if,
@@ -363,7 +363,7 @@ RSpec.describe 'bit_field/type/rws' do
           WIDTH:          2,
           INITIAL_VALUE:  INITIAL_VALUE,
           HW_SET_WIDTH:   1
-        ) u_bit_field (
+        )(
           i_clk:              i_clk,
           i_rst:              i_rst,
           bit_field_if:       bit_field_sub_if,
@@ -386,7 +386,7 @@ RSpec.describe 'bit_field/type/rws' do
           WIDTH:          4,
           INITIAL_VALUE:  INITIAL_VALUE,
           HW_SET_WIDTH:   1
-        ) u_bit_field (
+        )(
           i_clk:              i_clk,
           i_rst:              i_rst,
           bit_field_if:       bit_field_sub_if,
@@ -409,7 +409,7 @@ RSpec.describe 'bit_field/type/rws' do
           WIDTH:          4,
           INITIAL_VALUE:  INITIAL_VALUE,
           HW_SET_WIDTH:   1
-        ) u_bit_field (
+        )(
           i_clk:              i_clk,
           i_rst:              i_rst,
           bit_field_if:       bit_field_sub_if,
@@ -432,7 +432,7 @@ RSpec.describe 'bit_field/type/rws' do
           WIDTH:          4,
           INITIAL_VALUE:  INITIAL_VALUE,
           HW_SET_WIDTH:   1
-        ) u_bit_field (
+        )(
           i_clk:              i_clk,
           i_rst:              i_rst,
           bit_field_if:       bit_field_sub_if,
@@ -455,7 +455,7 @@ RSpec.describe 'bit_field/type/rws' do
           WIDTH:          4,
           INITIAL_VALUE:  INITIAL_VALUE,
           HW_SET_WIDTH:   1
-        ) u_bit_field (
+        )(
           i_clk:              i_clk,
           i_rst:              i_rst,
           bit_field_if:       bit_field_sub_if,
@@ -478,7 +478,7 @@ RSpec.describe 'bit_field/type/rws' do
           WIDTH:          4,
           INITIAL_VALUE:  INITIAL_VALUE,
           HW_SET_WIDTH:   1
-        ) u_bit_field (
+        )(
           i_clk:              i_clk,
           i_rst:              i_rst,
           bit_field_if:       bit_field_sub_if,
@@ -501,7 +501,7 @@ RSpec.describe 'bit_field/type/rws' do
           WIDTH:          4,
           INITIAL_VALUE:  INITIAL_VALUE,
           HW_SET_WIDTH:   1
-        ) u_bit_field (
+        )(
           i_clk:              i_clk,
           i_rst:              i_rst,
           bit_field_if:       bit_field_sub_if,
@@ -524,7 +524,7 @@ RSpec.describe 'bit_field/type/rws' do
           WIDTH:          4,
           INITIAL_VALUE:  INITIAL_VALUE,
           HW_SET_WIDTH:   1
-        ) u_bit_field (
+        )(
           i_clk:              i_clk,
           i_rst:              i_rst,
           bit_field_if:       bit_field_sub_if,
@@ -547,7 +547,7 @@ RSpec.describe 'bit_field/type/rws' do
           WIDTH:          4,
           INITIAL_VALUE:  INITIAL_VALUE,
           HW_SET_WIDTH:   1
-        ) u_bit_field (
+        )(
           i_clk:              i_clk,
           i_rst:              i_rst,
           bit_field_if:       bit_field_sub_if,

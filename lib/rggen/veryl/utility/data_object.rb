@@ -53,11 +53,21 @@ module RgGen
         end
 
         def type_declaration
-          if width || array_size
-            "#{type}<#{[*array_size, width].compact.join(', ')}>"
+          if emit_width? || array_size
+            "#{type}<#{array_dimensions.join(', ')}>"
           else
             type
           end
+        end
+
+        def emit_width?
+          width && (!width.is_a?(Integer) || width >= 2)
+        end
+
+        def array_dimensions
+          dimensions = Array(array_size)
+          dimensions << width if emit_width?
+          dimensions
         end
 
         def default_value

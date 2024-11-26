@@ -30,6 +30,7 @@ RSpec.describe RgGen::Veryl::Utility::DataObject do
     context '変数の場合' do
       it '変数宣言を返す' do
         expect(var('foo')).to match_declaration('var foo: logic')
+        expect(var('foo') { |o| o.width 1 }).to match_declaration('var foo: logic')
         expect(var('foo') { |o| o.width 2 }).to match_declaration('var foo: logic<2>')
         expect(var('foo') { |o| o.width 'WIDTH' }).to match_declaration('var foo: logic<WIDTH>')
 

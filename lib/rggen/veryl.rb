@@ -22,6 +22,18 @@ RgGen.setup_plugin :'rggen-veryl' do |plugin|
   end
 
   plugin.files [
+    'veryl/register_block/veryl_top',
+    'veryl/register_block/protocol',
+    'veryl/register_block/protocol/apb',
+    'veryl/register_block/protocol/axi4lite',
+    'veryl/register_block/protocol/wishbone',
+    'veryl/register_file/veryl_top',
+    'veryl/register/veryl_top',
+    'veryl/register/type',
+    'veryl/register/type/external',
+    'veryl/register/type/indirect',
+    'veryl/register/type/rw',
+    'veryl/bit_field/veryl_top',
     'veryl/bit_field/type',
     'veryl/bit_field/type/custom',
     'veryl/bit_field/type/rc_w0c_w1c_wc_woc',
@@ -40,18 +52,6 @@ RgGen.setup_plugin :'rggen-veryl' do |plugin|
     'veryl/bit_field/type/w0t_w1t',
     'veryl/bit_field/type/w0trg_w1trg',
     'veryl/bit_field/type/wo_wo1_wotrg',
-    'veryl/bit_field/type/wrc_wrs',
-    'veryl/bit_field/veryl_top',
-    'veryl/register/type',
-    'veryl/register/type/external',
-    'veryl/register/type/indirect',
-    'veryl/register/type/rw',
-    'veryl/register/veryl_top',
-    'veryl/register_file/veryl_top',
-    'veryl/register_block/protocol',
-    'veryl/register_block/protocol/apb',
-    'veryl/register_block/protocol/axi4lite',
-    'veryl/register_block/protocol/wishbone',
-    'veryl/register_block/veryl_top'
+    'veryl/bit_field/type/wrc_wrs'
   ]
 end

@@ -6,8 +6,8 @@ module RgGen
       class Modport < SystemVerilog::Common::Utility::InterfacePort
         def declaration
           [
-            'modport',
             "#{name}:",
+            'modport',
             port_type
           ].join(' ')
         end

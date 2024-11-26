@@ -48,7 +48,7 @@ RSpec.describe 'register_block/protocol' do
     expect(veryl)
       .to have_param(
         :base_address,
-        name: 'BASE_ADDRESS', type: :bit, width: 'ADDRESS_WIDTH', default: 0
+        name: 'BASE_ADDRESS', type: :bit, width: 'ADDRESS_WIDTH', default: "'0"
       )
     expect(veryl)
       .to have_param(
@@ -58,7 +58,7 @@ RSpec.describe 'register_block/protocol' do
     expect(veryl)
       .to have_param(
         :default_read_data,
-        name: 'DEFAULT_READ_DATA', type: :bit, width: bus_width, default: 0
+        name: 'DEFAULT_READ_DATA', type: :bit, width: bus_width, default: "'0"
       )
     expect(veryl)
       .to have_param(

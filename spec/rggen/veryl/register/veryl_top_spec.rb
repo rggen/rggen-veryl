@@ -486,8 +486,8 @@ RSpec.describe 'register/veryl_top' do
         :g_register_4 {
           for i in 0..2 :g {
             for j in 0..2 :g {
-              var indirect_match: logic<2>;
               inst bit_field_if: rggen_bit_field_if#(WIDTH: 32);
+              var indirect_match: logic<2>;
               assign indirect_match[0] = register_if[0].value[0+:2] == (i as 2);
               assign indirect_match[1] = register_if[0].value[8+:2] == (j as 2);
               inst u_register: rggen_indirect_register #(

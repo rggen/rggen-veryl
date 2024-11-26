@@ -369,7 +369,7 @@ RSpec.describe 'bit_field/veryl_top' do
 
       expect(bit_fields[0]).to generate_code(:register, :top_down, <<~'VERYL')
         :g_bit_field_0 {
-          const INITIAL_VALUE: bit<1> = 1'h0;
+          const INITIAL_VALUE: bit = 1'h0;
           inst bit_field_sub_if: rggen_bit_field_if#(WIDTH: 1);
           always_comb {
             bit_field_sub_if.valid = bit_field_if.valid;
@@ -442,7 +442,7 @@ RSpec.describe 'bit_field/veryl_top' do
       expect(bit_fields[2]).to generate_code(:register, :top_down, <<~'VERYL')
         :g_bit_field_2 {
           for i in 0..2 :g {
-            const INITIAL_VALUE: bit<1> = 1'h0;
+            const INITIAL_VALUE: bit = 1'h0;
             inst bit_field_sub_if: rggen_bit_field_if#(WIDTH: 1);
             always_comb {
               bit_field_sub_if.valid = bit_field_if.valid;
@@ -554,7 +554,7 @@ RSpec.describe 'bit_field/veryl_top' do
 
       expect(bit_fields[5]).to generate_code(:register, :top_down, <<~'VERYL')
         :g_bit_field_0 {
-          const INITIAL_VALUE: bit<1> = 1'h0;
+          const INITIAL_VALUE: bit = 1'h0;
           inst bit_field_sub_if: rggen_bit_field_if#(WIDTH: 1);
           always_comb {
             bit_field_sub_if.valid = bit_field_if.valid;
@@ -627,7 +627,7 @@ RSpec.describe 'bit_field/veryl_top' do
       expect(bit_fields[7]).to generate_code(:register, :top_down, <<~'VERYL')
         :g_bit_field_2 {
           for j in 0..2 :g {
-            const INITIAL_VALUE: bit<1> = 1'h0;
+            const INITIAL_VALUE: bit = 1'h0;
             inst bit_field_sub_if: rggen_bit_field_if#(WIDTH: 1);
             always_comb {
               bit_field_sub_if.valid = bit_field_if.valid;
@@ -739,7 +739,7 @@ RSpec.describe 'bit_field/veryl_top' do
 
       expect(bit_fields[10]).to generate_code(:register, :top_down, <<~'VERYL')
         :g_bit_field_0 {
-          const INITIAL_VALUE: bit<1> = 1'h0;
+          const INITIAL_VALUE: bit = 1'h0;
           inst bit_field_sub_if: rggen_bit_field_if#(WIDTH: 1);
           always_comb {
             bit_field_sub_if.valid = bit_field_if.valid;
@@ -812,7 +812,7 @@ RSpec.describe 'bit_field/veryl_top' do
       expect(bit_fields[12]).to generate_code(:register, :top_down, <<~'VERYL')
         :g_bit_field_2 {
           for k in 0..2 :g {
-            const INITIAL_VALUE: bit<1> = 1'h0;
+            const INITIAL_VALUE: bit = 1'h0;
             inst bit_field_sub_if: rggen_bit_field_if#(WIDTH: 1);
             always_comb {
               bit_field_sub_if.valid = bit_field_if.valid;

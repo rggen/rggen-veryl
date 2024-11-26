@@ -124,7 +124,7 @@ RSpec.describe 'register_file/veryl_top' do
               bit_field_if: bit_field_if
             );
             :g_bit_field_0 {
-              const INITIAL_VALUE: bit<1> = 1'h0;
+              const INITIAL_VALUE: bit = 1'h0;
               inst bit_field_sub_if: rggen_bit_field_if#(WIDTH: 1);
               always_comb {
                 bit_field_sub_if.valid = bit_field_if.valid;
@@ -175,7 +175,7 @@ RSpec.describe 'register_file/veryl_top' do
               bit_field_if: bit_field_if
             );
             :g_bit_field_0 {
-              const INITIAL_VALUE: bit<1> = 1'h0;
+              const INITIAL_VALUE: bit = 1'h0;
               inst bit_field_sub_if: rggen_bit_field_if#(WIDTH: 1);
               always_comb {
                 bit_field_sub_if.valid = bit_field_if.valid;
@@ -232,7 +232,7 @@ RSpec.describe 'register_file/veryl_top' do
                 bit_field_if: bit_field_if
               );
               :g_bit_field_0 {
-                const INITIAL_VALUE: bit<1> = 1'h0;
+                const INITIAL_VALUE: bit = 1'h0;
                 inst bit_field_sub_if: rggen_bit_field_if#(WIDTH: 1);
                 always_comb {
                   bit_field_sub_if.valid = bit_field_if.valid;
@@ -284,7 +284,7 @@ RSpec.describe 'register_file/veryl_top' do
               bit_field_if: bit_field_if
             );
             :g_bit_field_0 {
-              const INITIAL_VALUE: bit<1> = 1'h0;
+              const INITIAL_VALUE: bit = 1'h0;
               inst bit_field_sub_if: rggen_bit_field_if#(WIDTH: 1);
               always_comb {
                 bit_field_sub_if.valid = bit_field_if.valid;
@@ -345,7 +345,7 @@ RSpec.describe 'register_file/veryl_top' do
                         bit_field_if: bit_field_if
                       );
                       :g_bit_field_0 {
-                        const INITIAL_VALUE: bit<1> = 1'h0;
+                        const INITIAL_VALUE: bit = 1'h0;
                         inst bit_field_sub_if: rggen_bit_field_if#(WIDTH: 1);
                         always_comb {
                           bit_field_sub_if.valid = bit_field_if.valid;
@@ -401,7 +401,7 @@ RSpec.describe 'register_file/veryl_top' do
                       bit_field_if: bit_field_if
                     );
                     :g_bit_field_0 {
-                      const INITIAL_VALUE: bit<1> = 1'h0;
+                      const INITIAL_VALUE: bit = 1'h0;
                       inst bit_field_sub_if: rggen_bit_field_if#(WIDTH: 1);
                       always_comb {
                         bit_field_sub_if.valid = bit_field_if.valid;
@@ -464,7 +464,7 @@ RSpec.describe 'register_file/veryl_top' do
                     bit_field_if: bit_field_if
                   );
                   :g_bit_field_0 {
-                    const INITIAL_VALUE: bit<1> = 1'h0;
+                    const INITIAL_VALUE: bit = 1'h0;
                     inst bit_field_sub_if: rggen_bit_field_if#(WIDTH: 1);
                     always_comb {
                       bit_field_sub_if.valid = bit_field_if.valid;
@@ -518,7 +518,7 @@ RSpec.describe 'register_file/veryl_top' do
                   bit_field_if: bit_field_if
                 );
                 :g_bit_field_0 {
-                  const INITIAL_VALUE: bit<1> = 1'h0;
+                  const INITIAL_VALUE: bit = 1'h0;
                   inst bit_field_sub_if: rggen_bit_field_if#(WIDTH: 1);
                   always_comb {
                     bit_field_sub_if.valid = bit_field_if.valid;

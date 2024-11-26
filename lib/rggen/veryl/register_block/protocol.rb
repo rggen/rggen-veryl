@@ -13,13 +13,13 @@ RgGen.define_list_feature(:register_block, :protocol) do
           name: 'PRE_DECODE', type: :bit, default: 0
         }
         param :base_address, {
-          name: 'BASE_ADDRESS', type: :bit, width: address_width, default: 0
+          name: 'BASE_ADDRESS', type: :bit, width: address_width, default: all_bits_0
         }
         param :error_status, {
           name: 'ERROR_STATUS', type: :bit, default: 0
         }
         param :default_read_data, {
-          name: 'DEFAULT_READ_DATA', type: :bit, width: bus_width, default: 0
+          name: 'DEFAULT_READ_DATA', type: :bit, width: bus_width, default: all_bits_0
         }
         param :insert_slicer, {
           name: 'INSERT_SLICER', type: :bit, default: 0
