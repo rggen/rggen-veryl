@@ -9,7 +9,7 @@ RgGen.define_list_item_feature(:register, :type, :external) do
       }
       modport :bus_if, {
         name: "#{register.name}_bus_if",
-        interface_type: 'rggen_bus_if', modport: 'master'
+        interface_type: 'rggen::rggen_bus_if', modport: 'master'
       }
     end
 

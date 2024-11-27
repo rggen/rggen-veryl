@@ -4,7 +4,8 @@ RgGen.define_list_item_feature(:register_block, :protocol, :apb) do
   veryl do
     build do
       modport :apb_if, {
-        name: 'apb_if', interface_type: 'rggen_apb_if', modport: 'slave'
+        name: 'apb_if',
+        interface_type: 'rggen::rggen_apb_if', modport: 'slave'
       }
     end
 

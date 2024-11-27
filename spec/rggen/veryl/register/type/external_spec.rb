@@ -40,7 +40,7 @@ RSpec.describe 'register/type/external' do
     expect(registers[0])
       .to have_modport(
         :register_block, :bus_if,
-        name: 'register_0_bus_if', interface_type: 'rggen_bus_if', modport: 'master'
+        name: 'register_0_bus_if', interface_type: 'rggen::rggen_bus_if', modport: 'master'
       )
   end
 
@@ -53,7 +53,7 @@ RSpec.describe 'register/type/external' do
       end
 
       expect(registers[0]).to generate_code(:register, :top_down, <<~'VERYL')
-        inst u_register: rggen_external_register #(
+        inst u_register: rggen::rggen_external_register #(
           ADDRESS_WIDTH:  8,
           BUS_WIDTH:      32,
           VALUE_WIDTH:    32,
@@ -69,7 +69,7 @@ RSpec.describe 'register/type/external' do
       VERYL
 
       expect(registers[1]).to generate_code(:register, :top_down, <<~'VERYL')
-        inst u_register: rggen_external_register #(
+        inst u_register: rggen::rggen_external_register #(
           ADDRESS_WIDTH:  8,
           BUS_WIDTH:      32,
           VALUE_WIDTH:    32,

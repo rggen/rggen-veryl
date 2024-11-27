@@ -117,9 +117,9 @@ RSpec.describe 'bit_field/type/w0trg' do
   end
 
   describe '#generate_code' do
-    it 'rggen_bit_field_w01trgをインスタンスするコードを生成する' do
+    it 'rggen::rggen_bit_field_w01trgをインスタンスするコードを生成する' do
       expect(bit_fields[0]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field_w01trg #(
+        inst u_bit_field: rggen::rggen_bit_field_w01trg #(
           TRIGGER_VALUE:  1'b0,
           WIDTH:          1
         )(
@@ -132,7 +132,7 @@ RSpec.describe 'bit_field/type/w0trg' do
       VERYL
 
       expect(bit_fields[1]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field_w01trg #(
+        inst u_bit_field: rggen::rggen_bit_field_w01trg #(
           TRIGGER_VALUE:  1'b0,
           WIDTH:          4
         )(
@@ -145,7 +145,7 @@ RSpec.describe 'bit_field/type/w0trg' do
       VERYL
 
       expect(bit_fields[2]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field_w01trg #(
+        inst u_bit_field: rggen::rggen_bit_field_w01trg #(
           TRIGGER_VALUE:  1'b0,
           WIDTH:          4
         )(
@@ -158,7 +158,7 @@ RSpec.describe 'bit_field/type/w0trg' do
       VERYL
 
       expect(bit_fields[5]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field_w01trg #(
+        inst u_bit_field: rggen::rggen_bit_field_w01trg #(
           TRIGGER_VALUE:  1'b0,
           WIDTH:          4
         )(
@@ -171,7 +171,7 @@ RSpec.describe 'bit_field/type/w0trg' do
       VERYL
 
       expect(bit_fields[8]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field_w01trg #(
+        inst u_bit_field: rggen::rggen_bit_field_w01trg #(
           TRIGGER_VALUE:  1'b0,
           WIDTH:          4
         )(
@@ -184,7 +184,7 @@ RSpec.describe 'bit_field/type/w0trg' do
       VERYL
 
       expect(bit_fields[11]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field_w01trg #(
+        inst u_bit_field: rggen::rggen_bit_field_w01trg #(
           TRIGGER_VALUE:  1'b0,
           WIDTH:          4
         )(

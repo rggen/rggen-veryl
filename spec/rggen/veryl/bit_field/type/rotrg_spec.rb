@@ -253,7 +253,7 @@ RSpec.describe 'bit_field/type/rotrg' do
   end
 
   describe '#generate_code' do
-    it 'rggen_bit_fieldをインスタンスするコードを生成する' do
+    it 'rggen::rggen_bit_fieldをインスタンスするコードを生成する' do
       bit_fields = create_bit_fields do
         byte_size 256
 
@@ -363,7 +363,7 @@ RSpec.describe 'bit_field/type/rotrg' do
       end
 
       expect(bit_fields[0]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field #(
+        inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              1,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,
@@ -387,7 +387,7 @@ RSpec.describe 'bit_field/type/rotrg' do
       VERYL
 
       expect(bit_fields[1]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field #(
+        inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              1,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,
@@ -411,7 +411,7 @@ RSpec.describe 'bit_field/type/rotrg' do
       VERYL
 
       expect(bit_fields[2]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field #(
+        inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              8,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,
@@ -435,7 +435,7 @@ RSpec.describe 'bit_field/type/rotrg' do
       VERYL
 
       expect(bit_fields[3]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field #(
+        inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              8,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,
@@ -459,7 +459,7 @@ RSpec.describe 'bit_field/type/rotrg' do
       VERYL
 
       expect(bit_fields[6]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field #(
+        inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              64,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,
@@ -483,7 +483,7 @@ RSpec.describe 'bit_field/type/rotrg' do
       VERYL
 
       expect(bit_fields[7]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field #(
+        inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,
@@ -507,7 +507,7 @@ RSpec.describe 'bit_field/type/rotrg' do
       VERYL
 
       expect(bit_fields[8]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field #(
+        inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,
@@ -531,7 +531,7 @@ RSpec.describe 'bit_field/type/rotrg' do
       VERYL
 
       expect(bit_fields[9]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field #(
+        inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,
@@ -555,7 +555,7 @@ RSpec.describe 'bit_field/type/rotrg' do
       VERYL
 
       expect(bit_fields[12]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field #(
+        inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,
@@ -579,7 +579,7 @@ RSpec.describe 'bit_field/type/rotrg' do
       VERYL
 
       expect(bit_fields[13]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field #(
+        inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,
@@ -603,7 +603,7 @@ RSpec.describe 'bit_field/type/rotrg' do
       VERYL
 
       expect(bit_fields[14]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field #(
+        inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,
@@ -627,7 +627,7 @@ RSpec.describe 'bit_field/type/rotrg' do
       VERYL
 
       expect(bit_fields[17]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field #(
+        inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,
@@ -651,7 +651,7 @@ RSpec.describe 'bit_field/type/rotrg' do
       VERYL
 
       expect(bit_fields[18]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field #(
+        inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,
@@ -675,7 +675,7 @@ RSpec.describe 'bit_field/type/rotrg' do
       VERYL
 
       expect(bit_fields[19]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field #(
+        inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,
@@ -699,7 +699,7 @@ RSpec.describe 'bit_field/type/rotrg' do
       VERYL
 
       expect(bit_fields[22]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field #(
+        inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,
@@ -723,7 +723,7 @@ RSpec.describe 'bit_field/type/rotrg' do
       VERYL
 
       expect(bit_fields[23]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field #(
+        inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,
@@ -747,7 +747,7 @@ RSpec.describe 'bit_field/type/rotrg' do
       VERYL
 
       expect(bit_fields[24]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field #(
+        inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,

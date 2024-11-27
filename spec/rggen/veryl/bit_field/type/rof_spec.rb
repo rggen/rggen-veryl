@@ -9,7 +9,7 @@ RSpec.describe 'bit_field/type/rof' do
   end
 
   describe '#generate_code' do
-    it 'rggen_bit_fieldをインスタンスするコードを出力する' do
+    it 'rggen::rggen_bit_fieldをインスタンスするコードを出力する' do
       bit_fields = create_bit_fields do
         byte_size 256
 
@@ -35,7 +35,7 @@ RSpec.describe 'bit_field/type/rof' do
       end
 
       expect(bit_fields[0]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field #(
+        inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              1,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1
@@ -58,7 +58,7 @@ RSpec.describe 'bit_field/type/rof' do
       VERYL
 
       expect(bit_fields[1]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field #(
+        inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              16,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1
@@ -81,7 +81,7 @@ RSpec.describe 'bit_field/type/rof' do
       VERYL
 
       expect(bit_fields[2]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field #(
+        inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              1,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1
@@ -104,7 +104,7 @@ RSpec.describe 'bit_field/type/rof' do
       VERYL
 
       expect(bit_fields[3]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field #(
+        inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              16,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1

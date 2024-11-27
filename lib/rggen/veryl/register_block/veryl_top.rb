@@ -7,7 +7,7 @@ RgGen.define_simple_feature(:register_block, :veryl_top) do
       input :reset, { name: 'i_rst', type: :reset }
 
       interface :register_if, {
-        name: 'register_if', interface_type: 'rggen_register_if',
+        name: 'register_if', interface_type: 'rggen::rggen_register_if',
         param_values: param_values, array_size: [total_registers], variables: ['value']
       }
     end
@@ -47,7 +47,7 @@ RgGen.define_simple_feature(:register_block, :veryl_top) do
     end
 
     def packages
-      ['rggen_rtl_pkg', *register_block.package_imports(:register_block)]
+      ['rggen::rggen_rtl_pkg', *register_block.package_imports(:register_block)]
     end
 
     def params

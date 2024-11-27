@@ -35,7 +35,7 @@ RSpec.describe 'register_block/veryl_top' do
   end
 
   describe 'register_if' do
-    it 'レジスタの個数分のrggen_register_ifのインスタンスを持つ' do
+    it 'レジスタの個数分のrggen::rggen_register_ifのインスタンスを持つ' do
       register_block = create_register_block do
         name 'block_0'
         byte_size 256
@@ -48,7 +48,7 @@ RSpec.describe 'register_block/veryl_top' do
       expect(register_block)
         .to have_interface(
           :register_if,
-          name: 'register_if', interface_type: 'rggen_register_if',
+          name: 'register_if', interface_type: 'rggen::rggen_register_if',
           param_values: {
             ADDRESS_WIDTH: address_width, BUS_WIDTH: bus_width, VALUE_WIDTH: 1 * bus_width
           },
@@ -68,7 +68,7 @@ RSpec.describe 'register_block/veryl_top' do
       expect(register_block)
         .to have_interface(
           :register_if,
-          name: 'register_if', interface_type: 'rggen_register_if',
+          name: 'register_if', interface_type: 'rggen::rggen_register_if',
           param_values: {
             ADDRESS_WIDTH: address_width, BUS_WIDTH: bus_width, VALUE_WIDTH: 1 * bus_width
           },
@@ -97,7 +97,7 @@ RSpec.describe 'register_block/veryl_top' do
       expect(register_block)
         .to have_interface(
           :register_if,
-          name: 'register_if', interface_type: 'rggen_register_if',
+          name: 'register_if', interface_type: 'rggen::rggen_register_if',
           param_values: {
             ADDRESS_WIDTH: address_width, BUS_WIDTH: bus_width, VALUE_WIDTH: 3 * bus_width
           },
@@ -141,7 +141,7 @@ RSpec.describe 'register_block/veryl_top' do
       expect(register_block)
         .to have_interface(
           :register_if,
-          name: 'register_if', interface_type: 'rggen_register_if',
+          name: 'register_if', interface_type: 'rggen::rggen_register_if',
           param_values: {
             ADDRESS_WIDTH: address_width, BUS_WIDTH: bus_width, VALUE_WIDTH: 2 * bus_width
           },

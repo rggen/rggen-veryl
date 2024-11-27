@@ -137,9 +137,9 @@ RSpec.describe 'register/type/default' do
       veryl.registers
     end
 
-    it 'rggen_default_registerをインスタンスするコードを出力する' do
+    it 'rggen::rggen_default_registerをインスタンスするコードを出力する' do
       expect(registers[0]).to generate_code(:register, :top_down, <<~'VERYL')
-        inst u_register: rggen_default_register #(
+        inst u_register: rggen::rggen_default_register #(
           READABLE:       1,
           WRITABLE:       1,
           ADDRESS_WIDTH:  10,
@@ -157,7 +157,7 @@ RSpec.describe 'register/type/default' do
       VERYL
 
       expect(registers[1]).to generate_code(:register, :top_down, <<~'VERYL')
-        inst u_register: rggen_default_register #(
+        inst u_register: rggen::rggen_default_register #(
           READABLE:       1,
           WRITABLE:       1,
           ADDRESS_WIDTH:  10,
@@ -175,7 +175,7 @@ RSpec.describe 'register/type/default' do
       VERYL
 
       expect(registers[2]).to generate_code(:register, :top_down, <<~'VERYL')
-        inst u_register: rggen_default_register #(
+        inst u_register: rggen::rggen_default_register #(
           READABLE:       1,
           WRITABLE:       1,
           ADDRESS_WIDTH:  10,
@@ -193,7 +193,7 @@ RSpec.describe 'register/type/default' do
       VERYL
 
       expect(registers[3]).to generate_code(:register, :top_down, <<~'VERYL')
-        inst u_register: rggen_default_register #(
+        inst u_register: rggen::rggen_default_register #(
           READABLE:       1,
           WRITABLE:       1,
           ADDRESS_WIDTH:  10,
@@ -211,7 +211,7 @@ RSpec.describe 'register/type/default' do
       VERYL
 
       expect(registers[4]).to generate_code(:register, :top_down, <<~'VERYL')
-        inst u_register: rggen_default_register #(
+        inst u_register: rggen::rggen_default_register #(
           READABLE:       1,
           WRITABLE:       1,
           ADDRESS_WIDTH:  10,
@@ -229,7 +229,7 @@ RSpec.describe 'register/type/default' do
       VERYL
 
       expect(registers[5]).to generate_code(:register, :top_down, <<~'VERYL')
-        inst u_register: rggen_default_register #(
+        inst u_register: rggen::rggen_default_register #(
           READABLE:       1,
           WRITABLE:       1,
           ADDRESS_WIDTH:  10,
@@ -247,7 +247,7 @@ RSpec.describe 'register/type/default' do
       VERYL
 
       expect(registers[6]).to generate_code(:register, :top_down, <<~'VERYL')
-        inst u_register: rggen_default_register #(
+        inst u_register: rggen::rggen_default_register #(
           READABLE:       1,
           WRITABLE:       1,
           ADDRESS_WIDTH:  10,
@@ -265,7 +265,7 @@ RSpec.describe 'register/type/default' do
       VERYL
 
       expect(registers[7]).to generate_code(:register, :top_down, <<~'VERYL')
-        inst u_register: rggen_default_register #(
+        inst u_register: rggen::rggen_default_register #(
           READABLE:       1,
           WRITABLE:       1,
           ADDRESS_WIDTH:  10,
@@ -283,7 +283,7 @@ RSpec.describe 'register/type/default' do
       VERYL
 
       expect(registers[8]).to generate_code(:register, :top_down, <<~'VERYL')
-        inst u_register: rggen_default_register #(
+        inst u_register: rggen::rggen_default_register #(
           READABLE:       1,
           WRITABLE:       1,
           ADDRESS_WIDTH:  10,
@@ -301,7 +301,7 @@ RSpec.describe 'register/type/default' do
       VERYL
 
       expect(registers[9]).to generate_code(:register, :top_down, <<~'VERYL')
-        inst u_register: rggen_default_register #(
+        inst u_register: rggen::rggen_default_register #(
           READABLE:       1,
           WRITABLE:       1,
           ADDRESS_WIDTH:  10,
@@ -319,7 +319,7 @@ RSpec.describe 'register/type/default' do
       VERYL
 
       expect(registers[10]).to generate_code(:register, :top_down, <<~'VERYL')
-        inst u_register: rggen_default_register #(
+        inst u_register: rggen::rggen_default_register #(
           READABLE:       1,
           WRITABLE:       1,
           ADDRESS_WIDTH:  10,
@@ -337,7 +337,7 @@ RSpec.describe 'register/type/default' do
       VERYL
 
       expect(registers[11]).to generate_code(:register, :top_down, <<~'VERYL')
-        inst u_register: rggen_default_register #(
+        inst u_register: rggen::rggen_default_register #(
           READABLE:       1,
           WRITABLE:       1,
           ADDRESS_WIDTH:  10,

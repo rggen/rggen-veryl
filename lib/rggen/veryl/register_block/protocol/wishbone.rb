@@ -7,7 +7,8 @@ RgGen.define_list_item_feature(:register_block, :protocol, :wishbone) do
         name: 'USE_STALL', type: :bit, default: 1
       }
       modport :wishbone_if, {
-        name: 'wishbone_if', interface_type: 'rggen_wishbone_if', modport: 'slave'
+        name: 'wishbone_if', interface_type:
+        'rggen::rggen_wishbone_if', modport: 'slave'
       }
     end
 

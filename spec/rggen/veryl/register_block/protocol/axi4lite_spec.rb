@@ -49,12 +49,12 @@ RSpec.describe 'register_block/protocol/axi4lite' do
     expect(register_block)
       .to have_modport(
         :axi4lite_if,
-        name: 'axi4lite_if', interface_type: 'rggen_axi4lite_if', modport: 'slave'
+        name: 'axi4lite_if', interface_type: 'rggen::rggen_axi4lite_if', modport: 'slave'
     )
   end
 
   describe '#generate_code' do
-    it 'rggen_axi4lite_adapterをインスタンスするコードを生成する' do
+    it 'rggen::rggen_axi4lite_adapterをインスタンスするコードを生成する' do
       register_block = create_register_block do
         name 'block_0'
           byte_size 256
@@ -64,7 +64,7 @@ RSpec.describe 'register_block/protocol/axi4lite' do
       end
 
       expect(register_block).to generate_code(:register_block, :top_down, <<~'VERYL')
-        inst u_adapter: rggen_axi4lite_adapter #(
+        inst u_adapter: rggen::rggen_axi4lite_adapter #(
           ID_WIDTH:             ID_WIDTH,
           ADDRESS_WIDTH:        ADDRESS_WIDTH,
           LOCAL_ADDRESS_WIDTH:  8,

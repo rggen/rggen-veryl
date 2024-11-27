@@ -345,9 +345,9 @@ RSpec.describe 'bit_field/type/rohw' do
   end
 
   describe '#generate_code' do
-    it 'rggen_bit_fieldをインスタンスするコードを出力する' do
+    it 'rggen::rggen_bit_fieldをインスタンスするコードを出力する' do
       expect(bit_fields[0]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field #(
+        inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:            1,
           INITIAL_VALUE:    INITIAL_VALUE,
           SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE
@@ -370,7 +370,7 @@ RSpec.describe 'bit_field/type/rohw' do
       VERYL
 
       expect(bit_fields[1]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field #(
+        inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:            1,
           INITIAL_VALUE:    INITIAL_VALUE,
           SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE
@@ -393,7 +393,7 @@ RSpec.describe 'bit_field/type/rohw' do
       VERYL
 
       expect(bit_fields[2]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field #(
+        inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:            2,
           INITIAL_VALUE:    INITIAL_VALUE,
           SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE
@@ -416,7 +416,7 @@ RSpec.describe 'bit_field/type/rohw' do
       VERYL
 
       expect(bit_fields[3]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field #(
+        inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:            2,
           INITIAL_VALUE:    INITIAL_VALUE,
           SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE
@@ -439,7 +439,7 @@ RSpec.describe 'bit_field/type/rohw' do
       VERYL
 
       expect(bit_fields[4]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field #(
+        inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:            4,
           INITIAL_VALUE:    INITIAL_VALUE,
           SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE
@@ -462,7 +462,7 @@ RSpec.describe 'bit_field/type/rohw' do
       VERYL
 
       expect(bit_fields[5]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field #(
+        inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:            4,
           INITIAL_VALUE:    INITIAL_VALUE,
           SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE
@@ -485,7 +485,7 @@ RSpec.describe 'bit_field/type/rohw' do
       VERYL
 
       expect(bit_fields[10]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field #(
+        inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:            4,
           INITIAL_VALUE:    INITIAL_VALUE,
           SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE
@@ -508,7 +508,7 @@ RSpec.describe 'bit_field/type/rohw' do
       VERYL
 
       expect(bit_fields[11]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field #(
+        inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:            4,
           INITIAL_VALUE:    INITIAL_VALUE,
           SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE
@@ -531,7 +531,7 @@ RSpec.describe 'bit_field/type/rohw' do
       VERYL
 
       expect(bit_fields[16]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field #(
+        inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:            4,
           INITIAL_VALUE:    INITIAL_VALUE,
           SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE
@@ -554,7 +554,7 @@ RSpec.describe 'bit_field/type/rohw' do
       VERYL
 
       expect(bit_fields[17]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field #(
+        inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:            4,
           INITIAL_VALUE:    INITIAL_VALUE,
           SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE
@@ -577,7 +577,7 @@ RSpec.describe 'bit_field/type/rohw' do
       VERYL
 
       expect(bit_fields[22]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field #(
+        inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:            4,
           INITIAL_VALUE:    INITIAL_VALUE,
           SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE
@@ -600,7 +600,7 @@ RSpec.describe 'bit_field/type/rohw' do
       VERYL
 
       expect(bit_fields[23]).to generate_code(:bit_field, :top_down, <<~'VERYL')
-        inst u_bit_field: rggen_bit_field #(
+        inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:            4,
           INITIAL_VALUE:    INITIAL_VALUE,
           SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE

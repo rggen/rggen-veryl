@@ -11,7 +11,7 @@ RgGen.define_list_item_feature(:register_block, :protocol, :axi4lite) do
       }
       modport :axi4lite_if, {
         name: 'axi4lite_if',
-        interface_type: 'rggen_axi4lite_if', modport: 'slave'
+        interface_type: 'rggen::rggen_axi4lite_if', modport: 'slave'
       }
     end
 

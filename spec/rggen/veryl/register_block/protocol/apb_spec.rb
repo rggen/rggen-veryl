@@ -33,12 +33,12 @@ RSpec.describe 'register_block/protocol/apb' do
     expect(register_block)
       .to have_modport(
         :apb_if,
-        name: 'apb_if', interface_type: 'rggen_apb_if', modport: 'slave'
+        name: 'apb_if', interface_type: 'rggen::rggen_apb_if', modport: 'slave'
       )
   end
 
   describe '#generate_code' do
-    it 'rggen_apb_adapterをインスタンスするコードを生成する' do
+    it 'rggen::rggen_apb_adapterをインスタンスするコードを生成する' do
       register_block = create_register_block do
         name 'block_0'
         byte_size 256
@@ -48,7 +48,7 @@ RSpec.describe 'register_block/protocol/apb' do
       end
 
       expect(register_block).to generate_code(:register_block, :top_down, <<~'VERYL')
-        inst u_adapter: rggen_apb_adapter #(
+        inst u_adapter: rggen::rggen_apb_adapter #(
           ADDRESS_WIDTH:        ADDRESS_WIDTH,
           LOCAL_ADDRESS_WIDTH:  8,
           BUS_WIDTH:            32,

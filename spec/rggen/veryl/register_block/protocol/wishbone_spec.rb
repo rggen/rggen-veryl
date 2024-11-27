@@ -45,14 +45,14 @@ RSpec.describe 'regisrer_block/protocol/wishbone' do
     expect(register_block)
       .to have_modport(
         :wishbone_if,
-        name: 'wishbone_if', interface_type: 'rggen_wishbone_if', modport: 'slave'
+        name: 'wishbone_if', interface_type: 'rggen::rggen_wishbone_if', modport: 'slave'
       )
   end
 
   describe '#generate_code' do
-    it 'rggen_wishbone_adapterをインスタンスするコードを生成する' do
+    it 'rggen::rggen_wishbone_adapterをインスタンスするコードを生成する' do
       expect(register_block).to generate_code(:register_block, :top_down, <<~'VERYL')
-        inst u_adapter: rggen_wishbone_adapter #(
+        inst u_adapter: rggen::rggen_wishbone_adapter #(
           ADDRESS_WIDTH:        ADDRESS_WIDTH,
           LOCAL_ADDRESS_WIDTH:  8,
           BUS_WIDTH:            32,
