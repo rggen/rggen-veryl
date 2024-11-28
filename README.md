@@ -32,6 +32,19 @@ $ export RGGEN_PLUGINS=${RGGEN_PLUGINS}:rggen-veryl
 $ rggen your_register_map.yml
 ```
 
+## Using Generated RTL
+
+Generated RTL files are constructed by using common Veryl modules maintained in the repository below.
+
+https://github.com/rggen/rggen-veryl-rtl
+
+You need to add this repository to the `[dependencies]` section in your `Veryl.toml` file. For example:
+
+```toml
+[dependencies]
+"https://github.com/rggen/rggen-veryl-rtl" = "0.1.0"
+```
+
 ## Contact
 
 Feedbacks, bus reports, questions and etc. are welcome! You can post them by using following ways:
