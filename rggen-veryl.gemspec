@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
     'bug_tracker_uri' => 'https://github.com/rggen/rggen/issues',
     'mailing_list_uri' => 'https://groups.google.com/d/forum/rggen',
     'rubygems_mfa_required' => 'true',
-    'source_code_uri' => 'https://github.com/rggen/rggen-vhdl',
+    'source_code_uri' => 'https://github.com/rggen/rggen-veryl',
     'wiki_uri' => 'https://github.com/rggen/rggen/wiki'
   }
 
