@@ -62,4 +62,4 @@ Copyright &copy; 2024 Taichi Ishitani. RgGen::Veryl is licensed under the [MIT L
 
 ## Code of Conduct
 
-Everyone interacting in the RgGen::Veryl project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/rggen-veryl/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the RgGen::Veryl project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/rggen/rggen-veryl/blob/master/CODE_OF_CONDUCT.md).
