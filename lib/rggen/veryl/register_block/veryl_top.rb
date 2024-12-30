@@ -8,7 +8,7 @@ RgGen.define_simple_feature(:register_block, :veryl_top) do
 
       interface :register_if, {
         name: 'register_if', interface_type: 'rggen::rggen_register_if',
-        param_values: param_values, array_size: [total_registers], variables: ['value']
+        param_values:, array_size: [total_registers], variables: ['value']
       }
     end
 
