@@ -5,15 +5,15 @@ module RgGen
     module Utility
       private
 
-      def local_scope(name, attributes = {}, &block)
+      def local_scope(name, attributes = {}, &)
         LocalScope
-          .new(attributes.merge(name: name), &block)
+          .new(attributes.merge(name:), &)
           .to_code
       end
 
-      def module_definition(name, attributes = {}, &block)
+      def module_definition(name, attributes = {}, &)
         ModuleDefinition
-          .new(attributes.merge(name: name), &block)
+          .new(attributes.merge(name:), &)
           .to_code
       end
 

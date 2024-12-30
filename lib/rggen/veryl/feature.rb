@@ -7,31 +7,31 @@ module RgGen
 
       private
 
-      def create_if_instance(_, attributes, &block)
-        InterfaceInstance.new(attributes, &block)
+      def create_if_instance(_, attributes, &)
+        InterfaceInstance.new(attributes, &)
       end
 
-      def create_port(direction, attributes, &block)
+      def create_port(direction, attributes, &)
         attributes =
-          { direction: direction }
+          { direction: }
             .merge(attributes)
-        DataObject.new(:port, attributes, &block)
+        DataObject.new(:port, attributes, &)
       end
 
-      def create_modport(_, attributes, &block)
-        Modport.new(attributes, &block)
+      def create_modport(_, attributes, &)
+        Modport.new(attributes, &)
       end
 
-      def create_param(_, attributes, &block)
-        DataObject.new(:param, attributes, &block)
+      def create_param(_, attributes, &)
+        DataObject.new(:param, attributes, &)
       end
 
-      def create_const(_, attributes, &block)
-        DataObject.new(:const, attributes, &block)
+      def create_const(_, attributes, &)
+        DataObject.new(:const, attributes, &)
       end
 
-      def create_var(_, attributes, &block)
-        DataObject.new(:var, attributes, &block)
+      def create_var(_, attributes, &)
+        DataObject.new(:var, attributes, &)
       end
 
       define_entity :input, :create_port, :port, -> { register_block }
