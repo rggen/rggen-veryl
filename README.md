@@ -58,7 +58,7 @@ Feedbacks, bus reports, questions and etc. are welcome! You can post them by usi
 
 ## Copyright & License
 
-Copyright &copy; 2024 Taichi Ishitani. RgGen::Veryl is licensed under the [MIT License](https://opensource.org/licenses/MIT), see [LICENSE](LICENSE) for futher details.
+Copyright &copy; 2024-2025 Taichi Ishitani. RgGen::Veryl is licensed under the [MIT License](https://opensource.org/licenses/MIT), see [LICENSE](LICENSE) for futher details.
 
 ## Code of Conduct
 
