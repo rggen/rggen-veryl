@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'rggen/systemverilog/rtl'
 require_relative 'veryl/version'
 require_relative 'veryl/utility/data_object'
 require_relative 'veryl/utility/modport'
@@ -10,6 +11,7 @@ require_relative 'veryl/utility'
 require_relative 'veryl/component'
 require_relative 'veryl/feature'
 require_relative 'veryl/factories'
+require_relative 'veryl/register_map/keyword_checker'
 
 RgGen.setup_plugin :'rggen-veryl' do |plugin|
   plugin.version RgGen::Veryl::VERSION
@@ -53,5 +55,9 @@ RgGen.setup_plugin :'rggen-veryl' do |plugin|
     'veryl/bit_field/type/w0trg_w1trg',
     'veryl/bit_field/type/wo_wo1_wotrg',
     'veryl/bit_field/type/wrc_wrs'
+  ]
+
+  plugin.files [
+    'veryl/register_map/name'
   ]
 end
