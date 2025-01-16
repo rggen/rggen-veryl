@@ -29,6 +29,7 @@ RgGen.setup_plugin :'rggen-veryl' do |plugin|
     'veryl/register_block/protocol/apb',
     'veryl/register_block/protocol/axi4lite',
     'veryl/register_block/protocol/wishbone',
+    'veryl/register_block/protocol/native',
     'veryl/register_file/veryl_top',
     'veryl/register/veryl_top',
     'veryl/register/type',
