@@ -5,10 +5,9 @@ RSpec.describe 'register_block/protocol/apb' do
   include_context 'clean-up builder'
 
   before(:all) do
-    RgGen.enable(:global, [:bus_width, :address_width, :enable_wide_register])
-    RgGen.enable(:register_block, :protocol)
+    RgGen.enable(:global, [:address_width, :enable_wide_register])
+    RgGen.enable(:register_block, [:name, :byte_size, :protocol, :bus_width])
     RgGen.enable(:register_block, :protocol, [:apb])
-    RgGen.enable(:register_block, [:name, :byte_size])
     RgGen.enable(:register, [:name, :offset_address, :size, :type])
     RgGen.enable(:register, :type, :external)
     RgGen.enable(:register_block, :veryl_top)
