@@ -68,31 +68,31 @@ RSpec.describe 'regiter_map/name' do
   end
 
   context 'レジスタブロック名がVerylの予約語に一致する場合' do
-    it 'RegiterMapErrorを起こす' do
+    it 'SourceErrorを起こす' do
       veryl_keywords.each do |keyword|
         expect {
           create_register_map do
             register_block { name keyword }
           end
-        }.to raise_register_map_error "veryl keyword is not allowed for register block name: #{keyword}"
+        }.to raise_source_error "veryl keyword is not allowed for register block name: #{keyword}"
       end
     end
   end
 
   context 'レジスタブロック名がSystemVerilogの予約語に一致する場合' do
-    it 'RegiterMapErrorを起こす' do
+    it 'SourceErrorを起こす' do
       systemverilog_keywords.each do |keyword|
         expect {
           create_register_map do
             register_block { name keyword }
           end
-        }.to raise_register_map_error "systemverilog keyword is not allowed for register block name: #{keyword}"
+        }.to raise_source_error "systemverilog keyword is not allowed for register block name: #{keyword}"
       end
     end
   end
 
   context 'レジスタファイル名がVerylの予約語に一致する場合' do
-    it 'RegiterMapErrorを起こす' do
+    it 'SourceErrorを起こす' do
       veryl_keywords.each do |keyword|
         expect {
           create_register_map do
@@ -101,13 +101,13 @@ RSpec.describe 'regiter_map/name' do
               register_file { name keyword }
             end
           end
-        }.to raise_register_map_error "veryl keyword is not allowed for register file name: #{keyword}"
+        }.to raise_source_error "veryl keyword is not allowed for register file name: #{keyword}"
       end
     end
   end
 
   context 'レジスタファイル名がSystemVerilogの予約語に一致する場合' do
-    it 'RegiterMapErrorを起こす' do
+    it 'SourceErrorを起こす' do
       systemverilog_keywords.each do |keyword|
         expect {
           create_register_map do
@@ -116,13 +116,13 @@ RSpec.describe 'regiter_map/name' do
               register_file { name keyword }
             end
           end
-        }.to raise_register_map_error "systemverilog keyword is not allowed for register file name: #{keyword}"
+        }.to raise_source_error "systemverilog keyword is not allowed for register file name: #{keyword}"
       end
     end
   end
 
   context 'レジスタ名がVerylの予約語に一致する場合' do
-    it 'RegiterMapErrorを起こす' do
+    it 'SourceErrorを起こす' do
       veryl_keywords.each do |keyword|
         expect {
           create_register_map do
@@ -131,13 +131,13 @@ RSpec.describe 'regiter_map/name' do
               register { name keyword }
             end
           end
-        }.to raise_register_map_error "veryl keyword is not allowed for register name: #{keyword}"
+        }.to raise_source_error "veryl keyword is not allowed for register name: #{keyword}"
       end
     end
   end
 
   context 'レジスタ名がSystemVerilogの予約語に一致する場合' do
-    it 'RegiterMapErrorを起こす' do
+    it 'SourceErrorを起こす' do
       systemverilog_keywords.each do |keyword|
         expect {
           create_register_map do
@@ -146,13 +146,13 @@ RSpec.describe 'regiter_map/name' do
               register { name keyword }
             end
           end
-        }.to raise_register_map_error "systemverilog keyword is not allowed for register name: #{keyword}"
+        }.to raise_source_error "systemverilog keyword is not allowed for register name: #{keyword}"
       end
     end
   end
 
   context 'ビットフィールド名がVerylの予約語に一致する場合' do
-    it 'RegiterMapErrorを起こす' do
+    it 'SourceErrorを起こす' do
       veryl_keywords.each do |keyword|
         expect {
           create_register_map do
@@ -164,13 +164,13 @@ RSpec.describe 'regiter_map/name' do
               end
             end
           end
-        }.to raise_register_map_error "veryl keyword is not allowed for bit field name: #{keyword}"
+        }.to raise_source_error "veryl keyword is not allowed for bit field name: #{keyword}"
       end
     end
   end
 
   context 'ビットフィールド名がSystemVerilogの予約語に一致する場合' do
-    it 'RegiterMapErrorを起こす' do
+    it 'SourceErrorを起こす' do
       systemverilog_keywords.each do |keyword|
         expect {
           create_register_map do
@@ -182,7 +182,7 @@ RSpec.describe 'regiter_map/name' do
               end
             end
           end
-        }.to raise_register_map_error "systemverilog keyword is not allowed for bit field name: #{keyword}"
+        }.to raise_source_error "systemverilog keyword is not allowed for bit field name: #{keyword}"
       end
     end
   end
