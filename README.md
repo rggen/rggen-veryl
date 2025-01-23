@@ -43,7 +43,7 @@ You need to add this repository to the `[dependencies]` section in your `Veryl.t
 
 ```toml
 [dependencies]
-"https://github.com/rggen/rggen-veryl-rtl" = "0.1.0"
+"https://github.com/rggen/rggen-veryl-rtl" = "0.2.0"
 ```
 
 ## Contact
