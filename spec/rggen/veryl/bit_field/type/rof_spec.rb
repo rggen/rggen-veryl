@@ -37,92 +37,56 @@ RSpec.describe 'bit_field/type/rof' do
       expect(bit_fields[0]).to generate_code(:bit_field, :top_down, <<~'VERYL')
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              1,
+          SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1
         )(
-          i_clk:              '0,
-          i_rst:              '0,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '0,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            INITIAL_VALUE,
-          i_mask:             '1,
-          o_value:            _,
-          o_value_unmasked:   _
+          i_clk:        '0,
+          i_rst:        '0,
+          bit_field_if: bit_field_sub_if,
+          i_value:      INITIAL_VALUE
         );
       VERYL
 
       expect(bit_fields[1]).to generate_code(:bit_field, :top_down, <<~'VERYL')
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              16,
+          SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1
         )(
-          i_clk:              '0,
-          i_rst:              '0,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '0,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            INITIAL_VALUE,
-          i_mask:             '1,
-          o_value:            _,
-          o_value_unmasked:   _
+          i_clk:        '0,
+          i_rst:        '0,
+          bit_field_if: bit_field_sub_if,
+          i_value:      INITIAL_VALUE
         );
       VERYL
 
       expect(bit_fields[2]).to generate_code(:bit_field, :top_down, <<~'VERYL')
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              1,
+          SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1
         )(
-          i_clk:              '0,
-          i_rst:              '0,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '0,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            INITIAL_VALUE,
-          i_mask:             '1,
-          o_value:            _,
-          o_value_unmasked:   _
+          i_clk:        '0,
+          i_rst:        '0,
+          bit_field_if: bit_field_sub_if,
+          i_value:      INITIAL_VALUE
         );
       VERYL
 
       expect(bit_fields[3]).to generate_code(:bit_field, :top_down, <<~'VERYL')
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              16,
+          SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1
         )(
-          i_clk:              '0,
-          i_rst:              '0,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '0,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            INITIAL_VALUE,
-          i_mask:             '1,
-          o_value:            _,
-          o_value_unmasked:   _
+          i_clk:        '0,
+          i_rst:        '0,
+          bit_field_if: bit_field_sub_if,
+          i_value:      INITIAL_VALUE
         );
       VERYL
     end

@@ -140,20 +140,12 @@ RSpec.describe 'register_file/veryl_top' do
                 SW_WRITE_ONCE:  0,
                 TRIGGER:        0
               )(
-                i_clk:              i_clk,
-                i_rst:              i_rst,
-                bit_field_if:       bit_field_sub_if,
-                o_write_trigger:    _,
-                o_read_trigger:     _,
-                i_sw_write_enable:  '1,
-                i_hw_write_enable:  '0,
-                i_hw_write_data:    '0,
-                i_hw_set:           '0,
-                i_hw_clear:         '0,
-                i_value:            '0,
-                i_mask:             '1,
-                o_value:            o_register_file_0_register_0_bit_field_0,
-                o_value_unmasked:   _
+                i_clk:            i_clk,
+                i_rst:            i_rst,
+                bit_field_if:     bit_field_sub_if,
+                o_write_trigger:  _,
+                o_read_trigger:   _,
+                o_value:          o_register_file_0_register_0_bit_field_0
               );
             }
           }
@@ -191,20 +183,12 @@ RSpec.describe 'register_file/veryl_top' do
                 SW_WRITE_ONCE:  0,
                 TRIGGER:        0
               )(
-                i_clk:              i_clk,
-                i_rst:              i_rst,
-                bit_field_if:       bit_field_sub_if,
-                o_write_trigger:    _,
-                o_read_trigger:     _,
-                i_sw_write_enable:  '1,
-                i_hw_write_enable:  '0,
-                i_hw_write_data:    '0,
-                i_hw_set:           '0,
-                i_hw_clear:         '0,
-                i_value:            '0,
-                i_mask:             '1,
-                o_value:            o_register_file_0_register_1_bit_field_0,
-                o_value_unmasked:   _
+                i_clk:            i_clk,
+                i_rst:            i_rst,
+                bit_field_if:     bit_field_sub_if,
+                o_write_trigger:  _,
+                o_read_trigger:   _,
+                o_value:          o_register_file_0_register_1_bit_field_0
               );
             }
           }
@@ -248,20 +232,12 @@ RSpec.describe 'register_file/veryl_top' do
                   SW_WRITE_ONCE:  0,
                   TRIGGER:        0
                 )(
-                  i_clk:              i_clk,
-                  i_rst:              i_rst,
-                  bit_field_if:       bit_field_sub_if,
-                  o_write_trigger:    _,
-                  o_read_trigger:     _,
-                  i_sw_write_enable:  '1,
-                  i_hw_write_enable:  '0,
-                  i_hw_write_data:    '0,
-                  i_hw_set:           '0,
-                  i_hw_clear:         '0,
-                  i_value:            '0,
-                  i_mask:             '1,
-                  o_value:            o_register_file_1_register_file_0_register_0_bit_field_0,
-                  o_value_unmasked:   _
+                  i_clk:            i_clk,
+                  i_rst:            i_rst,
+                  bit_field_if:     bit_field_sub_if,
+                  o_write_trigger:  _,
+                  o_read_trigger:   _,
+                  o_value:          o_register_file_1_register_file_0_register_0_bit_field_0
                 );
               }
             }
@@ -300,20 +276,12 @@ RSpec.describe 'register_file/veryl_top' do
                 SW_WRITE_ONCE:  0,
                 TRIGGER:        0
               )(
-                i_clk:              i_clk,
-                i_rst:              i_rst,
-                bit_field_if:       bit_field_sub_if,
-                o_write_trigger:    _,
-                o_read_trigger:     _,
-                i_sw_write_enable:  '1,
-                i_hw_write_enable:  '0,
-                i_hw_write_data:    '0,
-                i_hw_set:           '0,
-                i_hw_clear:         '0,
-                i_value:            '0,
-                i_mask:             '1,
-                o_value:            o_register_file_1_register_1_bit_field_0,
-                o_value_unmasked:   _
+                i_clk:            i_clk,
+                i_rst:            i_rst,
+                bit_field_if:     bit_field_sub_if,
+                o_write_trigger:  _,
+                o_read_trigger:   _,
+                o_value:          o_register_file_1_register_1_bit_field_0
               );
             }
           }
@@ -361,20 +329,12 @@ RSpec.describe 'register_file/veryl_top' do
                           SW_WRITE_ONCE:  0,
                           TRIGGER:        0
                         )(
-                          i_clk:              i_clk,
-                          i_rst:              i_rst,
-                          bit_field_if:       bit_field_sub_if,
-                          o_write_trigger:    _,
-                          o_read_trigger:     _,
-                          i_sw_write_enable:  '1,
-                          i_hw_write_enable:  '0,
-                          i_hw_write_data:    '0,
-                          i_hw_set:           '0,
-                          i_hw_clear:         '0,
-                          i_value:            '0,
-                          i_mask:             '1,
-                          o_value:            o_register_file_2_register_file_0_register_0_bit_field_0[i][j][k][l],
-                          o_value_unmasked:   _
+                          i_clk:            i_clk,
+                          i_rst:            i_rst,
+                          bit_field_if:     bit_field_sub_if,
+                          o_write_trigger:  _,
+                          o_read_trigger:   _,
+                          o_value:          o_register_file_2_register_file_0_register_0_bit_field_0[i][j][k][l]
                         );
                       }
                     }
@@ -417,20 +377,12 @@ RSpec.describe 'register_file/veryl_top' do
                         SW_WRITE_ONCE:  0,
                         TRIGGER:        0
                       )(
-                        i_clk:              i_clk,
-                        i_rst:              i_rst,
-                        bit_field_if:       bit_field_sub_if,
-                        o_write_trigger:    _,
-                        o_read_trigger:     _,
-                        i_sw_write_enable:  '1,
-                        i_hw_write_enable:  '0,
-                        i_hw_write_data:    '0,
-                        i_hw_set:           '0,
-                        i_hw_clear:         '0,
-                        i_value:            '0,
-                        i_mask:             '1,
-                        o_value:            o_register_file_2_register_1_bit_field_0[i][j][k][l],
-                        o_value_unmasked:   _
+                        i_clk:            i_clk,
+                        i_rst:            i_rst,
+                        bit_field_if:     bit_field_sub_if,
+                        o_write_trigger:  _,
+                        o_read_trigger:   _,
+                        o_value:          o_register_file_2_register_1_bit_field_0[i][j][k][l]
                       );
                     }
                   }
@@ -480,20 +432,12 @@ RSpec.describe 'register_file/veryl_top' do
                       SW_WRITE_ONCE:  0,
                       TRIGGER:        0
                     )(
-                      i_clk:              i_clk,
-                      i_rst:              i_rst,
-                      bit_field_if:       bit_field_sub_if,
-                      o_write_trigger:    _,
-                      o_read_trigger:     _,
-                      i_sw_write_enable:  '1,
-                      i_hw_write_enable:  '0,
-                      i_hw_write_data:    '0,
-                      i_hw_set:           '0,
-                      i_hw_clear:         '0,
-                      i_value:            '0,
-                      i_mask:             '1,
-                      o_value:            o_register_file_3_register_file_0_register_0_bit_field_0[i][j],
-                      o_value_unmasked:   _
+                      i_clk:            i_clk,
+                      i_rst:            i_rst,
+                      bit_field_if:     bit_field_sub_if,
+                      o_write_trigger:  _,
+                      o_read_trigger:   _,
+                      o_value:          o_register_file_3_register_file_0_register_0_bit_field_0[i][j]
                     );
                   }
                 }
@@ -534,20 +478,12 @@ RSpec.describe 'register_file/veryl_top' do
                     SW_WRITE_ONCE:  0,
                     TRIGGER:        0
                   )(
-                    i_clk:              i_clk,
-                    i_rst:              i_rst,
-                    bit_field_if:       bit_field_sub_if,
-                    o_write_trigger:    _,
-                    o_read_trigger:     _,
-                    i_sw_write_enable:  '1,
-                    i_hw_write_enable:  '0,
-                    i_hw_write_data:    '0,
-                    i_hw_set:           '0,
-                    i_hw_clear:         '0,
-                    i_value:            '0,
-                    i_mask:             '1,
-                    o_value:            o_register_file_3_register_1_bit_field_0[i][j],
-                    o_value_unmasked:   _
+                    i_clk:            i_clk,
+                    i_rst:            i_rst,
+                    bit_field_if:     bit_field_sub_if,
+                    o_write_trigger:  _,
+                    o_read_trigger:   _,
+                    o_value:          o_register_file_3_register_1_bit_field_0[i][j]
                   );
                 }
               }

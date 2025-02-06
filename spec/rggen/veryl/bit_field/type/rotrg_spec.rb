@@ -365,408 +365,272 @@ RSpec.describe 'bit_field/type/rotrg' do
       expect(bit_fields[0]).to generate_code(:bit_field, :top_down, <<~'VERYL')
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              1,
+          SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            1
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     o_register_0_bit_field_0_read_trigger,
-          i_sw_write_enable:  '0,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            i_register_0_bit_field_0,
-          i_mask:             '1,
-          o_value:            _,
-          o_value_unmasked:   _
+          i_clk:          i_clk,
+          i_rst:          i_rst,
+          bit_field_if:   bit_field_sub_if,
+          o_read_trigger: o_register_0_bit_field_0_read_trigger,
+          i_value:        i_register_0_bit_field_0
         );
       VERYL
 
       expect(bit_fields[1]).to generate_code(:bit_field, :top_down, <<~'VERYL')
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              1,
+          SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            1
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     o_register_0_bit_field_1_read_trigger,
-          i_sw_write_enable:  '0,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            register_if[1].value[1+:1],
-          i_mask:             '1,
-          o_value:            _,
-          o_value_unmasked:   _
+          i_clk:          i_clk,
+          i_rst:          i_rst,
+          bit_field_if:   bit_field_sub_if,
+          o_read_trigger: o_register_0_bit_field_1_read_trigger,
+          i_value:        register_if[1].value[1+:1]
         );
       VERYL
 
       expect(bit_fields[2]).to generate_code(:bit_field, :top_down, <<~'VERYL')
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              8,
+          SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            1
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     o_register_0_bit_field_2_read_trigger,
-          i_sw_write_enable:  '0,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            i_register_0_bit_field_2,
-          i_mask:             '1,
-          o_value:            _,
-          o_value_unmasked:   _
+          i_clk:          i_clk,
+          i_rst:          i_rst,
+          bit_field_if:   bit_field_sub_if,
+          o_read_trigger: o_register_0_bit_field_2_read_trigger,
+          i_value:        i_register_0_bit_field_2
         );
       VERYL
 
       expect(bit_fields[3]).to generate_code(:bit_field, :top_down, <<~'VERYL')
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              8,
+          SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            1
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     o_register_0_bit_field_3_read_trigger,
-          i_sw_write_enable:  '0,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            register_if[1].value[16+:8],
-          i_mask:             '1,
-          o_value:            _,
-          o_value_unmasked:   _
+          i_clk:          i_clk,
+          i_rst:          i_rst,
+          bit_field_if:   bit_field_sub_if,
+          o_read_trigger: o_register_0_bit_field_3_read_trigger,
+          i_value:        register_if[1].value[16+:8]
         );
       VERYL
 
       expect(bit_fields[6]).to generate_code(:bit_field, :top_down, <<~'VERYL')
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              64,
+          SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            1
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     o_register_2_bit_field_0_read_trigger,
-          i_sw_write_enable:  '0,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            i_register_2_bit_field_0,
-          i_mask:             '1,
-          o_value:            _,
-          o_value_unmasked:   _
+          i_clk:          i_clk,
+          i_rst:          i_rst,
+          bit_field_if:   bit_field_sub_if,
+          o_read_trigger: o_register_2_bit_field_0_read_trigger,
+          i_value:        i_register_2_bit_field_0
         );
       VERYL
 
       expect(bit_fields[7]).to generate_code(:bit_field, :top_down, <<~'VERYL')
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
+          SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            1
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     o_register_3_bit_field_0_read_trigger[i],
-          i_sw_write_enable:  '0,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            i_register_3_bit_field_0[i],
-          i_mask:             '1,
-          o_value:            _,
-          o_value_unmasked:   _
+          i_clk:          i_clk,
+          i_rst:          i_rst,
+          bit_field_if:   bit_field_sub_if,
+          o_read_trigger: o_register_3_bit_field_0_read_trigger[i],
+          i_value:        i_register_3_bit_field_0[i]
         );
       VERYL
 
       expect(bit_fields[8]).to generate_code(:bit_field, :top_down, <<~'VERYL')
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
+          SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            1
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     o_register_3_bit_field_1_read_trigger[i],
-          i_sw_write_enable:  '0,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            register_if[4].value[4+:4],
-          i_mask:             '1,
-          o_value:            _,
-          o_value_unmasked:   _
+          i_clk:          i_clk,
+          i_rst:          i_rst,
+          bit_field_if:   bit_field_sub_if,
+          o_read_trigger: o_register_3_bit_field_1_read_trigger[i],
+          i_value:        register_if[4].value[4+:4]
         );
       VERYL
 
       expect(bit_fields[9]).to generate_code(:bit_field, :top_down, <<~'VERYL')
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
+          SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            1
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     o_register_3_bit_field_2_read_trigger[i],
-          i_sw_write_enable:  '0,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            register_if[4].value[8+4*i+:4],
-          i_mask:             '1,
-          o_value:            _,
-          o_value_unmasked:   _
+          i_clk:          i_clk,
+          i_rst:          i_rst,
+          bit_field_if:   bit_field_sub_if,
+          o_read_trigger: o_register_3_bit_field_2_read_trigger[i],
+          i_value:        register_if[4].value[8+4*i+:4]
         );
       VERYL
 
       expect(bit_fields[12]).to generate_code(:bit_field, :top_down, <<~'VERYL')
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
+          SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            1
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     o_register_5_bit_field_0_read_trigger[i][j],
-          i_sw_write_enable:  '0,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            i_register_5_bit_field_0[i][j],
-          i_mask:             '1,
-          o_value:            _,
-          o_value_unmasked:   _
+          i_clk:          i_clk,
+          i_rst:          i_rst,
+          bit_field_if:   bit_field_sub_if,
+          o_read_trigger: o_register_5_bit_field_0_read_trigger[i][j],
+          i_value:        i_register_5_bit_field_0[i][j]
         );
       VERYL
 
       expect(bit_fields[13]).to generate_code(:bit_field, :top_down, <<~'VERYL')
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
+          SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            1
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     o_register_5_bit_field_1_read_trigger[i][j],
-          i_sw_write_enable:  '0,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            register_if[9+i].value[4+4*j+:4],
-          i_mask:             '1,
-          o_value:            _,
-          o_value_unmasked:   _
+          i_clk:          i_clk,
+          i_rst:          i_rst,
+          bit_field_if:   bit_field_sub_if,
+          o_read_trigger: o_register_5_bit_field_1_read_trigger[i][j],
+          i_value:        register_if[9+i].value[4+4*j+:4]
         );
       VERYL
 
       expect(bit_fields[14]).to generate_code(:bit_field, :top_down, <<~'VERYL')
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
+          SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            1
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     o_register_5_bit_field_2_read_trigger[i][j],
-          i_sw_write_enable:  '0,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            register_if[13].value[4+:4],
-          i_mask:             '1,
-          o_value:            _,
-          o_value_unmasked:   _
+          i_clk:          i_clk,
+          i_rst:          i_rst,
+          bit_field_if:   bit_field_sub_if,
+          o_read_trigger: o_register_5_bit_field_2_read_trigger[i][j],
+          i_value:        register_if[13].value[4+:4]
         );
       VERYL
 
       expect(bit_fields[17]).to generate_code(:bit_field, :top_down, <<~'VERYL')
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
+          SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            1
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     o_register_8_bit_field_0_read_trigger[i][j][k],
-          i_sw_write_enable:  '0,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            i_register_8_bit_field_0[i][j][k],
-          i_mask:             '1,
-          o_value:            _,
-          o_value_unmasked:   _
+          i_clk:          i_clk,
+          i_rst:          i_rst,
+          bit_field_if:   bit_field_sub_if,
+          o_read_trigger: o_register_8_bit_field_0_read_trigger[i][j][k],
+          i_value:        i_register_8_bit_field_0[i][j][k]
         );
       VERYL
 
       expect(bit_fields[18]).to generate_code(:bit_field, :top_down, <<~'VERYL')
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
+          SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            1
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     o_register_8_bit_field_1_read_trigger[i][j][k],
-          i_sw_write_enable:  '0,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            register_if[18+2*i+j].value[4+4*k+:4],
-          i_mask:             '1,
-          o_value:            _,
-          o_value_unmasked:   _
+          i_clk:          i_clk,
+          i_rst:          i_rst,
+          bit_field_if:   bit_field_sub_if,
+          o_read_trigger: o_register_8_bit_field_1_read_trigger[i][j][k],
+          i_value:        register_if[18+2*i+j].value[4+4*k+:4]
         );
       VERYL
 
       expect(bit_fields[19]).to generate_code(:bit_field, :top_down, <<~'VERYL')
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
+          SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            1
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     o_register_8_bit_field_2_read_trigger[i][j][k],
-          i_sw_write_enable:  '0,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            register_if[22].value[4+:4],
-          i_mask:             '1,
-          o_value:            _,
-          o_value_unmasked:   _
+          i_clk:          i_clk,
+          i_rst:          i_rst,
+          bit_field_if:   bit_field_sub_if,
+          o_read_trigger: o_register_8_bit_field_2_read_trigger[i][j][k],
+          i_value:        register_if[22].value[4+:4]
         );
       VERYL
 
       expect(bit_fields[22]).to generate_code(:bit_field, :top_down, <<~'VERYL')
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
+          SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            1
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     o_register_file_11_register_file_0_register_0_bit_field_0_read_trigger[i][j][k][l][m],
-          i_sw_write_enable:  '0,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            i_register_file_11_register_file_0_register_0_bit_field_0[i][j][k][l][m],
-          i_mask:             '1,
-          o_value:            _,
-          o_value_unmasked:   _
+          i_clk:          i_clk,
+          i_rst:          i_rst,
+          bit_field_if:   bit_field_sub_if,
+          o_read_trigger: o_register_file_11_register_file_0_register_0_bit_field_0_read_trigger[i][j][k][l][m],
+          i_value:        i_register_file_11_register_file_0_register_0_bit_field_0[i][j][k][l][m]
         );
       VERYL
 
       expect(bit_fields[23]).to generate_code(:bit_field, :top_down, <<~'VERYL')
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
+          SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            1
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     o_register_file_11_register_file_0_register_0_bit_field_1_read_trigger[i][j][k][l][m],
-          i_sw_write_enable:  '0,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            register_if[39+5*(2*i+j)+2*k+l].value[4+4*m+:4],
-          i_mask:             '1,
-          o_value:            _,
-          o_value_unmasked:   _
+          i_clk:          i_clk,
+          i_rst:          i_rst,
+          bit_field_if:   bit_field_sub_if,
+          o_read_trigger: o_register_file_11_register_file_0_register_0_bit_field_1_read_trigger[i][j][k][l][m],
+          i_value:        register_if[39+5*(2*i+j)+2*k+l].value[4+4*m+:4]
         );
       VERYL
 
       expect(bit_fields[24]).to generate_code(:bit_field, :top_down, <<~'VERYL')
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
+          SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
           STORAGE:            0,
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            1
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     o_register_file_11_register_file_0_register_0_bit_field_2_read_trigger[i][j][k][l][m],
-          i_sw_write_enable:  '0,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            register_if[39+5*(2*i+j)+4].value[4+:4],
-          i_mask:             '1,
-          o_value:            _,
-          o_value_unmasked:   _
+          i_clk:          i_clk,
+          i_rst:          i_rst,
+          bit_field_if:   bit_field_sub_if,
+          o_read_trigger: o_register_file_11_register_file_0_register_0_bit_field_2_read_trigger[i][j][k][l][m],
+          i_value:        register_if[39+5*(2*i+j)+4].value[4+:4]
         );
       VERYL
     end
