@@ -32,10 +32,6 @@ RgGen.define_list_item_feature(:bit_field, :type, [:rc, :w0c, :w1c, :wc, :woc]) 
       }.fetch(bit_field.type, 'WRITE_CLEAR')
     end
 
-    def sw_write_enable
-      bit_field.type == :rc && all_bits_0 || all_bits_1
-    end
-
     def value_out_unmasked_singal
       bit_field.reference? && value_unmasked[loop_variables] || unused
     end

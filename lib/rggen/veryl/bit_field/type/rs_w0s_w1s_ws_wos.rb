@@ -26,9 +26,5 @@ RgGen.define_list_item_feature(:bit_field, :type, [:rs, :w0s, :w1s, :ws, :wos]) 
         rs: 'WRITE_NONE', w0s: 'WRITE_0_SET', w1s: 'WRITE_1_SET'
       }.fetch(bit_field.type, 'WRITE_SET')
     end
-
-    def sw_write_enable
-      bit_field.writable? && all_bits_1 || all_bits_0
-    end
   end
 end

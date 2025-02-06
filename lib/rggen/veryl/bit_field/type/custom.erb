@@ -13,13 +13,10 @@ inst u_bit_field: rggen::rggen_bit_field #(
   bit_field_if:       bit_field_sub_if,
   o_write_trigger:    <%= output_port(:write_trigger) %>,
   o_read_trigger:     <%= output_port(:read_trigger) %>,
-  i_sw_write_enable:  '1,
   i_hw_write_enable:  <%= input_port(:hw_write_enable) %>,
   i_hw_write_data:    <%= input_port(:hw_write_data) %>,
   i_hw_set:           <%= input_port(:hw_set) %>,
   i_hw_clear:         <%= input_port(:hw_clear) %>,
   i_value:            <%= input_port(:value_in) %>,
-  i_mask:             '1,
-  o_value:            <%= output_port(:value_out) %>,
-  o_value_unmasked:   _
+  o_value:            <%= output_port(:value_out) %>
 );

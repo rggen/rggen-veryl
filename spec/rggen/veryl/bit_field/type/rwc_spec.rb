@@ -298,20 +298,11 @@ RSpec.describe 'bit_field/type/rwc' do
           INITIAL_VALUE:  INITIAL_VALUE,
           HW_CLEAR_WIDTH: 1
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         i_register_0_bit_field_0_clear,
-          i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_0_bit_field_0,
-          o_value_unmasked:   _
+          i_clk:        i_clk,
+          i_rst:        i_rst,
+          bit_field_if: bit_field_sub_if,
+          i_hw_clear:   i_register_0_bit_field_0_clear,
+          o_value:      o_register_0_bit_field_0
         );
       VERYL
 
@@ -321,20 +312,11 @@ RSpec.describe 'bit_field/type/rwc' do
           INITIAL_VALUE:  INITIAL_VALUE,
           HW_CLEAR_WIDTH: 1
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         register_if[25].value[0+:1],
-          i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_0_bit_field_1,
-          o_value_unmasked:   _
+          i_clk:        i_clk,
+          i_rst:        i_rst,
+          bit_field_if: bit_field_sub_if,
+          i_hw_clear:   register_if[25].value[0+:1],
+          o_value:      o_register_0_bit_field_1
         );
       VERYL
 
@@ -344,20 +326,11 @@ RSpec.describe 'bit_field/type/rwc' do
           INITIAL_VALUE:  INITIAL_VALUE,
           HW_CLEAR_WIDTH: 1
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         i_register_0_bit_field_2_clear,
-          i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_0_bit_field_2,
-          o_value_unmasked:   _
+          i_clk:        i_clk,
+          i_rst:        i_rst,
+          bit_field_if: bit_field_sub_if,
+          i_hw_clear:   i_register_0_bit_field_2_clear,
+          o_value:      o_register_0_bit_field_2
         );
       VERYL
 
@@ -367,20 +340,11 @@ RSpec.describe 'bit_field/type/rwc' do
           INITIAL_VALUE:  INITIAL_VALUE,
           HW_CLEAR_WIDTH: 1
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         register_if[25].value[0+:1],
-          i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_0_bit_field_3,
-          o_value_unmasked:   _
+          i_clk:        i_clk,
+          i_rst:        i_rst,
+          bit_field_if: bit_field_sub_if,
+          i_hw_clear:   register_if[25].value[0+:1],
+          o_value:      o_register_0_bit_field_3
         );
       VERYL
 
@@ -390,20 +354,11 @@ RSpec.describe 'bit_field/type/rwc' do
           INITIAL_VALUE:  INITIAL_VALUE,
           HW_CLEAR_WIDTH: 1
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         i_register_0_bit_field_4_clear[i],
-          i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_0_bit_field_4[i],
-          o_value_unmasked:   _
+          i_clk:        i_clk,
+          i_rst:        i_rst,
+          bit_field_if: bit_field_sub_if,
+          i_hw_clear:   i_register_0_bit_field_4_clear[i],
+          o_value:      o_register_0_bit_field_4[i]
         );
       VERYL
 
@@ -413,20 +368,11 @@ RSpec.describe 'bit_field/type/rwc' do
           INITIAL_VALUE:  INITIAL_VALUE,
           HW_CLEAR_WIDTH: 1
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         register_if[25].value[0+:1],
-          i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_0_bit_field_5[i],
-          o_value_unmasked:   _
+          i_clk:        i_clk,
+          i_rst:        i_rst,
+          bit_field_if: bit_field_sub_if,
+          i_hw_clear:   register_if[25].value[0+:1],
+          o_value:      o_register_0_bit_field_5[i]
         );
       VERYL
 
@@ -436,20 +382,11 @@ RSpec.describe 'bit_field/type/rwc' do
           INITIAL_VALUE:  INITIAL_VALUE,
           HW_CLEAR_WIDTH: 1
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         i_register_1_bit_field_4_clear[i][j],
-          i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_1_bit_field_4[i][j],
-          o_value_unmasked:   _
+          i_clk:        i_clk,
+          i_rst:        i_rst,
+          bit_field_if: bit_field_sub_if,
+          i_hw_clear:   i_register_1_bit_field_4_clear[i][j],
+          o_value:      o_register_1_bit_field_4[i][j]
         );
       VERYL
 
@@ -459,20 +396,11 @@ RSpec.describe 'bit_field/type/rwc' do
           INITIAL_VALUE:  INITIAL_VALUE,
           HW_CLEAR_WIDTH: 1
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         register_if[25].value[0+:1],
-          i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_1_bit_field_5[i][j],
-          o_value_unmasked:   _
+          i_clk:        i_clk,
+          i_rst:        i_rst,
+          bit_field_if: bit_field_sub_if,
+          i_hw_clear:   register_if[25].value[0+:1],
+          o_value:      o_register_1_bit_field_5[i][j]
         );
       VERYL
 
@@ -482,20 +410,11 @@ RSpec.describe 'bit_field/type/rwc' do
           INITIAL_VALUE:  INITIAL_VALUE,
           HW_CLEAR_WIDTH: 1
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         i_register_2_bit_field_4_clear[i][j][k],
-          i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_2_bit_field_4[i][j][k],
-          o_value_unmasked:   _
+          i_clk:        i_clk,
+          i_rst:        i_rst,
+          bit_field_if: bit_field_sub_if,
+          i_hw_clear:   i_register_2_bit_field_4_clear[i][j][k],
+          o_value:      o_register_2_bit_field_4[i][j][k]
         );
       VERYL
 
@@ -505,20 +424,11 @@ RSpec.describe 'bit_field/type/rwc' do
           INITIAL_VALUE:  INITIAL_VALUE,
           HW_CLEAR_WIDTH: 1
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         register_if[25].value[0+:1],
-          i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_2_bit_field_5[i][j][k],
-          o_value_unmasked:   _
+          i_clk:        i_clk,
+          i_rst:        i_rst,
+          bit_field_if: bit_field_sub_if,
+          i_hw_clear:   register_if[25].value[0+:1],
+          o_value:      o_register_2_bit_field_5[i][j][k]
         );
       VERYL
 
@@ -528,20 +438,11 @@ RSpec.describe 'bit_field/type/rwc' do
           INITIAL_VALUE:  INITIAL_VALUE,
           HW_CLEAR_WIDTH: 1
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         i_register_file_3_register_file_0_register_0_bit_field_4_clear[i][j][k][l][m],
-          i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_file_3_register_file_0_register_0_bit_field_4[i][j][k][l][m],
-          o_value_unmasked:   _
+          i_clk:        i_clk,
+          i_rst:        i_rst,
+          bit_field_if: bit_field_sub_if,
+          i_hw_clear:   i_register_file_3_register_file_0_register_0_bit_field_4_clear[i][j][k][l][m],
+          o_value:      o_register_file_3_register_file_0_register_0_bit_field_4[i][j][k][l][m]
         );
       VERYL
 
@@ -551,20 +452,11 @@ RSpec.describe 'bit_field/type/rwc' do
           INITIAL_VALUE:  INITIAL_VALUE,
           HW_CLEAR_WIDTH: 1
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         register_if[26+2*i+j].value[0+:1],
-          i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_file_3_register_file_0_register_0_bit_field_5[i][j][k][l][m],
-          o_value_unmasked:   _
+          i_clk:        i_clk,
+          i_rst:        i_rst,
+          bit_field_if: bit_field_sub_if,
+          i_hw_clear:   register_if[26+2*i+j].value[0+:1],
+          o_value:      o_register_file_3_register_file_0_register_0_bit_field_5[i][j][k][l][m]
         );
       VERYL
     end

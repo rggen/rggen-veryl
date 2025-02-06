@@ -223,15 +223,12 @@ RSpec.describe 'bit_field/type/custom' do
           bit_field_if:       bit_field_sub_if,
           o_write_trigger:    _,
           o_read_trigger:     _,
-          i_sw_write_enable:  '1,
           i_hw_write_enable:  '0,
           i_hw_write_data:    '0,
           i_hw_set:           '0,
           i_hw_clear:         '0,
           i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_0_bit_field_0,
-          o_value_unmasked:   _
+          o_value:            o_register_0_bit_field_0
         );
       VERYL
 
@@ -251,15 +248,12 @@ RSpec.describe 'bit_field/type/custom' do
           bit_field_if:       bit_field_sub_if,
           o_write_trigger:    _,
           o_read_trigger:     _,
-          i_sw_write_enable:  '1,
           i_hw_write_enable:  '0,
           i_hw_write_data:    '0,
           i_hw_set:           '0,
           i_hw_clear:         '0,
           i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_1_bit_field_0,
-          o_value_unmasked:   _
+          o_value:            o_register_1_bit_field_0
         );
       VERYL
 
@@ -279,15 +273,12 @@ RSpec.describe 'bit_field/type/custom' do
           bit_field_if:       bit_field_sub_if,
           o_write_trigger:    _,
           o_read_trigger:     _,
-          i_sw_write_enable:  '1,
           i_hw_write_enable:  '0,
           i_hw_write_data:    '0,
           i_hw_set:           '0,
           i_hw_clear:         '0,
           i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_1_bit_field_1,
-          o_value_unmasked:   _
+          o_value:            o_register_1_bit_field_1
         );
       VERYL
 
@@ -307,15 +298,12 @@ RSpec.describe 'bit_field/type/custom' do
           bit_field_if:       bit_field_sub_if,
           o_write_trigger:    _,
           o_read_trigger:     _,
-          i_sw_write_enable:  '1,
           i_hw_write_enable:  '0,
           i_hw_write_data:    '0,
           i_hw_set:           '0,
           i_hw_clear:         '0,
           i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_1_bit_field_2,
-          o_value_unmasked:   _
+          o_value:            o_register_1_bit_field_2
         );
       VERYL
 
@@ -335,15 +323,12 @@ RSpec.describe 'bit_field/type/custom' do
           bit_field_if:       bit_field_sub_if,
           o_write_trigger:    _,
           o_read_trigger:     _,
-          i_sw_write_enable:  '1,
           i_hw_write_enable:  '0,
           i_hw_write_data:    '0,
           i_hw_set:           '0,
           i_hw_clear:         '0,
           i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_1_bit_field_3,
-          o_value_unmasked:   _
+          o_value:            o_register_1_bit_field_3
         );
       VERYL
 
@@ -363,15 +348,12 @@ RSpec.describe 'bit_field/type/custom' do
           bit_field_if:       bit_field_sub_if,
           o_write_trigger:    _,
           o_read_trigger:     _,
-          i_sw_write_enable:  '1,
           i_hw_write_enable:  '0,
           i_hw_write_data:    '0,
           i_hw_set:           '0,
           i_hw_clear:         '0,
           i_value:            i_register_2_bit_field_0,
-          i_mask:             '1,
-          o_value:            _,
-          o_value_unmasked:   _
+          o_value:            _
         );
       VERYL
 
@@ -391,15 +373,12 @@ RSpec.describe 'bit_field/type/custom' do
           bit_field_if:       bit_field_sub_if,
           o_write_trigger:    _,
           o_read_trigger:     _,
-          i_sw_write_enable:  '1,
           i_hw_write_enable:  '0,
           i_hw_write_data:    '0,
           i_hw_set:           '0,
           i_hw_clear:         '0,
           i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_2_bit_field_1,
-          o_value_unmasked:   _
+          o_value:            o_register_2_bit_field_1
         );
       VERYL
 
@@ -419,15 +398,12 @@ RSpec.describe 'bit_field/type/custom' do
           bit_field_if:       bit_field_sub_if,
           o_write_trigger:    _,
           o_read_trigger:     _,
-          i_sw_write_enable:  '1,
           i_hw_write_enable:  '0,
           i_hw_write_data:    '0,
           i_hw_set:           '0,
           i_hw_clear:         '0,
           i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_2_bit_field_2,
-          o_value_unmasked:   _
+          o_value:            o_register_2_bit_field_2
         );
       VERYL
 
@@ -447,15 +423,12 @@ RSpec.describe 'bit_field/type/custom' do
           bit_field_if:       bit_field_sub_if,
           o_write_trigger:    _,
           o_read_trigger:     _,
-          i_sw_write_enable:  '1,
           i_hw_write_enable:  '0,
           i_hw_write_data:    '0,
           i_hw_set:           '0,
           i_hw_clear:         '0,
           i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_2_bit_field_3,
-          o_value_unmasked:   _
+          o_value:            o_register_2_bit_field_3
         );
       VERYL
 
@@ -475,15 +448,12 @@ RSpec.describe 'bit_field/type/custom' do
           bit_field_if:       bit_field_sub_if,
           o_write_trigger:    _,
           o_read_trigger:     _,
-          i_sw_write_enable:  '1,
           i_hw_write_enable:  '0,
           i_hw_write_data:    '0,
           i_hw_set:           '0,
           i_hw_clear:         '0,
           i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_2_bit_field_4,
-          o_value_unmasked:   _
+          o_value:            o_register_2_bit_field_4
         );
       VERYL
 
@@ -503,15 +473,12 @@ RSpec.describe 'bit_field/type/custom' do
           bit_field_if:       bit_field_sub_if,
           o_write_trigger:    _,
           o_read_trigger:     _,
-          i_sw_write_enable:  '1,
           i_hw_write_enable:  '0,
           i_hw_write_data:    '0,
           i_hw_set:           '0,
           i_hw_clear:         '0,
           i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_2_bit_field_5,
-          o_value_unmasked:   _
+          o_value:            o_register_2_bit_field_5
         );
       VERYL
 
@@ -531,15 +498,12 @@ RSpec.describe 'bit_field/type/custom' do
           bit_field_if:       bit_field_sub_if,
           o_write_trigger:    _,
           o_read_trigger:     _,
-          i_sw_write_enable:  '1,
           i_hw_write_enable:  '0,
           i_hw_write_data:    '0,
           i_hw_set:           '0,
           i_hw_clear:         '0,
           i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_2_bit_field_6,
-          o_value_unmasked:   _
+          o_value:            o_register_2_bit_field_6
         );
       VERYL
 
@@ -559,15 +523,12 @@ RSpec.describe 'bit_field/type/custom' do
           bit_field_if:       bit_field_sub_if,
           o_write_trigger:    _,
           o_read_trigger:     _,
-          i_sw_write_enable:  '1,
           i_hw_write_enable:  '0,
           i_hw_write_data:    '0,
           i_hw_set:           '0,
           i_hw_clear:         '0,
           i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_2_bit_field_7,
-          o_value_unmasked:   _
+          o_value:            o_register_2_bit_field_7
         );
       VERYL
 
@@ -587,15 +548,12 @@ RSpec.describe 'bit_field/type/custom' do
           bit_field_if:       bit_field_sub_if,
           o_write_trigger:    _,
           o_read_trigger:     _,
-          i_sw_write_enable:  '1,
           i_hw_write_enable:  '0,
           i_hw_write_data:    '0,
           i_hw_set:           '0,
           i_hw_clear:         '0,
           i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_2_bit_field_8,
-          o_value_unmasked:   _
+          o_value:            o_register_2_bit_field_8
         );
       VERYL
 
@@ -615,15 +573,12 @@ RSpec.describe 'bit_field/type/custom' do
           bit_field_if:       bit_field_sub_if,
           o_write_trigger:    _,
           o_read_trigger:     _,
-          i_sw_write_enable:  '1,
           i_hw_write_enable:  '0,
           i_hw_write_data:    '0,
           i_hw_set:           '0,
           i_hw_clear:         '0,
           i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_2_bit_field_9,
-          o_value_unmasked:   _
+          o_value:            o_register_2_bit_field_9
         );
       VERYL
 
@@ -643,15 +598,12 @@ RSpec.describe 'bit_field/type/custom' do
           bit_field_if:       bit_field_sub_if,
           o_write_trigger:    _,
           o_read_trigger:     _,
-          i_sw_write_enable:  '1,
           i_hw_write_enable:  '0,
           i_hw_write_data:    '0,
           i_hw_set:           '0,
           i_hw_clear:         '0,
           i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_3_bit_field_0,
-          o_value_unmasked:   _
+          o_value:            o_register_3_bit_field_0
         );
       VERYL
 
@@ -671,15 +623,12 @@ RSpec.describe 'bit_field/type/custom' do
           bit_field_if:       bit_field_sub_if,
           o_write_trigger:    _,
           o_read_trigger:     _,
-          i_sw_write_enable:  '1,
           i_hw_write_enable:  i_register_4_bit_field_0_hw_write_enable,
           i_hw_write_data:    i_register_4_bit_field_0_hw_write_data,
           i_hw_set:           '0,
           i_hw_clear:         '0,
           i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_4_bit_field_0,
-          o_value_unmasked:   _
+          o_value:            o_register_4_bit_field_0
         );
       VERYL
 
@@ -699,15 +648,12 @@ RSpec.describe 'bit_field/type/custom' do
           bit_field_if:       bit_field_sub_if,
           o_write_trigger:    _,
           o_read_trigger:     _,
-          i_sw_write_enable:  '1,
           i_hw_write_enable:  '0,
           i_hw_write_data:    '0,
           i_hw_set:           i_register_4_bit_field_1_hw_set,
           i_hw_clear:         '0,
           i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_4_bit_field_1,
-          o_value_unmasked:   _
+          o_value:            o_register_4_bit_field_1
         );
       VERYL
 
@@ -727,15 +673,12 @@ RSpec.describe 'bit_field/type/custom' do
           bit_field_if:       bit_field_sub_if,
           o_write_trigger:    _,
           o_read_trigger:     _,
-          i_sw_write_enable:  '1,
           i_hw_write_enable:  '0,
           i_hw_write_data:    '0,
           i_hw_set:           '0,
           i_hw_clear:         i_register_4_bit_field_2_hw_clear,
           i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_4_bit_field_2,
-          o_value_unmasked:   _
+          o_value:            o_register_4_bit_field_2
         );
       VERYL
 
@@ -755,15 +698,12 @@ RSpec.describe 'bit_field/type/custom' do
           bit_field_if:       bit_field_sub_if,
           o_write_trigger:    o_register_5_bit_field_0_write_trigger,
           o_read_trigger:     _,
-          i_sw_write_enable:  '1,
           i_hw_write_enable:  '0,
           i_hw_write_data:    '0,
           i_hw_set:           '0,
           i_hw_clear:         '0,
           i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_5_bit_field_0,
-          o_value_unmasked:   _
+          o_value:            o_register_5_bit_field_0
         );
       VERYL
 
@@ -783,15 +723,12 @@ RSpec.describe 'bit_field/type/custom' do
           bit_field_if:       bit_field_sub_if,
           o_write_trigger:    _,
           o_read_trigger:     o_register_5_bit_field_1_read_trigger,
-          i_sw_write_enable:  '1,
           i_hw_write_enable:  '0,
           i_hw_write_data:    '0,
           i_hw_set:           '0,
           i_hw_clear:         '0,
           i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_5_bit_field_1,
-          o_value_unmasked:   _
+          o_value:            o_register_5_bit_field_1
         );
       VERYL
     end

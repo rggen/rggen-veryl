@@ -178,20 +178,10 @@ RSpec.describe 'bit_field/type/w1crs' do
           SW_READ_ACTION:   rggen_sw_action::READ_SET,
           SW_WRITE_ACTION:  rggen_sw_action::WRITE_1_CLEAR
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_0_bit_field_0,
-          o_value_unmasked:   _
+          i_clk:        i_clk,
+          i_rst:        i_rst,
+          bit_field_if: bit_field_sub_if,
+          o_value:      o_register_0_bit_field_0
         );
       VERYL
 
@@ -202,20 +192,10 @@ RSpec.describe 'bit_field/type/w1crs' do
           SW_READ_ACTION:   rggen_sw_action::READ_SET,
           SW_WRITE_ACTION:  rggen_sw_action::WRITE_1_CLEAR
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_0_bit_field_1,
-          o_value_unmasked:   _
+          i_clk:        i_clk,
+          i_rst:        i_rst,
+          bit_field_if: bit_field_sub_if,
+          o_value:      o_register_0_bit_field_1
         );
       VERYL
 
@@ -226,20 +206,10 @@ RSpec.describe 'bit_field/type/w1crs' do
           SW_READ_ACTION:   rggen_sw_action::READ_SET,
           SW_WRITE_ACTION:  rggen_sw_action::WRITE_1_CLEAR
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_1_bit_field_0,
-          o_value_unmasked:   _
+          i_clk:        i_clk,
+          i_rst:        i_rst,
+          bit_field_if: bit_field_sub_if,
+          o_value:      o_register_1_bit_field_0
         );
       VERYL
 
@@ -250,20 +220,10 @@ RSpec.describe 'bit_field/type/w1crs' do
           SW_READ_ACTION:   rggen_sw_action::READ_SET,
           SW_WRITE_ACTION:  rggen_sw_action::WRITE_1_CLEAR
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_2_bit_field_0[i],
-          o_value_unmasked:   _
+          i_clk:        i_clk,
+          i_rst:        i_rst,
+          bit_field_if: bit_field_sub_if,
+          o_value:      o_register_2_bit_field_0[i]
         );
       VERYL
 
@@ -274,20 +234,10 @@ RSpec.describe 'bit_field/type/w1crs' do
           SW_READ_ACTION:   rggen_sw_action::READ_SET,
           SW_WRITE_ACTION:  rggen_sw_action::WRITE_1_CLEAR
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_3_bit_field_0[i][j],
-          o_value_unmasked:   _
+          i_clk:        i_clk,
+          i_rst:        i_rst,
+          bit_field_if: bit_field_sub_if,
+          o_value:      o_register_3_bit_field_0[i][j]
         );
       VERYL
 
@@ -298,20 +248,10 @@ RSpec.describe 'bit_field/type/w1crs' do
           SW_READ_ACTION:   rggen_sw_action::READ_SET,
           SW_WRITE_ACTION:  rggen_sw_action::WRITE_1_CLEAR
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_4_bit_field_0[i][j][k],
-          o_value_unmasked:   _
+          i_clk:        i_clk,
+          i_rst:        i_rst,
+          bit_field_if: bit_field_sub_if,
+          o_value:      o_register_4_bit_field_0[i][j][k]
         );
       VERYL
 
@@ -322,20 +262,10 @@ RSpec.describe 'bit_field/type/w1crs' do
           SW_READ_ACTION:   rggen_sw_action::READ_SET,
           SW_WRITE_ACTION:  rggen_sw_action::WRITE_1_CLEAR
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            '0,
-          i_mask:             '1,
-          o_value:            o_register_file_5_register_file_0_register_0_bit_field_0[i][j][k][l][m],
-          o_value_unmasked:   _
+          i_clk:        i_clk,
+          i_rst:        i_rst,
+          bit_field_if: bit_field_sub_if,
+          o_value:      o_register_file_5_register_file_0_register_0_bit_field_0[i][j][k][l][m]
         );
       VERYL
     end

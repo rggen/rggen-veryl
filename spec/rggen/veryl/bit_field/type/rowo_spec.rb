@@ -485,20 +485,13 @@ RSpec.describe 'bit_field/type/rowo' do
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            0
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            i_register_0_bit_field_0,
-          i_mask:             '1,
-          o_value:            o_register_0_bit_field_0,
-          o_value_unmasked:   _
+          i_clk:            i_clk,
+          i_rst:            i_rst,
+          bit_field_if:     bit_field_sub_if,
+          o_write_trigger:  _,
+          o_read_trigger:   _,
+          i_value:          i_register_0_bit_field_0,
+          o_value:          o_register_0_bit_field_0
         );
       VERYL
 
@@ -509,20 +502,13 @@ RSpec.describe 'bit_field/type/rowo' do
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            0
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            register_if[1].value[1+:1],
-          i_mask:             '1,
-          o_value:            o_register_0_bit_field_1,
-          o_value_unmasked:   _
+          i_clk:            i_clk,
+          i_rst:            i_rst,
+          bit_field_if:     bit_field_sub_if,
+          o_write_trigger:  _,
+          o_read_trigger:   _,
+          i_value:          register_if[1].value[1+:1],
+          o_value:          o_register_0_bit_field_1
         );
       VERYL
 
@@ -533,20 +519,13 @@ RSpec.describe 'bit_field/type/rowo' do
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            0
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            i_register_0_bit_field_2,
-          i_mask:             '1,
-          o_value:            o_register_0_bit_field_2,
-          o_value_unmasked:   _
+          i_clk:            i_clk,
+          i_rst:            i_rst,
+          bit_field_if:     bit_field_sub_if,
+          o_write_trigger:  _,
+          o_read_trigger:   _,
+          i_value:          i_register_0_bit_field_2,
+          o_value:          o_register_0_bit_field_2
         );
       VERYL
 
@@ -557,20 +536,13 @@ RSpec.describe 'bit_field/type/rowo' do
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            0
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            register_if[1].value[16+:8],
-          i_mask:             '1,
-          o_value:            o_register_0_bit_field_3,
-          o_value_unmasked:   _
+          i_clk:            i_clk,
+          i_rst:            i_rst,
+          bit_field_if:     bit_field_sub_if,
+          o_write_trigger:  _,
+          o_read_trigger:   _,
+          i_value:          register_if[1].value[16+:8],
+          o_value:          o_register_0_bit_field_3
         );
       VERYL
 
@@ -581,20 +553,13 @@ RSpec.describe 'bit_field/type/rowo' do
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            0
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            i_register_2_bit_field_0,
-          i_mask:             '1,
-          o_value:            o_register_2_bit_field_0,
-          o_value_unmasked:   _
+          i_clk:            i_clk,
+          i_rst:            i_rst,
+          bit_field_if:     bit_field_sub_if,
+          o_write_trigger:  _,
+          o_read_trigger:   _,
+          i_value:          i_register_2_bit_field_0,
+          o_value:          o_register_2_bit_field_0
         );
       VERYL
 
@@ -605,20 +570,13 @@ RSpec.describe 'bit_field/type/rowo' do
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            0
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            i_register_3_bit_field_0[i],
-          i_mask:             '1,
-          o_value:            o_register_3_bit_field_0[i],
-          o_value_unmasked:   _
+          i_clk:            i_clk,
+          i_rst:            i_rst,
+          bit_field_if:     bit_field_sub_if,
+          o_write_trigger:  _,
+          o_read_trigger:   _,
+          i_value:          i_register_3_bit_field_0[i],
+          o_value:          o_register_3_bit_field_0[i]
         );
       VERYL
 
@@ -629,20 +587,13 @@ RSpec.describe 'bit_field/type/rowo' do
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            0
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            register_if[4].value[4+:4],
-          i_mask:             '1,
-          o_value:            o_register_3_bit_field_1[i],
-          o_value_unmasked:   _
+          i_clk:            i_clk,
+          i_rst:            i_rst,
+          bit_field_if:     bit_field_sub_if,
+          o_write_trigger:  _,
+          o_read_trigger:   _,
+          i_value:          register_if[4].value[4+:4],
+          o_value:          o_register_3_bit_field_1[i]
         );
       VERYL
 
@@ -653,20 +604,13 @@ RSpec.describe 'bit_field/type/rowo' do
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            0
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            register_if[4].value[8+4*i+:4],
-          i_mask:             '1,
-          o_value:            o_register_3_bit_field_2[i],
-          o_value_unmasked:   _
+          i_clk:            i_clk,
+          i_rst:            i_rst,
+          bit_field_if:     bit_field_sub_if,
+          o_write_trigger:  _,
+          o_read_trigger:   _,
+          i_value:          register_if[4].value[8+4*i+:4],
+          o_value:          o_register_3_bit_field_2[i]
         );
       VERYL
 
@@ -677,20 +621,13 @@ RSpec.describe 'bit_field/type/rowo' do
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            0
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            i_register_5_bit_field_0[i][j],
-          i_mask:             '1,
-          o_value:            o_register_5_bit_field_0[i][j],
-          o_value_unmasked:   _
+          i_clk:            i_clk,
+          i_rst:            i_rst,
+          bit_field_if:     bit_field_sub_if,
+          o_write_trigger:  _,
+          o_read_trigger:   _,
+          i_value:          i_register_5_bit_field_0[i][j],
+          o_value:          o_register_5_bit_field_0[i][j]
         );
       VERYL
 
@@ -701,20 +638,13 @@ RSpec.describe 'bit_field/type/rowo' do
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            0
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            register_if[9+i].value[4+4*j+:4],
-          i_mask:             '1,
-          o_value:            o_register_5_bit_field_1[i][j],
-          o_value_unmasked:   _
+          i_clk:            i_clk,
+          i_rst:            i_rst,
+          bit_field_if:     bit_field_sub_if,
+          o_write_trigger:  _,
+          o_read_trigger:   _,
+          i_value:          register_if[9+i].value[4+4*j+:4],
+          o_value:          o_register_5_bit_field_1[i][j]
         );
       VERYL
 
@@ -725,20 +655,13 @@ RSpec.describe 'bit_field/type/rowo' do
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            0
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            register_if[13].value[4+:4],
-          i_mask:             '1,
-          o_value:            o_register_5_bit_field_2[i][j],
-          o_value_unmasked:   _
+          i_clk:            i_clk,
+          i_rst:            i_rst,
+          bit_field_if:     bit_field_sub_if,
+          o_write_trigger:  _,
+          o_read_trigger:   _,
+          i_value:          register_if[13].value[4+:4],
+          o_value:          o_register_5_bit_field_2[i][j]
         );
       VERYL
 
@@ -749,20 +672,13 @@ RSpec.describe 'bit_field/type/rowo' do
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            0
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            i_register_8_bit_field_0[i][j][k],
-          i_mask:             '1,
-          o_value:            o_register_8_bit_field_0[i][j][k],
-          o_value_unmasked:   _
+          i_clk:            i_clk,
+          i_rst:            i_rst,
+          bit_field_if:     bit_field_sub_if,
+          o_write_trigger:  _,
+          o_read_trigger:   _,
+          i_value:          i_register_8_bit_field_0[i][j][k],
+          o_value:          o_register_8_bit_field_0[i][j][k]
         );
       VERYL
 
@@ -773,20 +689,13 @@ RSpec.describe 'bit_field/type/rowo' do
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            0
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            register_if[18+2*i+j].value[4+4*k+:4],
-          i_mask:             '1,
-          o_value:            o_register_8_bit_field_1[i][j][k],
-          o_value_unmasked:   _
+          i_clk:            i_clk,
+          i_rst:            i_rst,
+          bit_field_if:     bit_field_sub_if,
+          o_write_trigger:  _,
+          o_read_trigger:   _,
+          i_value:          register_if[18+2*i+j].value[4+4*k+:4],
+          o_value:          o_register_8_bit_field_1[i][j][k]
         );
       VERYL
 
@@ -797,20 +706,13 @@ RSpec.describe 'bit_field/type/rowo' do
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            0
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            register_if[22].value[4+:4],
-          i_mask:             '1,
-          o_value:            o_register_8_bit_field_2[i][j][k],
-          o_value_unmasked:   _
+          i_clk:            i_clk,
+          i_rst:            i_rst,
+          bit_field_if:     bit_field_sub_if,
+          o_write_trigger:  _,
+          o_read_trigger:   _,
+          i_value:          register_if[22].value[4+:4],
+          o_value:          o_register_8_bit_field_2[i][j][k]
         );
       VERYL
 
@@ -821,20 +723,13 @@ RSpec.describe 'bit_field/type/rowo' do
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            0
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            i_register_file_11_register_file_0_register_0_bit_field_0[i][j][k][l][m],
-          i_mask:             '1,
-          o_value:            o_register_file_11_register_file_0_register_0_bit_field_0[i][j][k][l][m],
-          o_value_unmasked:   _
+          i_clk:            i_clk,
+          i_rst:            i_rst,
+          bit_field_if:     bit_field_sub_if,
+          o_write_trigger:  _,
+          o_read_trigger:   _,
+          i_value:          i_register_file_11_register_file_0_register_0_bit_field_0[i][j][k][l][m],
+          o_value:          o_register_file_11_register_file_0_register_0_bit_field_0[i][j][k][l][m]
         );
       VERYL
 
@@ -845,20 +740,13 @@ RSpec.describe 'bit_field/type/rowo' do
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            0
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            register_if[39+5*(2*i+j)+2*k+l].value[4+4*m+:4],
-          i_mask:             '1,
-          o_value:            o_register_file_11_register_file_0_register_0_bit_field_1[i][j][k][l][m],
-          o_value_unmasked:   _
+          i_clk:            i_clk,
+          i_rst:            i_rst,
+          bit_field_if:     bit_field_sub_if,
+          o_write_trigger:  _,
+          o_read_trigger:   _,
+          i_value:          register_if[39+5*(2*i+j)+2*k+l].value[4+4*m+:4],
+          o_value:          o_register_file_11_register_file_0_register_0_bit_field_1[i][j][k][l][m]
         );
       VERYL
 
@@ -869,20 +757,13 @@ RSpec.describe 'bit_field/type/rowo' do
           EXTERNAL_READ_DATA: 1,
           TRIGGER:            0
         )(
-          i_clk:              i_clk,
-          i_rst:              i_rst,
-          bit_field_if:       bit_field_sub_if,
-          o_write_trigger:    _,
-          o_read_trigger:     _,
-          i_sw_write_enable:  '1,
-          i_hw_write_enable:  '0,
-          i_hw_write_data:    '0,
-          i_hw_set:           '0,
-          i_hw_clear:         '0,
-          i_value:            register_if[39+5*(2*i+j)+4].value[4+:4],
-          i_mask:             '1,
-          o_value:            o_register_file_11_register_file_0_register_0_bit_field_2[i][j][k][l][m],
-          o_value_unmasked:   _
+          i_clk:            i_clk,
+          i_rst:            i_rst,
+          bit_field_if:     bit_field_sub_if,
+          o_write_trigger:  _,
+          o_read_trigger:   _,
+          i_value:          register_if[39+5*(2*i+j)+4].value[4+:4],
+          o_value:          o_register_file_11_register_file_0_register_0_bit_field_2[i][j][k][l][m]
         );
       VERYL
     end

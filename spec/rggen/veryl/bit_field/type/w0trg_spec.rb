@@ -126,7 +126,6 @@ RSpec.describe 'bit_field/type/w0trg' do
           i_clk:        i_clk,
           i_rst:        i_rst,
           bit_field_if: bit_field_sub_if,
-          i_value:      '0,
           o_trigger:    o_register_0_bit_field_0_trigger
         );
       VERYL
@@ -139,7 +138,6 @@ RSpec.describe 'bit_field/type/w0trg' do
           i_clk:        i_clk,
           i_rst:        i_rst,
           bit_field_if: bit_field_sub_if,
-          i_value:      '0,
           o_trigger:    o_register_0_bit_field_1_trigger
         );
       VERYL
@@ -152,7 +150,6 @@ RSpec.describe 'bit_field/type/w0trg' do
           i_clk:        i_clk,
           i_rst:        i_rst,
           bit_field_if: bit_field_sub_if,
-          i_value:      '0,
           o_trigger:    o_register_0_bit_field_2_trigger[i]
         );
       VERYL
@@ -165,7 +162,6 @@ RSpec.describe 'bit_field/type/w0trg' do
           i_clk:        i_clk,
           i_rst:        i_rst,
           bit_field_if: bit_field_sub_if,
-          i_value:      '0,
           o_trigger:    o_register_1_bit_field_2_trigger[i][j]
         );
       VERYL
@@ -178,7 +174,6 @@ RSpec.describe 'bit_field/type/w0trg' do
           i_clk:        i_clk,
           i_rst:        i_rst,
           bit_field_if: bit_field_sub_if,
-          i_value:      '0,
           o_trigger:    o_register_2_bit_field_2_trigger[i][j][k]
         );
       VERYL
@@ -191,7 +186,6 @@ RSpec.describe 'bit_field/type/w0trg' do
           i_clk:        i_clk,
           i_rst:        i_rst,
           bit_field_if: bit_field_sub_if,
-          i_value:      '0,
           o_trigger:    o_register_file_3_register_file_0_register_0_bit_field_2_trigger[i][j][k][l][m]
         );
       VERYL
