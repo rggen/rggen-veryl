@@ -252,9 +252,9 @@ RSpec.describe 'register/type/indirect' do
       VERYL
 
       expect(registers[7]).to generate_code(:register, :top_down, <<~'VERYL')
-        assign indirect_match[0] = register_if[0].value[0+:1] == 1'h0;
-        assign indirect_match[1] = register_if[0].value[8+:2] == (i as 2);
-        assign indirect_match[2] = register_if[0].value[16+:4] == (j as 4);
+        assign indirect_match[0] = register_if[0].value[8+:2] == (i as 2);
+        assign indirect_match[1] = register_if[0].value[16+:4] == (j as 4);
+        assign indirect_match[2] = register_if[0].value[0+:1] == 1'h0;
         inst u_register: rggen::rggen_indirect_register #(
           READABLE:             1,
           WRITABLE:             1,
@@ -339,9 +339,9 @@ RSpec.describe 'register/type/indirect' do
       VERYL
 
       expect(registers[11]).to generate_code(:register, :top_down, <<~'VERYL')
-        assign indirect_match[0] = register_if[3].value[0+:1] == 1'h0;
-        assign indirect_match[1] = register_if[3].value[8+:2] == (i as 2);
-        assign indirect_match[2] = register_if[3].value[16+:4] == (j as 4);
+        assign indirect_match[0] = register_if[3].value[8+:2] == (i as 2);
+        assign indirect_match[1] = register_if[3].value[16+:4] == (j as 4);
+        assign indirect_match[2] = register_if[3].value[0+:1] == 1'h0;
         inst u_register: rggen::rggen_indirect_register #(
           READABLE:             1,
           WRITABLE:             1,
@@ -362,9 +362,9 @@ RSpec.describe 'register/type/indirect' do
       VERYL
 
       expect(registers[12]).to generate_code(:register, :top_down, <<~'VERYL')
-        assign indirect_match[0] = register_if[0].value[0+:1] == 1'h0;
-        assign indirect_match[1] = register_if[0].value[8+:2] == (k as 2);
-        assign indirect_match[2] = register_if[0].value[16+:4] == (l as 4);
+        assign indirect_match[0] = register_if[0].value[8+:2] == (k as 2);
+        assign indirect_match[1] = register_if[0].value[16+:4] == (l as 4);
+        assign indirect_match[2] = register_if[0].value[0+:1] == 1'h0;
         inst u_register: rggen::rggen_indirect_register #(
           READABLE:             1,
           WRITABLE:             1,
@@ -385,9 +385,9 @@ RSpec.describe 'register/type/indirect' do
       VERYL
 
       expect(registers[13]).to generate_code(:register, :top_down, <<~'VERYL')
-        assign indirect_match[0] = register_if[3].value[0+:1] == 1'h0;
-        assign indirect_match[1] = register_if[3].value[8+:2] == (k as 2);
-        assign indirect_match[2] = register_if[3].value[16+:4] == (l as 4);
+        assign indirect_match[0] = register_if[3].value[8+:2] == (k as 2);
+        assign indirect_match[1] = register_if[3].value[16+:4] == (l as 4);
+        assign indirect_match[2] = register_if[3].value[0+:1] == 1'h0;
         inst u_register: rggen::rggen_indirect_register #(
           READABLE:             1,
           WRITABLE:             1,
