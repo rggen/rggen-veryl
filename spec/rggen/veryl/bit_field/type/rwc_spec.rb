@@ -289,8 +289,6 @@ RSpec.describe 'bit_field/type/rwc' do
   end
 
   describe '#generate_code' do
-    let(:array_port_format) { :packed }
-
     it 'rggen::rggen_bit_fieldをインスタンスするコードを出力する' do
       expect(bit_fields[0]).to generate_code(:bit_field, :top_down, <<~'VERYL')
         inst u_bit_field: rggen::rggen_bit_field #(
