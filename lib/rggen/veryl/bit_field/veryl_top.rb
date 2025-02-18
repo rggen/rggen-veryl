@@ -52,18 +52,17 @@ RgGen.define_simple_feature(:bit_field, :veryl_top) do
     end
 
     def initial_value_size
-      return unless bit_field.initial_value_array?
-
-      [bit_field.sequence_size]
+      bit_field.initial_value_array? && array_size || nil
     end
 
     def initial_value_rhs
       if !bit_field.initial_value_array?
         sized_initial_value
       elsif bit_field.fixed_initial_value?
-        array(sized_initial_values)
+        concat(sized_initial_values)
       else
-        repeat(bit_field.sequence_size, sized_initial_value)
+        size = array_size.inject(:*)
+        repeat(size, sized_initial_value)
       end
     end
 
@@ -72,11 +71,14 @@ RgGen.define_simple_feature(:bit_field, :veryl_top) do
     end
 
     def sized_initial_values
-      bit_field.initial_values.map { |v| hex(v, bit_field.width) }
+      bit_field
+        .initial_values(flatten: true)
+        .map { |v| hex(v, bit_field.width) }
+        .reverse
     end
 
     def register_if(offsets)
-      index = register.index(offsets || register.local_indices)
+      index = register.index(offsets || register.local_indexes)
       register_block.register_if[index]
     end
 
