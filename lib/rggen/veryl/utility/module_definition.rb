@@ -6,6 +6,7 @@ module RgGen
       class ModuleDefinition < SystemVerilog::Common::Utility::StructureDefinition
         define_attribute :name
         define_attribute :package_imports
+        define_attribute :generics
         define_attribute :params
         define_attribute :ports
         define_attribute :variables
@@ -15,6 +16,7 @@ module RgGen
         def header_code(code)
           package_import_declaration(code)
           module_header_begin(code)
+          generic_declarations(code)
           param_declarations(code)
           port_declarations(code)
           module_header_end(code)
@@ -27,7 +29,20 @@ module RgGen
         end
 
         def module_header_begin(code)
-          code << "pub module #{name} "
+          code << "pub module #{name}"
+          code << ' ' unless include_generics?
+        end
+
+        def include_generics?
+          (generics&.size || 0).positive?
+        end
+
+        def generic_declarations(code)
+          return unless include_generics?
+
+          wrap(code, '::<', '>') do
+            add_declarations_to_header(code, generics)
+          end
         end
 
         def param_declarations(code)
