@@ -21,16 +21,12 @@ RgGen.define_list_item_feature(:bit_field, :type, [:wo, :wo1, :wotrg]) do
       bit_field.type == :wotrg
     end
 
-    def trigger
-      wotrg? && 1 || 0
-    end
-
     def write_trigger_signal
       wotrg? && write_trigger[loop_variables] || unused
     end
 
-    def write_once
-      bit_field.type == :wo1 && 1 || 0
+    def write_once?
+      bit_field.type == :wo1
     end
   end
 end

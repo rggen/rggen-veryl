@@ -109,8 +109,8 @@ RSpec.describe 'register_file/veryl_top' do
           :g_register_0 {
             inst bit_field_if: rggen::rggen_bit_field_if#(WIDTH: 32);
             inst u_register: rggen::rggen_default_register #(
-              READABLE:       1,
-              WRITABLE:       1,
+              READABLE:       true,
+              WRITABLE:       true,
               ADDRESS_WIDTH:  9,
               OFFSET_ADDRESS: 9'h000,
               BUS_WIDTH:      32,
@@ -137,8 +137,8 @@ RSpec.describe 'register_file/veryl_top' do
               inst u_bit_field: rggen::rggen_bit_field #(
                 WIDTH:          1,
                 INITIAL_VALUE:  INITIAL_VALUE,
-                SW_WRITE_ONCE:  0,
-                TRIGGER:        0
+                SW_WRITE_ONCE:  false,
+                TRIGGER:        false
               )(
                 i_clk:            i_clk,
                 i_rst:            i_rst,
@@ -152,8 +152,8 @@ RSpec.describe 'register_file/veryl_top' do
           :g_register_1 {
             inst bit_field_if: rggen::rggen_bit_field_if#(WIDTH: 32);
             inst u_register: rggen::rggen_default_register #(
-              READABLE:       1,
-              WRITABLE:       1,
+              READABLE:       true,
+              WRITABLE:       true,
               ADDRESS_WIDTH:  9,
               OFFSET_ADDRESS: 9'h004,
               BUS_WIDTH:      32,
@@ -180,8 +180,8 @@ RSpec.describe 'register_file/veryl_top' do
               inst u_bit_field: rggen::rggen_bit_field #(
                 WIDTH:          1,
                 INITIAL_VALUE:  INITIAL_VALUE,
-                SW_WRITE_ONCE:  0,
-                TRIGGER:        0
+                SW_WRITE_ONCE:  false,
+                TRIGGER:        false
               )(
                 i_clk:            i_clk,
                 i_rst:            i_rst,
@@ -201,8 +201,8 @@ RSpec.describe 'register_file/veryl_top' do
             :g_register_0 {
               inst bit_field_if: rggen::rggen_bit_field_if#(WIDTH: 32);
               inst u_register: rggen::rggen_default_register #(
-                READABLE:       1,
-                WRITABLE:       1,
+                READABLE:       true,
+                WRITABLE:       true,
                 ADDRESS_WIDTH:  9,
                 OFFSET_ADDRESS: 9'h010,
                 BUS_WIDTH:      32,
@@ -229,8 +229,8 @@ RSpec.describe 'register_file/veryl_top' do
                 inst u_bit_field: rggen::rggen_bit_field #(
                   WIDTH:          1,
                   INITIAL_VALUE:  INITIAL_VALUE,
-                  SW_WRITE_ONCE:  0,
-                  TRIGGER:        0
+                  SW_WRITE_ONCE:  false,
+                  TRIGGER:        false
                 )(
                   i_clk:            i_clk,
                   i_rst:            i_rst,
@@ -245,8 +245,8 @@ RSpec.describe 'register_file/veryl_top' do
           :g_register_1 {
             inst bit_field_if: rggen::rggen_bit_field_if#(WIDTH: 32);
             inst u_register: rggen::rggen_default_register #(
-              READABLE:       1,
-              WRITABLE:       1,
+              READABLE:       true,
+              WRITABLE:       true,
               ADDRESS_WIDTH:  9,
               OFFSET_ADDRESS: 9'h014,
               BUS_WIDTH:      32,
@@ -273,8 +273,8 @@ RSpec.describe 'register_file/veryl_top' do
               inst u_bit_field: rggen::rggen_bit_field #(
                 WIDTH:          1,
                 INITIAL_VALUE:  INITIAL_VALUE,
-                SW_WRITE_ONCE:  0,
-                TRIGGER:        0
+                SW_WRITE_ONCE:  false,
+                TRIGGER:        false
               )(
                 i_clk:            i_clk,
                 i_rst:            i_rst,
@@ -298,8 +298,8 @@ RSpec.describe 'register_file/veryl_top' do
                     for l in 0..2 :g {
                       inst bit_field_if: rggen::rggen_bit_field_if#(WIDTH: 32);
                       inst u_register: rggen::rggen_default_register #(
-                        READABLE:       1,
-                        WRITABLE:       1,
+                        READABLE:       true,
+                        WRITABLE:       true,
                         ADDRESS_WIDTH:  9,
                         OFFSET_ADDRESS: 9'h020+(32*(2*i+j) as 9)+(4*(2*k+l) as 9),
                         BUS_WIDTH:      32,
@@ -326,8 +326,8 @@ RSpec.describe 'register_file/veryl_top' do
                         inst u_bit_field: rggen::rggen_bit_field #(
                           WIDTH:          1,
                           INITIAL_VALUE:  INITIAL_VALUE,
-                          SW_WRITE_ONCE:  0,
-                          TRIGGER:        0
+                          SW_WRITE_ONCE:  false,
+                          TRIGGER:        false
                         )(
                           i_clk:            i_clk,
                           i_rst:            i_rst,
@@ -346,8 +346,8 @@ RSpec.describe 'register_file/veryl_top' do
                   for l in 0..2 :g {
                     inst bit_field_if: rggen::rggen_bit_field_if#(WIDTH: 32);
                     inst u_register: rggen::rggen_default_register #(
-                      READABLE:       1,
-                      WRITABLE:       1,
+                      READABLE:       true,
+                      WRITABLE:       true,
                       ADDRESS_WIDTH:  9,
                       OFFSET_ADDRESS: 9'h020+(32*(2*i+j) as 9)+9'h010+(4*(2*k+l) as 9),
                       BUS_WIDTH:      32,
@@ -374,8 +374,8 @@ RSpec.describe 'register_file/veryl_top' do
                       inst u_bit_field: rggen::rggen_bit_field #(
                         WIDTH:          1,
                         INITIAL_VALUE:  INITIAL_VALUE,
-                        SW_WRITE_ONCE:  0,
-                        TRIGGER:        0
+                        SW_WRITE_ONCE:  false,
+                        TRIGGER:        false
                       )(
                         i_clk:            i_clk,
                         i_rst:            i_rst,
@@ -401,8 +401,8 @@ RSpec.describe 'register_file/veryl_top' do
                 for j in 0..2 :g {
                   inst bit_field_if: rggen::rggen_bit_field_if#(WIDTH: 32);
                   inst u_register: rggen::rggen_default_register #(
-                    READABLE:       1,
-                    WRITABLE:       1,
+                    READABLE:       true,
+                    WRITABLE:       true,
                     ADDRESS_WIDTH:  9,
                     OFFSET_ADDRESS: 9'h0a0+(64*i as 9)+(8*j as 9),
                     BUS_WIDTH:      32,
@@ -429,8 +429,8 @@ RSpec.describe 'register_file/veryl_top' do
                     inst u_bit_field: rggen::rggen_bit_field #(
                       WIDTH:          1,
                       INITIAL_VALUE:  INITIAL_VALUE,
-                      SW_WRITE_ONCE:  0,
-                      TRIGGER:        0
+                      SW_WRITE_ONCE:  false,
+                      TRIGGER:        false
                     )(
                       i_clk:            i_clk,
                       i_rst:            i_rst,
@@ -447,8 +447,8 @@ RSpec.describe 'register_file/veryl_top' do
               for j in 0..2 :g {
                 inst bit_field_if: rggen::rggen_bit_field_if#(WIDTH: 32);
                 inst u_register: rggen::rggen_default_register #(
-                  READABLE:       1,
-                  WRITABLE:       1,
+                  READABLE:       true,
+                  WRITABLE:       true,
                   ADDRESS_WIDTH:  9,
                   OFFSET_ADDRESS: 9'h0a0+(64*i as 9)+9'h010+(8*j as 9),
                   BUS_WIDTH:      32,
@@ -475,8 +475,8 @@ RSpec.describe 'register_file/veryl_top' do
                   inst u_bit_field: rggen::rggen_bit_field #(
                     WIDTH:          1,
                     INITIAL_VALUE:  INITIAL_VALUE,
-                    SW_WRITE_ONCE:  0,
-                    TRIGGER:        0
+                    SW_WRITE_ONCE:  false,
+                    TRIGGER:        false
                   )(
                     i_clk:            i_clk,
                     i_rst:            i_rst,

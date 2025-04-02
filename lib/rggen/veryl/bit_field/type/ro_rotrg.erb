@@ -1,9 +1,9 @@
 inst u_bit_field: rggen::rggen_bit_field #(
   WIDTH:              <%= width %>,
   SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
-  STORAGE:            0,
-  EXTERNAL_READ_DATA: 1,
-  TRIGGER:            <%= trigger %>
+  STORAGE:            false,
+  EXTERNAL_READ_DATA: true,
+  TRIGGER:            <%= rotrg? %>
 )(
   i_clk:          <%= clock %>,
   i_rst:          <%= reset %>,

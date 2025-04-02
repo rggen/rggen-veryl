@@ -123,8 +123,8 @@ RSpec.describe 'register/type/default' do
     it 'rggen::rggen_default_registerをインスタンスするコードを出力する' do
       expect(registers[0]).to generate_code(:register, :top_down, <<~'VERYL')
         inst u_register: rggen::rggen_default_register #(
-          READABLE:       1,
-          WRITABLE:       1,
+          READABLE:       true,
+          WRITABLE:       true,
           ADDRESS_WIDTH:  10,
           OFFSET_ADDRESS: 10'h000,
           BUS_WIDTH:      32,
@@ -141,8 +141,8 @@ RSpec.describe 'register/type/default' do
 
       expect(registers[1]).to generate_code(:register, :top_down, <<~'VERYL')
         inst u_register: rggen::rggen_default_register #(
-          READABLE:       1,
-          WRITABLE:       1,
+          READABLE:       true,
+          WRITABLE:       true,
           ADDRESS_WIDTH:  10,
           OFFSET_ADDRESS: 10'h010+(4*i as 10),
           BUS_WIDTH:      32,
@@ -159,8 +159,8 @@ RSpec.describe 'register/type/default' do
 
       expect(registers[2]).to generate_code(:register, :top_down, <<~'VERYL')
         inst u_register: rggen::rggen_default_register #(
-          READABLE:       1,
-          WRITABLE:       1,
+          READABLE:       true,
+          WRITABLE:       true,
           ADDRESS_WIDTH:  10,
           OFFSET_ADDRESS: 10'h020+(4*(2*i+j) as 10),
           BUS_WIDTH:      32,
@@ -177,8 +177,8 @@ RSpec.describe 'register/type/default' do
 
       expect(registers[3]).to generate_code(:register, :top_down, <<~'VERYL')
         inst u_register: rggen::rggen_default_register #(
-          READABLE:       1,
-          WRITABLE:       1,
+          READABLE:       true,
+          WRITABLE:       true,
           ADDRESS_WIDTH:  10,
           OFFSET_ADDRESS: 10'h030+(8*i as 10),
           BUS_WIDTH:      32,
@@ -195,8 +195,8 @@ RSpec.describe 'register/type/default' do
 
       expect(registers[4]).to generate_code(:register, :top_down, <<~'VERYL')
         inst u_register: rggen::rggen_default_register #(
-          READABLE:       1,
-          WRITABLE:       1,
+          READABLE:       true,
+          WRITABLE:       true,
           ADDRESS_WIDTH:  10,
           OFFSET_ADDRESS: 10'h040,
           BUS_WIDTH:      32,
@@ -213,8 +213,8 @@ RSpec.describe 'register/type/default' do
 
       expect(registers[5]).to generate_code(:register, :top_down, <<~'VERYL')
         inst u_register: rggen::rggen_default_register #(
-          READABLE:       1,
-          WRITABLE:       1,
+          READABLE:       true,
+          WRITABLE:       true,
           ADDRESS_WIDTH:  10,
           OFFSET_ADDRESS: 10'h050,
           BUS_WIDTH:      32,
@@ -231,8 +231,8 @@ RSpec.describe 'register/type/default' do
 
       expect(registers[6]).to generate_code(:register, :top_down, <<~'VERYL')
         inst u_register: rggen::rggen_default_register #(
-          READABLE:       1,
-          WRITABLE:       1,
+          READABLE:       true,
+          WRITABLE:       true,
           ADDRESS_WIDTH:  10,
           OFFSET_ADDRESS: 10'h060,
           BUS_WIDTH:      32,
@@ -249,8 +249,8 @@ RSpec.describe 'register/type/default' do
 
       expect(registers[7]).to generate_code(:register, :top_down, <<~'VERYL')
         inst u_register: rggen::rggen_default_register #(
-          READABLE:       1,
-          WRITABLE:       1,
+          READABLE:       true,
+          WRITABLE:       true,
           ADDRESS_WIDTH:  10,
           OFFSET_ADDRESS: 10'h070,
           BUS_WIDTH:      32,
@@ -267,8 +267,8 @@ RSpec.describe 'register/type/default' do
 
       expect(registers[8]).to generate_code(:register, :top_down, <<~'VERYL')
         inst u_register: rggen::rggen_default_register #(
-          READABLE:       1,
-          WRITABLE:       0,
+          READABLE:       true,
+          WRITABLE:       false,
           ADDRESS_WIDTH:  10,
           OFFSET_ADDRESS: 10'h080,
           BUS_WIDTH:      32,
@@ -285,8 +285,8 @@ RSpec.describe 'register/type/default' do
 
       expect(registers[9]).to generate_code(:register, :top_down, <<~'VERYL')
         inst u_register: rggen::rggen_default_register #(
-          READABLE:       0,
-          WRITABLE:       1,
+          READABLE:       false,
+          WRITABLE:       true,
           ADDRESS_WIDTH:  10,
           OFFSET_ADDRESS: 10'h090,
           BUS_WIDTH:      32,
@@ -303,8 +303,8 @@ RSpec.describe 'register/type/default' do
 
       expect(registers[10]).to generate_code(:register, :top_down, <<~'VERYL')
         inst u_register: rggen::rggen_default_register #(
-          READABLE:       1,
-          WRITABLE:       1,
+          READABLE:       true,
+          WRITABLE:       true,
           ADDRESS_WIDTH:  10,
           OFFSET_ADDRESS: 10'h0a0+(32*(2*i+j) as 10)+10'h010+(4*(2*k+l) as 10),
           BUS_WIDTH:      32,
@@ -321,8 +321,8 @@ RSpec.describe 'register/type/default' do
 
       expect(registers[11]).to generate_code(:register, :top_down, <<~'VERYL')
         inst u_register: rggen::rggen_default_register #(
-          READABLE:       1,
-          WRITABLE:       1,
+          READABLE:       true,
+          WRITABLE:       true,
           ADDRESS_WIDTH:  10,
           OFFSET_ADDRESS: 10'h200+(32*i as 10)+(8*j as 10),
           BUS_WIDTH:      32,

@@ -3,10 +3,10 @@ inst u_bit_field: rggen::rggen_bit_field #(
   INITIAL_VALUE:      <%= initial_value %>,
   SW_READ_ACTION:     rggen_sw_action::<%= sw_read_action %>,
   SW_WRITE_ACTION:    rggen_sw_action::<%= sw_write_action %>,
-  SW_WRITE_ONCE:      <%= write_once %>,
-  STORAGE:            <%= storage %>,
-  EXTERNAL_READ_DATA: <%= external_read_data %>,
-  TRIGGER:            <%= trigger %>
+  SW_WRITE_ONCE:      <%= write_once? %>,
+  STORAGE:            <%= storage? %>,
+  EXTERNAL_READ_DATA: <%= external_read_data? %>,
+  TRIGGER:            <%= trigger? %>
 )(
   i_clk:              i_clk,
   i_rst:              i_rst,

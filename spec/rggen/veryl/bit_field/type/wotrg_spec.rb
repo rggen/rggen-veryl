@@ -246,8 +246,8 @@ RSpec.describe 'bit_field/type/wotrg' do
           WIDTH:          1,
           INITIAL_VALUE:  INITIAL_VALUE,
           SW_READ_ACTION: rggen_sw_action::READ_NONE,
-          SW_WRITE_ONCE:  0,
-          TRIGGER:        1
+          SW_WRITE_ONCE:  false,
+          TRIGGER:        true
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -262,8 +262,8 @@ RSpec.describe 'bit_field/type/wotrg' do
           WIDTH:          16,
           INITIAL_VALUE:  INITIAL_VALUE,
           SW_READ_ACTION: rggen_sw_action::READ_NONE,
-          SW_WRITE_ONCE:  0,
-          TRIGGER:        1
+          SW_WRITE_ONCE:  false,
+          TRIGGER:        true
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -278,8 +278,8 @@ RSpec.describe 'bit_field/type/wotrg' do
           WIDTH:          64,
           INITIAL_VALUE:  INITIAL_VALUE,
           SW_READ_ACTION: rggen_sw_action::READ_NONE,
-          SW_WRITE_ONCE:  0,
-          TRIGGER:        1
+          SW_WRITE_ONCE:  false,
+          TRIGGER:        true
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -294,8 +294,8 @@ RSpec.describe 'bit_field/type/wotrg' do
           WIDTH:          4,
           INITIAL_VALUE:  INITIAL_VALUE,
           SW_READ_ACTION: rggen_sw_action::READ_NONE,
-          SW_WRITE_ONCE:  0,
-          TRIGGER:        1
+          SW_WRITE_ONCE:  false,
+          TRIGGER:        true
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -310,8 +310,8 @@ RSpec.describe 'bit_field/type/wotrg' do
           WIDTH:          4,
           INITIAL_VALUE:  INITIAL_VALUE,
           SW_READ_ACTION: rggen_sw_action::READ_NONE,
-          SW_WRITE_ONCE:  0,
-          TRIGGER:        1
+          SW_WRITE_ONCE:  false,
+          TRIGGER:        true
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -326,8 +326,8 @@ RSpec.describe 'bit_field/type/wotrg' do
           WIDTH:          4,
           INITIAL_VALUE:  INITIAL_VALUE,
           SW_READ_ACTION: rggen_sw_action::READ_NONE,
-          SW_WRITE_ONCE:  0,
-          TRIGGER:        1
+          SW_WRITE_ONCE:  false,
+          TRIGGER:        true
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -342,8 +342,8 @@ RSpec.describe 'bit_field/type/wotrg' do
           WIDTH:          4,
           INITIAL_VALUE:  INITIAL_VALUE,
           SW_READ_ACTION: rggen_sw_action::READ_NONE,
-          SW_WRITE_ONCE:  0,
-          TRIGGER:        1
+          SW_WRITE_ONCE:  false,
+          TRIGGER:        true
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,

@@ -1,8 +1,8 @@
 inst u_bit_field: rggen::rggen_bit_field #(
   WIDTH:              <%= width %>,
   INITIAL_VALUE:      <%= initial_value %>,
-  EXTERNAL_READ_DATA: 1,
-  TRIGGER:            <%= trigger %>
+  EXTERNAL_READ_DATA: true,
+  TRIGGER:            <%= rowotrg? %>
 )(
   i_clk:            <%= clock %>,
   i_rst:            <%= reset %>,

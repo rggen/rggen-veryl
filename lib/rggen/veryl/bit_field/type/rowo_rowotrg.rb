@@ -29,10 +29,6 @@ RgGen.define_list_item_feature(:bit_field, :type, [:rowo, :rowotrg]) do
       bit_field.type == :rowotrg
     end
 
-    def trigger
-      rowotrg? && 1 || 0
-    end
-
     def write_trigger_signal
       rowotrg? && write_trigger[loop_variables] || unused
     end

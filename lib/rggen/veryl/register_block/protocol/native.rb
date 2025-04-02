@@ -7,7 +7,7 @@ RgGen.define_list_item_feature(:register_block, :protocol, :native) do
         name: 'STROBE_WIDTH', type: :u32, default: bus_width / 8
       }
       param :use_read_strobe, {
-        name: 'USE_READ_STROBE', type: :bit, default: 0
+        name: 'USE_READ_STROBE', type: :bool, default: false
       }
       modport :csrbus_if, {
         name: 'csrbus_if',

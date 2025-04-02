@@ -366,9 +366,9 @@ RSpec.describe 'bit_field/type/rotrg' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              1,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
-          STORAGE:            0,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            1
+          STORAGE:            false,
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            true
         )(
           i_clk:          i_clk,
           i_rst:          i_rst,
@@ -382,9 +382,9 @@ RSpec.describe 'bit_field/type/rotrg' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              1,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
-          STORAGE:            0,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            1
+          STORAGE:            false,
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            true
         )(
           i_clk:          i_clk,
           i_rst:          i_rst,
@@ -398,9 +398,9 @@ RSpec.describe 'bit_field/type/rotrg' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              8,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
-          STORAGE:            0,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            1
+          STORAGE:            false,
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            true
         )(
           i_clk:          i_clk,
           i_rst:          i_rst,
@@ -414,9 +414,9 @@ RSpec.describe 'bit_field/type/rotrg' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              8,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
-          STORAGE:            0,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            1
+          STORAGE:            false,
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            true
         )(
           i_clk:          i_clk,
           i_rst:          i_rst,
@@ -430,9 +430,9 @@ RSpec.describe 'bit_field/type/rotrg' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              64,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
-          STORAGE:            0,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            1
+          STORAGE:            false,
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            true
         )(
           i_clk:          i_clk,
           i_rst:          i_rst,
@@ -446,9 +446,9 @@ RSpec.describe 'bit_field/type/rotrg' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
-          STORAGE:            0,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            1
+          STORAGE:            false,
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            true
         )(
           i_clk:          i_clk,
           i_rst:          i_rst,
@@ -462,9 +462,9 @@ RSpec.describe 'bit_field/type/rotrg' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
-          STORAGE:            0,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            1
+          STORAGE:            false,
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            true
         )(
           i_clk:          i_clk,
           i_rst:          i_rst,
@@ -478,9 +478,9 @@ RSpec.describe 'bit_field/type/rotrg' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
-          STORAGE:            0,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            1
+          STORAGE:            false,
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            true
         )(
           i_clk:          i_clk,
           i_rst:          i_rst,
@@ -494,9 +494,9 @@ RSpec.describe 'bit_field/type/rotrg' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
-          STORAGE:            0,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            1
+          STORAGE:            false,
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            true
         )(
           i_clk:          i_clk,
           i_rst:          i_rst,
@@ -510,9 +510,9 @@ RSpec.describe 'bit_field/type/rotrg' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
-          STORAGE:            0,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            1
+          STORAGE:            false,
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            true
         )(
           i_clk:          i_clk,
           i_rst:          i_rst,
@@ -526,9 +526,9 @@ RSpec.describe 'bit_field/type/rotrg' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
-          STORAGE:            0,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            1
+          STORAGE:            false,
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            true
         )(
           i_clk:          i_clk,
           i_rst:          i_rst,
@@ -542,9 +542,9 @@ RSpec.describe 'bit_field/type/rotrg' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
-          STORAGE:            0,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            1
+          STORAGE:            false,
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            true
         )(
           i_clk:          i_clk,
           i_rst:          i_rst,
@@ -558,9 +558,9 @@ RSpec.describe 'bit_field/type/rotrg' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
-          STORAGE:            0,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            1
+          STORAGE:            false,
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            true
         )(
           i_clk:          i_clk,
           i_rst:          i_rst,
@@ -574,9 +574,9 @@ RSpec.describe 'bit_field/type/rotrg' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
-          STORAGE:            0,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            1
+          STORAGE:            false,
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            true
         )(
           i_clk:          i_clk,
           i_rst:          i_rst,
@@ -590,9 +590,9 @@ RSpec.describe 'bit_field/type/rotrg' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
-          STORAGE:            0,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            1
+          STORAGE:            false,
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            true
         )(
           i_clk:          i_clk,
           i_rst:          i_rst,
@@ -606,9 +606,9 @@ RSpec.describe 'bit_field/type/rotrg' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
-          STORAGE:            0,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            1
+          STORAGE:            false,
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            true
         )(
           i_clk:          i_clk,
           i_rst:          i_rst,
@@ -622,9 +622,9 @@ RSpec.describe 'bit_field/type/rotrg' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
-          STORAGE:            0,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            1
+          STORAGE:            false,
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            true
         )(
           i_clk:          i_clk,
           i_rst:          i_rst,

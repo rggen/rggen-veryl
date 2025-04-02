@@ -2,8 +2,8 @@ inst u_bit_field: rggen::rggen_bit_field #(
   WIDTH:          <%= width %>,
   INITIAL_VALUE:  <%= initial_value %>,
   SW_READ_ACTION: rggen_sw_action::READ_NONE,
-  SW_WRITE_ONCE:  <%= write_once %>,
-  TRIGGER:        <%= trigger %>
+  SW_WRITE_ONCE:  <%= write_once? %>,
+  TRIGGER:        <%= wotrg? %>
 )(
   i_clk:            <%= clock %>,
   i_rst:            <%= reset %>,

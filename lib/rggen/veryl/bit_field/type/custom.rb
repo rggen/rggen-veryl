@@ -78,24 +78,16 @@ RgGen.define_list_item_feature(:bit_field, :type, :custom) do
       }[bit_field.sw_write]
     end
 
-    def write_once
-      bit_field.sw_write_once? && 1 || 0
+    def write_once?
+      bit_field.sw_write_once?
     end
 
-    def storage
-      external_read_data? && 0 || 1
-    end
-
-    def external_read_data
-      external_read_data? && 1 || 0
+    def storage?
+      !external_read_data?
     end
 
     def trigger?
       bit_field.write_trigger? || bit_field.read_trigger?
-    end
-
-    def trigger
-      trigger? && 1 || 0
     end
 
     def input_port(name)
