@@ -7,6 +7,18 @@ RSpec.describe RgGen::Veryl::Utility::ModuleDefinition do
     [:foo_pkg, :bar_pkg]
   end
 
+  let(:generics) do
+    foo =
+      RgGen::Veryl::Utility::DataObject
+        .new(:generic, name: :FOO, type: :proto_foo)
+        .declaration
+    bar =
+      RgGen::Veryl::Utility::DataObject
+        .new(:generic, name: :BAR, type: :const, default: 0)
+        .declaration
+    [foo, bar]
+  end
+
   let(:params) do
     [:FOO, :BAR].map.with_index do |name, i|
       RgGen::Veryl::Utility::DataObject
@@ -47,6 +59,18 @@ RSpec.describe RgGen::Veryl::Utility::ModuleDefinition do
       import foo_pkg::*;
       import bar_pkg::*;
       pub module foo {
+      }
+    VERYL
+
+    expect(
+      module_definition(:foo) do |m|
+        m.generics generics
+      end
+    ).to match_string(<<~'VERYL')
+      pub module foo::<
+        FOO: proto_foo,
+        BAR: const = 0
+      >{
       }
     VERYL
 
@@ -100,6 +124,7 @@ RSpec.describe RgGen::Veryl::Utility::ModuleDefinition do
     expect(
       module_definition(:foo) do |m|
         m.package_imports packages
+        m.generics generics
         m.params params
         m.ports ports
         m.variables variables
@@ -109,7 +134,10 @@ RSpec.describe RgGen::Veryl::Utility::ModuleDefinition do
     ).to match_string(<<~'VERYL')
       import foo_pkg::*;
       import bar_pkg::*;
-      pub module foo #(
+      pub module foo::<
+        FOO: proto_foo,
+        BAR: const = 0
+      >#(
         param FOO: u32 = 0,
         param BAR: u32 = 1
       )(

@@ -61,7 +61,7 @@ module RgGen
         end
 
         def emit_width?
-          width && (!width.is_a?(Integer) || width >= 2)
+          (@object_type != :generic) && width && (!width.is_a?(Integer) || width >= 2)
         end
 
         def array_dimensions
@@ -71,7 +71,12 @@ module RgGen
         end
 
         def default_value
-          "= #{default}" if @object_type in :param | :const
+          "= #{default}" if emit_default_value?
+        end
+
+        def emit_default_value?
+          instance_variable_defined?(:@default) &&
+            (@object_type in :generic | :param | :const)
         end
       end
     end

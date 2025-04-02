@@ -5,6 +5,10 @@ RSpec.describe RgGen::Veryl::Utility::DataObject do
     described_class.new(:var, name: name, &block)
   end
 
+  def generic(name, &block)
+    described_class.new(:generic, name: name, &block)
+  end
+
   def param(name, &block)
     described_class.new(:param, name: name, &block)
   end
@@ -81,6 +85,13 @@ RSpec.describe RgGen::Veryl::Utility::DataObject do
         expect(output('foo') { |o| o.array_size ['ARRAY_SIZE'] }).to match_declaration('foo: output logic<ARRAY_SIZE>')
         expect(output('foo') { |o| o.array_size ['ARRAY_SIZE']; o.width 2 }).to match_declaration('foo: output logic<ARRAY_SIZE, 2>')
         expect(output('foo') { |o| o.array_size ['ARRAY_SIZE']; o.width 'WIDTH' }).to match_declaration('foo: output logic<ARRAY_SIZE, WIDTH>')
+      end
+    end
+
+    context 'ジェネリクスの場合' do
+      it 'ジェネリクス宣言を返す' do
+        expect(generic('foo') { |o| o.type :const}).to match_declaration('foo: const')
+        expect(generic('foo') { |o| o.type :const; o.default 0}).to match_declaration('foo: const = 0')
       end
     end
 
