@@ -7,6 +7,14 @@ RgGen.define_list_feature(:register, :type) do
 
       private
 
+      def readable?
+        register.readable?
+      end
+
+      def writable?
+        register.writable?
+      end
+
       def register_if
         register_block.register_if[register.index]
       end

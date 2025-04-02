@@ -175,8 +175,8 @@ RSpec.describe 'bit_field/type/rw' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:          1,
           INITIAL_VALUE:  INITIAL_VALUE,
-          SW_WRITE_ONCE:  0,
-          TRIGGER:        0
+          SW_WRITE_ONCE:  false,
+          TRIGGER:        false
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -191,8 +191,8 @@ RSpec.describe 'bit_field/type/rw' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:          16,
           INITIAL_VALUE:  INITIAL_VALUE,
-          SW_WRITE_ONCE:  0,
-          TRIGGER:        0
+          SW_WRITE_ONCE:  false,
+          TRIGGER:        false
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -207,8 +207,8 @@ RSpec.describe 'bit_field/type/rw' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:          64,
           INITIAL_VALUE:  INITIAL_VALUE,
-          SW_WRITE_ONCE:  0,
-          TRIGGER:        0
+          SW_WRITE_ONCE:  false,
+          TRIGGER:        false
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -223,8 +223,8 @@ RSpec.describe 'bit_field/type/rw' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:          4,
           INITIAL_VALUE:  INITIAL_VALUE,
-          SW_WRITE_ONCE:  0,
-          TRIGGER:        0
+          SW_WRITE_ONCE:  false,
+          TRIGGER:        false
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -239,8 +239,8 @@ RSpec.describe 'bit_field/type/rw' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:          4,
           INITIAL_VALUE:  INITIAL_VALUE,
-          SW_WRITE_ONCE:  0,
-          TRIGGER:        0
+          SW_WRITE_ONCE:  false,
+          TRIGGER:        false
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -255,8 +255,8 @@ RSpec.describe 'bit_field/type/rw' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:          4,
           INITIAL_VALUE:  INITIAL_VALUE,
-          SW_WRITE_ONCE:  0,
-          TRIGGER:        0
+          SW_WRITE_ONCE:  false,
+          TRIGGER:        false
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -271,8 +271,8 @@ RSpec.describe 'bit_field/type/rw' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:          4,
           INITIAL_VALUE:  INITIAL_VALUE,
-          SW_WRITE_ONCE:  0,
-          TRIGGER:        0
+          SW_WRITE_ONCE:  false,
+          TRIGGER:        false
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,

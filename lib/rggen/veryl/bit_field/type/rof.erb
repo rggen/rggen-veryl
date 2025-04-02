@@ -1,11 +1,11 @@
 inst u_bit_field: rggen::rggen_bit_field #(
   WIDTH:              <%= width %>,
   SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
-  STORAGE:            0,
-  EXTERNAL_READ_DATA: 1
+  STORAGE:            false,
+  EXTERNAL_READ_DATA: true
 )(
-  i_clk:        '0,
-  i_rst:        '0,
+  i_clk:        <%= clock %>,
+  i_rst:        <%= reset %>,
   bit_field_if: <%= bit_field_if %>,
   i_value:      <%= initial_value %>
 );

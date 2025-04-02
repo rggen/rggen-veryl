@@ -398,8 +398,8 @@ RSpec.describe 'bit_field/veryl_top' do
           inst u_bit_field: rggen::rggen_bit_field #(
             WIDTH:          1,
             INITIAL_VALUE:  INITIAL_VALUE,
-            SW_WRITE_ONCE:  0,
-            TRIGGER:        0
+            SW_WRITE_ONCE:  false,
+            TRIGGER:        false
           )(
             i_clk:            i_clk,
             i_rst:            i_rst,
@@ -426,8 +426,8 @@ RSpec.describe 'bit_field/veryl_top' do
           inst u_bit_field: rggen::rggen_bit_field #(
             WIDTH:          8,
             INITIAL_VALUE:  INITIAL_VALUE,
-            SW_WRITE_ONCE:  0,
-            TRIGGER:        0
+            SW_WRITE_ONCE:  false,
+            TRIGGER:        false
           )(
             i_clk:            i_clk,
             i_rst:            i_rst,
@@ -455,8 +455,8 @@ RSpec.describe 'bit_field/veryl_top' do
             inst u_bit_field: rggen::rggen_bit_field #(
               WIDTH:          1,
               INITIAL_VALUE:  INITIAL_VALUE,
-              SW_WRITE_ONCE:  0,
-              TRIGGER:        0
+              SW_WRITE_ONCE:  false,
+              TRIGGER:        false
             )(
               i_clk:            i_clk,
               i_rst:            i_rst,
@@ -484,8 +484,8 @@ RSpec.describe 'bit_field/veryl_top' do
             inst u_bit_field: rggen::rggen_bit_field #(
               WIDTH:          2,
               INITIAL_VALUE:  REGISTER_0_BIT_FIELD_3_INITIAL_VALUE[i],
-              SW_WRITE_ONCE:  0,
-              TRIGGER:        0
+              SW_WRITE_ONCE:  false,
+              TRIGGER:        false
             )(
               i_clk:            i_clk,
               i_rst:            i_rst,
@@ -514,8 +514,8 @@ RSpec.describe 'bit_field/veryl_top' do
             inst u_bit_field: rggen::rggen_bit_field #(
               WIDTH:          2,
               INITIAL_VALUE:  INITIAL_VALUE[i],
-              SW_WRITE_ONCE:  0,
-              TRIGGER:        0
+              SW_WRITE_ONCE:  false,
+              TRIGGER:        false
             )(
               i_clk:            i_clk,
               i_rst:            i_rst,
@@ -543,8 +543,8 @@ RSpec.describe 'bit_field/veryl_top' do
           inst u_bit_field: rggen::rggen_bit_field #(
             WIDTH:          1,
             INITIAL_VALUE:  INITIAL_VALUE,
-            SW_WRITE_ONCE:  0,
-            TRIGGER:        0
+            SW_WRITE_ONCE:  false,
+            TRIGGER:        false
           )(
             i_clk:            i_clk,
             i_rst:            i_rst,
@@ -571,8 +571,8 @@ RSpec.describe 'bit_field/veryl_top' do
           inst u_bit_field: rggen::rggen_bit_field #(
             WIDTH:          8,
             INITIAL_VALUE:  INITIAL_VALUE,
-            SW_WRITE_ONCE:  0,
-            TRIGGER:        0
+            SW_WRITE_ONCE:  false,
+            TRIGGER:        false
           )(
             i_clk:            i_clk,
             i_rst:            i_rst,
@@ -600,8 +600,8 @@ RSpec.describe 'bit_field/veryl_top' do
             inst u_bit_field: rggen::rggen_bit_field #(
               WIDTH:          1,
               INITIAL_VALUE:  INITIAL_VALUE,
-              SW_WRITE_ONCE:  0,
-              TRIGGER:        0
+              SW_WRITE_ONCE:  false,
+              TRIGGER:        false
             )(
               i_clk:            i_clk,
               i_rst:            i_rst,
@@ -629,8 +629,8 @@ RSpec.describe 'bit_field/veryl_top' do
             inst u_bit_field: rggen::rggen_bit_field #(
               WIDTH:          2,
               INITIAL_VALUE:  REGISTER_1_BIT_FIELD_3_INITIAL_VALUE[i][j],
-              SW_WRITE_ONCE:  0,
-              TRIGGER:        0
+              SW_WRITE_ONCE:  false,
+              TRIGGER:        false
             )(
               i_clk:            i_clk,
               i_rst:            i_rst,
@@ -659,8 +659,8 @@ RSpec.describe 'bit_field/veryl_top' do
             inst u_bit_field: rggen::rggen_bit_field #(
               WIDTH:          2,
               INITIAL_VALUE:  INITIAL_VALUE[i][j],
-              SW_WRITE_ONCE:  0,
-              TRIGGER:        0
+              SW_WRITE_ONCE:  false,
+              TRIGGER:        false
             )(
               i_clk:            i_clk,
               i_rst:            i_rst,
@@ -688,8 +688,8 @@ RSpec.describe 'bit_field/veryl_top' do
           inst u_bit_field: rggen::rggen_bit_field #(
             WIDTH:          1,
             INITIAL_VALUE:  INITIAL_VALUE,
-            SW_WRITE_ONCE:  0,
-            TRIGGER:        0
+            SW_WRITE_ONCE:  false,
+            TRIGGER:        false
           )(
             i_clk:            i_clk,
             i_rst:            i_rst,
@@ -716,8 +716,8 @@ RSpec.describe 'bit_field/veryl_top' do
           inst u_bit_field: rggen::rggen_bit_field #(
             WIDTH:          8,
             INITIAL_VALUE:  INITIAL_VALUE,
-            SW_WRITE_ONCE:  0,
-            TRIGGER:        0
+            SW_WRITE_ONCE:  false,
+            TRIGGER:        false
           )(
             i_clk:            i_clk,
             i_rst:            i_rst,
@@ -745,8 +745,8 @@ RSpec.describe 'bit_field/veryl_top' do
             inst u_bit_field: rggen::rggen_bit_field #(
               WIDTH:          1,
               INITIAL_VALUE:  INITIAL_VALUE,
-              SW_WRITE_ONCE:  0,
-              TRIGGER:        0
+              SW_WRITE_ONCE:  false,
+              TRIGGER:        false
             )(
               i_clk:            i_clk,
               i_rst:            i_rst,
@@ -774,8 +774,8 @@ RSpec.describe 'bit_field/veryl_top' do
             inst u_bit_field: rggen::rggen_bit_field #(
               WIDTH:          2,
               INITIAL_VALUE:  REGISTER_2_BIT_FIELD_3_INITIAL_VALUE[i][j][k],
-              SW_WRITE_ONCE:  0,
-              TRIGGER:        0
+              SW_WRITE_ONCE:  false,
+              TRIGGER:        false
             )(
               i_clk:            i_clk,
               i_rst:            i_rst,
@@ -804,8 +804,8 @@ RSpec.describe 'bit_field/veryl_top' do
             inst u_bit_field: rggen::rggen_bit_field #(
               WIDTH:          2,
               INITIAL_VALUE:  INITIAL_VALUE[i][j][k],
-              SW_WRITE_ONCE:  0,
-              TRIGGER:        0
+              SW_WRITE_ONCE:  false,
+              TRIGGER:        false
             )(
               i_clk:            i_clk,
               i_rst:            i_rst,
@@ -833,8 +833,8 @@ RSpec.describe 'bit_field/veryl_top' do
           inst u_bit_field: rggen::rggen_bit_field #(
             WIDTH:          32,
             INITIAL_VALUE:  INITIAL_VALUE,
-            SW_WRITE_ONCE:  0,
-            TRIGGER:        0
+            SW_WRITE_ONCE:  false,
+            TRIGGER:        false
           )(
             i_clk:            i_clk,
             i_rst:            i_rst,

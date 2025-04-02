@@ -43,7 +43,7 @@ RSpec.describe 'register_block/protocol' do
     expect(veryl)
       .to have_param(
         :pre_decode,
-        name: 'PRE_DECODE', type: :bit, default: 0
+        name: 'PRE_DECODE', type: :bool, default: false
       )
     expect(veryl)
       .to have_param(
@@ -53,7 +53,7 @@ RSpec.describe 'register_block/protocol' do
     expect(veryl)
       .to have_param(
         :error_status,
-        name: 'ERROR_STATUS', type: :bit, default: 0
+        name: 'ERROR_STATUS', type: :bool, default: false
       )
     expect(veryl)
       .to have_param(
@@ -63,7 +63,7 @@ RSpec.describe 'register_block/protocol' do
     expect(veryl)
       .to have_param(
         :insert_slicer,
-        name: 'INSERT_SLICER', type: :bit, default: 0
+        name: 'INSERT_SLICER', type: :bool, default: false
       )
   end
 end

@@ -38,11 +38,11 @@ RSpec.describe 'bit_field/type/rof' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              1,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
-          STORAGE:            0,
-          EXTERNAL_READ_DATA: 1
+          STORAGE:            false,
+          EXTERNAL_READ_DATA: true
         )(
-          i_clk:        '0,
-          i_rst:        '0,
+          i_clk:        i_clk,
+          i_rst:        i_rst,
           bit_field_if: bit_field_sub_if,
           i_value:      INITIAL_VALUE
         );
@@ -52,11 +52,11 @@ RSpec.describe 'bit_field/type/rof' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              16,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
-          STORAGE:            0,
-          EXTERNAL_READ_DATA: 1
+          STORAGE:            false,
+          EXTERNAL_READ_DATA: true
         )(
-          i_clk:        '0,
-          i_rst:        '0,
+          i_clk:        i_clk,
+          i_rst:        i_rst,
           bit_field_if: bit_field_sub_if,
           i_value:      INITIAL_VALUE
         );
@@ -66,11 +66,11 @@ RSpec.describe 'bit_field/type/rof' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              1,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
-          STORAGE:            0,
-          EXTERNAL_READ_DATA: 1
+          STORAGE:            false,
+          EXTERNAL_READ_DATA: true
         )(
-          i_clk:        '0,
-          i_rst:        '0,
+          i_clk:        i_clk,
+          i_rst:        i_rst,
           bit_field_if: bit_field_sub_if,
           i_value:      INITIAL_VALUE
         );
@@ -80,11 +80,11 @@ RSpec.describe 'bit_field/type/rof' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              16,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
-          STORAGE:            0,
-          EXTERNAL_READ_DATA: 1
+          STORAGE:            false,
+          EXTERNAL_READ_DATA: true
         )(
-          i_clk:        '0,
-          i_rst:        '0,
+          i_clk:        i_clk,
+          i_rst:        i_rst,
           bit_field_if: bit_field_sub_if,
           i_value:      INITIAL_VALUE
         );

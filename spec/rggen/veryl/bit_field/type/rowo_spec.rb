@@ -482,8 +482,8 @@ RSpec.describe 'bit_field/type/rowo' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              1,
           INITIAL_VALUE:      INITIAL_VALUE,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            0
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            false
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -499,8 +499,8 @@ RSpec.describe 'bit_field/type/rowo' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              1,
           INITIAL_VALUE:      INITIAL_VALUE,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            0
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            false
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -516,8 +516,8 @@ RSpec.describe 'bit_field/type/rowo' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              8,
           INITIAL_VALUE:      INITIAL_VALUE,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            0
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            false
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -533,8 +533,8 @@ RSpec.describe 'bit_field/type/rowo' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              8,
           INITIAL_VALUE:      INITIAL_VALUE,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            0
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            false
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -550,8 +550,8 @@ RSpec.describe 'bit_field/type/rowo' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              64,
           INITIAL_VALUE:      INITIAL_VALUE,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            0
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            false
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -567,8 +567,8 @@ RSpec.describe 'bit_field/type/rowo' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           INITIAL_VALUE:      INITIAL_VALUE,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            0
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            false
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -584,8 +584,8 @@ RSpec.describe 'bit_field/type/rowo' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           INITIAL_VALUE:      INITIAL_VALUE,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            0
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            false
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -601,8 +601,8 @@ RSpec.describe 'bit_field/type/rowo' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           INITIAL_VALUE:      INITIAL_VALUE,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            0
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            false
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -618,8 +618,8 @@ RSpec.describe 'bit_field/type/rowo' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           INITIAL_VALUE:      INITIAL_VALUE,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            0
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            false
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -635,8 +635,8 @@ RSpec.describe 'bit_field/type/rowo' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           INITIAL_VALUE:      INITIAL_VALUE,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            0
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            false
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -652,8 +652,8 @@ RSpec.describe 'bit_field/type/rowo' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           INITIAL_VALUE:      INITIAL_VALUE,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            0
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            false
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -669,8 +669,8 @@ RSpec.describe 'bit_field/type/rowo' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           INITIAL_VALUE:      INITIAL_VALUE,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            0
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            false
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -686,8 +686,8 @@ RSpec.describe 'bit_field/type/rowo' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           INITIAL_VALUE:      INITIAL_VALUE,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            0
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            false
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -703,8 +703,8 @@ RSpec.describe 'bit_field/type/rowo' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           INITIAL_VALUE:      INITIAL_VALUE,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            0
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            false
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -720,8 +720,8 @@ RSpec.describe 'bit_field/type/rowo' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           INITIAL_VALUE:      INITIAL_VALUE,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            0
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            false
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -737,8 +737,8 @@ RSpec.describe 'bit_field/type/rowo' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           INITIAL_VALUE:      INITIAL_VALUE,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            0
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            false
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -754,8 +754,8 @@ RSpec.describe 'bit_field/type/rowo' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:              4,
           INITIAL_VALUE:      INITIAL_VALUE,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            0
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            false
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,

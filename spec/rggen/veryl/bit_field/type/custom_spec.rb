@@ -213,10 +213,10 @@ RSpec.describe 'bit_field/type/custom' do
           INITIAL_VALUE:      INITIAL_VALUE,
           SW_READ_ACTION:     rggen_sw_action::READ_DEFAULT,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_DEFAULT,
-          SW_WRITE_ONCE:      0,
-          STORAGE:            1,
-          EXTERNAL_READ_DATA: 0,
-          TRIGGER:            0
+          SW_WRITE_ONCE:      false,
+          STORAGE:            true,
+          EXTERNAL_READ_DATA: false,
+          TRIGGER:            false
         )(
           i_clk:              i_clk,
           i_rst:              i_rst,
@@ -238,10 +238,10 @@ RSpec.describe 'bit_field/type/custom' do
           INITIAL_VALUE:      INITIAL_VALUE,
           SW_READ_ACTION:     rggen_sw_action::READ_NONE,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_DEFAULT,
-          SW_WRITE_ONCE:      0,
-          STORAGE:            1,
-          EXTERNAL_READ_DATA: 0,
-          TRIGGER:            0
+          SW_WRITE_ONCE:      false,
+          STORAGE:            true,
+          EXTERNAL_READ_DATA: false,
+          TRIGGER:            false
         )(
           i_clk:              i_clk,
           i_rst:              i_rst,
@@ -263,10 +263,10 @@ RSpec.describe 'bit_field/type/custom' do
           INITIAL_VALUE:      INITIAL_VALUE,
           SW_READ_ACTION:     rggen_sw_action::READ_DEFAULT,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_DEFAULT,
-          SW_WRITE_ONCE:      0,
-          STORAGE:            1,
-          EXTERNAL_READ_DATA: 0,
-          TRIGGER:            0
+          SW_WRITE_ONCE:      false,
+          STORAGE:            true,
+          EXTERNAL_READ_DATA: false,
+          TRIGGER:            false
         )(
           i_clk:              i_clk,
           i_rst:              i_rst,
@@ -288,10 +288,10 @@ RSpec.describe 'bit_field/type/custom' do
           INITIAL_VALUE:      INITIAL_VALUE,
           SW_READ_ACTION:     rggen_sw_action::READ_SET,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_DEFAULT,
-          SW_WRITE_ONCE:      0,
-          STORAGE:            1,
-          EXTERNAL_READ_DATA: 0,
-          TRIGGER:            0
+          SW_WRITE_ONCE:      false,
+          STORAGE:            true,
+          EXTERNAL_READ_DATA: false,
+          TRIGGER:            false
         )(
           i_clk:              i_clk,
           i_rst:              i_rst,
@@ -313,10 +313,10 @@ RSpec.describe 'bit_field/type/custom' do
           INITIAL_VALUE:      INITIAL_VALUE,
           SW_READ_ACTION:     rggen_sw_action::READ_CLEAR,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_DEFAULT,
-          SW_WRITE_ONCE:      0,
-          STORAGE:            1,
-          EXTERNAL_READ_DATA: 0,
-          TRIGGER:            0
+          SW_WRITE_ONCE:      false,
+          STORAGE:            true,
+          EXTERNAL_READ_DATA: false,
+          TRIGGER:            false
         )(
           i_clk:              i_clk,
           i_rst:              i_rst,
@@ -338,10 +338,10 @@ RSpec.describe 'bit_field/type/custom' do
           INITIAL_VALUE:      '0,
           SW_READ_ACTION:     rggen_sw_action::READ_DEFAULT,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_NONE,
-          SW_WRITE_ONCE:      0,
-          STORAGE:            0,
-          EXTERNAL_READ_DATA: 1,
-          TRIGGER:            0
+          SW_WRITE_ONCE:      false,
+          STORAGE:            false,
+          EXTERNAL_READ_DATA: true,
+          TRIGGER:            false
         )(
           i_clk:              i_clk,
           i_rst:              i_rst,
@@ -363,10 +363,10 @@ RSpec.describe 'bit_field/type/custom' do
           INITIAL_VALUE:      INITIAL_VALUE,
           SW_READ_ACTION:     rggen_sw_action::READ_DEFAULT,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_DEFAULT,
-          SW_WRITE_ONCE:      0,
-          STORAGE:            1,
-          EXTERNAL_READ_DATA: 0,
-          TRIGGER:            0
+          SW_WRITE_ONCE:      false,
+          STORAGE:            true,
+          EXTERNAL_READ_DATA: false,
+          TRIGGER:            false
         )(
           i_clk:              i_clk,
           i_rst:              i_rst,
@@ -388,10 +388,10 @@ RSpec.describe 'bit_field/type/custom' do
           INITIAL_VALUE:      INITIAL_VALUE,
           SW_READ_ACTION:     rggen_sw_action::READ_DEFAULT,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_SET,
-          SW_WRITE_ONCE:      0,
-          STORAGE:            1,
-          EXTERNAL_READ_DATA: 0,
-          TRIGGER:            0
+          SW_WRITE_ONCE:      false,
+          STORAGE:            true,
+          EXTERNAL_READ_DATA: false,
+          TRIGGER:            false
         )(
           i_clk:              i_clk,
           i_rst:              i_rst,
@@ -413,10 +413,10 @@ RSpec.describe 'bit_field/type/custom' do
           INITIAL_VALUE:      INITIAL_VALUE,
           SW_READ_ACTION:     rggen_sw_action::READ_DEFAULT,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_0_SET,
-          SW_WRITE_ONCE:      0,
-          STORAGE:            1,
-          EXTERNAL_READ_DATA: 0,
-          TRIGGER:            0
+          SW_WRITE_ONCE:      false,
+          STORAGE:            true,
+          EXTERNAL_READ_DATA: false,
+          TRIGGER:            false
         )(
           i_clk:              i_clk,
           i_rst:              i_rst,
@@ -438,10 +438,10 @@ RSpec.describe 'bit_field/type/custom' do
           INITIAL_VALUE:      INITIAL_VALUE,
           SW_READ_ACTION:     rggen_sw_action::READ_DEFAULT,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_1_SET,
-          SW_WRITE_ONCE:      0,
-          STORAGE:            1,
-          EXTERNAL_READ_DATA: 0,
-          TRIGGER:            0
+          SW_WRITE_ONCE:      false,
+          STORAGE:            true,
+          EXTERNAL_READ_DATA: false,
+          TRIGGER:            false
         )(
           i_clk:              i_clk,
           i_rst:              i_rst,
@@ -463,10 +463,10 @@ RSpec.describe 'bit_field/type/custom' do
           INITIAL_VALUE:      INITIAL_VALUE,
           SW_READ_ACTION:     rggen_sw_action::READ_DEFAULT,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_CLEAR,
-          SW_WRITE_ONCE:      0,
-          STORAGE:            1,
-          EXTERNAL_READ_DATA: 0,
-          TRIGGER:            0
+          SW_WRITE_ONCE:      false,
+          STORAGE:            true,
+          EXTERNAL_READ_DATA: false,
+          TRIGGER:            false
         )(
           i_clk:              i_clk,
           i_rst:              i_rst,
@@ -488,10 +488,10 @@ RSpec.describe 'bit_field/type/custom' do
           INITIAL_VALUE:      INITIAL_VALUE,
           SW_READ_ACTION:     rggen_sw_action::READ_DEFAULT,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_0_CLEAR,
-          SW_WRITE_ONCE:      0,
-          STORAGE:            1,
-          EXTERNAL_READ_DATA: 0,
-          TRIGGER:            0
+          SW_WRITE_ONCE:      false,
+          STORAGE:            true,
+          EXTERNAL_READ_DATA: false,
+          TRIGGER:            false
         )(
           i_clk:              i_clk,
           i_rst:              i_rst,
@@ -513,10 +513,10 @@ RSpec.describe 'bit_field/type/custom' do
           INITIAL_VALUE:      INITIAL_VALUE,
           SW_READ_ACTION:     rggen_sw_action::READ_DEFAULT,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_1_CLEAR,
-          SW_WRITE_ONCE:      0,
-          STORAGE:            1,
-          EXTERNAL_READ_DATA: 0,
-          TRIGGER:            0
+          SW_WRITE_ONCE:      false,
+          STORAGE:            true,
+          EXTERNAL_READ_DATA: false,
+          TRIGGER:            false
         )(
           i_clk:              i_clk,
           i_rst:              i_rst,
@@ -538,10 +538,10 @@ RSpec.describe 'bit_field/type/custom' do
           INITIAL_VALUE:      INITIAL_VALUE,
           SW_READ_ACTION:     rggen_sw_action::READ_DEFAULT,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_0_TOGGLE,
-          SW_WRITE_ONCE:      0,
-          STORAGE:            1,
-          EXTERNAL_READ_DATA: 0,
-          TRIGGER:            0
+          SW_WRITE_ONCE:      false,
+          STORAGE:            true,
+          EXTERNAL_READ_DATA: false,
+          TRIGGER:            false
         )(
           i_clk:              i_clk,
           i_rst:              i_rst,
@@ -563,10 +563,10 @@ RSpec.describe 'bit_field/type/custom' do
           INITIAL_VALUE:      INITIAL_VALUE,
           SW_READ_ACTION:     rggen_sw_action::READ_DEFAULT,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_1_TOGGLE,
-          SW_WRITE_ONCE:      0,
-          STORAGE:            1,
-          EXTERNAL_READ_DATA: 0,
-          TRIGGER:            0
+          SW_WRITE_ONCE:      false,
+          STORAGE:            true,
+          EXTERNAL_READ_DATA: false,
+          TRIGGER:            false
         )(
           i_clk:              i_clk,
           i_rst:              i_rst,
@@ -588,10 +588,10 @@ RSpec.describe 'bit_field/type/custom' do
           INITIAL_VALUE:      INITIAL_VALUE,
           SW_READ_ACTION:     rggen_sw_action::READ_DEFAULT,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_DEFAULT,
-          SW_WRITE_ONCE:      1,
-          STORAGE:            1,
-          EXTERNAL_READ_DATA: 0,
-          TRIGGER:            0
+          SW_WRITE_ONCE:      true,
+          STORAGE:            true,
+          EXTERNAL_READ_DATA: false,
+          TRIGGER:            false
         )(
           i_clk:              i_clk,
           i_rst:              i_rst,
@@ -613,10 +613,10 @@ RSpec.describe 'bit_field/type/custom' do
           INITIAL_VALUE:      INITIAL_VALUE,
           SW_READ_ACTION:     rggen_sw_action::READ_DEFAULT,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_DEFAULT,
-          SW_WRITE_ONCE:      0,
-          STORAGE:            1,
-          EXTERNAL_READ_DATA: 0,
-          TRIGGER:            0
+          SW_WRITE_ONCE:      false,
+          STORAGE:            true,
+          EXTERNAL_READ_DATA: false,
+          TRIGGER:            false
         )(
           i_clk:              i_clk,
           i_rst:              i_rst,
@@ -638,10 +638,10 @@ RSpec.describe 'bit_field/type/custom' do
           INITIAL_VALUE:      INITIAL_VALUE,
           SW_READ_ACTION:     rggen_sw_action::READ_DEFAULT,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_DEFAULT,
-          SW_WRITE_ONCE:      0,
-          STORAGE:            1,
-          EXTERNAL_READ_DATA: 0,
-          TRIGGER:            0
+          SW_WRITE_ONCE:      false,
+          STORAGE:            true,
+          EXTERNAL_READ_DATA: false,
+          TRIGGER:            false
         )(
           i_clk:              i_clk,
           i_rst:              i_rst,
@@ -663,10 +663,10 @@ RSpec.describe 'bit_field/type/custom' do
           INITIAL_VALUE:      INITIAL_VALUE,
           SW_READ_ACTION:     rggen_sw_action::READ_DEFAULT,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_DEFAULT,
-          SW_WRITE_ONCE:      0,
-          STORAGE:            1,
-          EXTERNAL_READ_DATA: 0,
-          TRIGGER:            0
+          SW_WRITE_ONCE:      false,
+          STORAGE:            true,
+          EXTERNAL_READ_DATA: false,
+          TRIGGER:            false
         )(
           i_clk:              i_clk,
           i_rst:              i_rst,
@@ -688,10 +688,10 @@ RSpec.describe 'bit_field/type/custom' do
           INITIAL_VALUE:      INITIAL_VALUE,
           SW_READ_ACTION:     rggen_sw_action::READ_DEFAULT,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_DEFAULT,
-          SW_WRITE_ONCE:      0,
-          STORAGE:            1,
-          EXTERNAL_READ_DATA: 0,
-          TRIGGER:            1
+          SW_WRITE_ONCE:      false,
+          STORAGE:            true,
+          EXTERNAL_READ_DATA: false,
+          TRIGGER:            true
         )(
           i_clk:              i_clk,
           i_rst:              i_rst,
@@ -713,10 +713,10 @@ RSpec.describe 'bit_field/type/custom' do
           INITIAL_VALUE:      INITIAL_VALUE,
           SW_READ_ACTION:     rggen_sw_action::READ_DEFAULT,
           SW_WRITE_ACTION:    rggen_sw_action::WRITE_DEFAULT,
-          SW_WRITE_ONCE:      0,
-          STORAGE:            1,
-          EXTERNAL_READ_DATA: 0,
-          TRIGGER:            1
+          SW_WRITE_ONCE:      false,
+          STORAGE:            true,
+          EXTERNAL_READ_DATA: false,
+          TRIGGER:            true
         )(
           i_clk:              i_clk,
           i_rst:              i_rst,
