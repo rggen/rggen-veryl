@@ -2,6 +2,6 @@
 
 module RgGen
   module Veryl
-    VERSION = '0.3.0'
+    VERSION = '0.4.0'
   end
 end
