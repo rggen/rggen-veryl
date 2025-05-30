@@ -127,9 +127,9 @@ RSpec.describe 'register_file/veryl_top' do
               const INITIAL_VALUE: bit = 1'h0;
               inst bit_field_sub_if: rggen::rggen_bit_field_if#(WIDTH: 1);
               always_comb {
-                bit_field_sub_if.valid = bit_field_if.valid;
-                bit_field_sub_if.read_mask = bit_field_if.read_mask[0+:1];
-                bit_field_sub_if.write_mask = bit_field_if.write_mask[0+:1];
+                bit_field_sub_if.read_valid = bit_field_if.read_valid;
+                bit_field_sub_if.write_valid = bit_field_if.write_valid;
+                bit_field_sub_if.mask = bit_field_if.mask[0+:1];
                 bit_field_sub_if.write_data = bit_field_if.write_data[0+:1];
                 bit_field_if.read_data[0+:1] = bit_field_sub_if.read_data;
                 bit_field_if.value[0+:1] = bit_field_sub_if.value;
@@ -170,9 +170,9 @@ RSpec.describe 'register_file/veryl_top' do
               const INITIAL_VALUE: bit = 1'h0;
               inst bit_field_sub_if: rggen::rggen_bit_field_if#(WIDTH: 1);
               always_comb {
-                bit_field_sub_if.valid = bit_field_if.valid;
-                bit_field_sub_if.read_mask = bit_field_if.read_mask[0+:1];
-                bit_field_sub_if.write_mask = bit_field_if.write_mask[0+:1];
+                bit_field_sub_if.read_valid = bit_field_if.read_valid;
+                bit_field_sub_if.write_valid = bit_field_if.write_valid;
+                bit_field_sub_if.mask = bit_field_if.mask[0+:1];
                 bit_field_sub_if.write_data = bit_field_if.write_data[0+:1];
                 bit_field_if.read_data[0+:1] = bit_field_sub_if.read_data;
                 bit_field_if.value[0+:1] = bit_field_sub_if.value;
@@ -219,9 +219,9 @@ RSpec.describe 'register_file/veryl_top' do
                 const INITIAL_VALUE: bit = 1'h0;
                 inst bit_field_sub_if: rggen::rggen_bit_field_if#(WIDTH: 1);
                 always_comb {
-                  bit_field_sub_if.valid = bit_field_if.valid;
-                  bit_field_sub_if.read_mask = bit_field_if.read_mask[0+:1];
-                  bit_field_sub_if.write_mask = bit_field_if.write_mask[0+:1];
+                  bit_field_sub_if.read_valid = bit_field_if.read_valid;
+                  bit_field_sub_if.write_valid = bit_field_if.write_valid;
+                  bit_field_sub_if.mask = bit_field_if.mask[0+:1];
                   bit_field_sub_if.write_data = bit_field_if.write_data[0+:1];
                   bit_field_if.read_data[0+:1] = bit_field_sub_if.read_data;
                   bit_field_if.value[0+:1] = bit_field_sub_if.value;
@@ -263,9 +263,9 @@ RSpec.describe 'register_file/veryl_top' do
               const INITIAL_VALUE: bit = 1'h0;
               inst bit_field_sub_if: rggen::rggen_bit_field_if#(WIDTH: 1);
               always_comb {
-                bit_field_sub_if.valid = bit_field_if.valid;
-                bit_field_sub_if.read_mask = bit_field_if.read_mask[0+:1];
-                bit_field_sub_if.write_mask = bit_field_if.write_mask[0+:1];
+                bit_field_sub_if.read_valid = bit_field_if.read_valid;
+                bit_field_sub_if.write_valid = bit_field_if.write_valid;
+                bit_field_sub_if.mask = bit_field_if.mask[0+:1];
                 bit_field_sub_if.write_data = bit_field_if.write_data[0+:1];
                 bit_field_if.read_data[0+:1] = bit_field_sub_if.read_data;
                 bit_field_if.value[0+:1] = bit_field_sub_if.value;
@@ -316,9 +316,9 @@ RSpec.describe 'register_file/veryl_top' do
                         const INITIAL_VALUE: bit = 1'h0;
                         inst bit_field_sub_if: rggen::rggen_bit_field_if#(WIDTH: 1);
                         always_comb {
-                          bit_field_sub_if.valid = bit_field_if.valid;
-                          bit_field_sub_if.read_mask = bit_field_if.read_mask[0+:1];
-                          bit_field_sub_if.write_mask = bit_field_if.write_mask[0+:1];
+                          bit_field_sub_if.read_valid = bit_field_if.read_valid;
+                          bit_field_sub_if.write_valid = bit_field_if.write_valid;
+                          bit_field_sub_if.mask = bit_field_if.mask[0+:1];
                           bit_field_sub_if.write_data = bit_field_if.write_data[0+:1];
                           bit_field_if.read_data[0+:1] = bit_field_sub_if.read_data;
                           bit_field_if.value[0+:1] = bit_field_sub_if.value;
@@ -364,9 +364,9 @@ RSpec.describe 'register_file/veryl_top' do
                       const INITIAL_VALUE: bit = 1'h0;
                       inst bit_field_sub_if: rggen::rggen_bit_field_if#(WIDTH: 1);
                       always_comb {
-                        bit_field_sub_if.valid = bit_field_if.valid;
-                        bit_field_sub_if.read_mask = bit_field_if.read_mask[0+:1];
-                        bit_field_sub_if.write_mask = bit_field_if.write_mask[0+:1];
+                        bit_field_sub_if.read_valid = bit_field_if.read_valid;
+                        bit_field_sub_if.write_valid = bit_field_if.write_valid;
+                        bit_field_sub_if.mask = bit_field_if.mask[0+:1];
                         bit_field_sub_if.write_data = bit_field_if.write_data[0+:1];
                         bit_field_if.read_data[0+:1] = bit_field_sub_if.read_data;
                         bit_field_if.value[0+:1] = bit_field_sub_if.value;
@@ -419,9 +419,9 @@ RSpec.describe 'register_file/veryl_top' do
                     const INITIAL_VALUE: bit = 1'h0;
                     inst bit_field_sub_if: rggen::rggen_bit_field_if#(WIDTH: 1);
                     always_comb {
-                      bit_field_sub_if.valid = bit_field_if.valid;
-                      bit_field_sub_if.read_mask = bit_field_if.read_mask[0+:1];
-                      bit_field_sub_if.write_mask = bit_field_if.write_mask[0+:1];
+                      bit_field_sub_if.read_valid = bit_field_if.read_valid;
+                      bit_field_sub_if.write_valid = bit_field_if.write_valid;
+                      bit_field_sub_if.mask = bit_field_if.mask[0+:1];
                       bit_field_sub_if.write_data = bit_field_if.write_data[0+:1];
                       bit_field_if.read_data[0+:1] = bit_field_sub_if.read_data;
                       bit_field_if.value[0+:1] = bit_field_sub_if.value;
@@ -465,9 +465,9 @@ RSpec.describe 'register_file/veryl_top' do
                   const INITIAL_VALUE: bit = 1'h0;
                   inst bit_field_sub_if: rggen::rggen_bit_field_if#(WIDTH: 1);
                   always_comb {
-                    bit_field_sub_if.valid = bit_field_if.valid;
-                    bit_field_sub_if.read_mask = bit_field_if.read_mask[0+:1];
-                    bit_field_sub_if.write_mask = bit_field_if.write_mask[0+:1];
+                    bit_field_sub_if.read_valid = bit_field_if.read_valid;
+                    bit_field_sub_if.write_valid = bit_field_if.write_valid;
+                    bit_field_sub_if.mask = bit_field_if.mask[0+:1];
                     bit_field_sub_if.write_data = bit_field_if.write_data[0+:1];
                     bit_field_if.read_data[0+:1] = bit_field_sub_if.read_data;
                     bit_field_if.value[0+:1] = bit_field_sub_if.value;

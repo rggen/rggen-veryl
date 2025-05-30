@@ -35,5 +35,9 @@ RgGen.define_list_item_feature(:bit_field, :type, [:rc, :w0c, :w1c, :wc, :woc]) 
     def value_out_unmasked_singal
       bit_field.reference? && value_unmasked[loop_variables] || unused
     end
+
+    def external_mask
+      bit_field.reference?
+    end
   end
 end

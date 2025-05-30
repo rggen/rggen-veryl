@@ -498,7 +498,9 @@ RSpec.describe 'bit_field/type/w0c' do
           WIDTH:            1,
           INITIAL_VALUE:    INITIAL_VALUE,
           SW_READ_ACTION:   rggen_sw_action::READ_DEFAULT,
-          SW_WRITE_ACTION:  rggen_sw_action::WRITE_0_CLEAR
+          SW_WRITE_ACTION:  rggen_sw_action::WRITE_0_CLEAR,
+          HW_SET:           true,
+          EXTERNAL_MASK:    false
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -515,7 +517,9 @@ RSpec.describe 'bit_field/type/w0c' do
           WIDTH:            1,
           INITIAL_VALUE:    INITIAL_VALUE,
           SW_READ_ACTION:   rggen_sw_action::READ_DEFAULT,
-          SW_WRITE_ACTION:  rggen_sw_action::WRITE_0_CLEAR
+          SW_WRITE_ACTION:  rggen_sw_action::WRITE_0_CLEAR,
+          HW_SET:           true,
+          EXTERNAL_MASK:    true
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -532,7 +536,9 @@ RSpec.describe 'bit_field/type/w0c' do
           WIDTH:            8,
           INITIAL_VALUE:    INITIAL_VALUE,
           SW_READ_ACTION:   rggen_sw_action::READ_DEFAULT,
-          SW_WRITE_ACTION:  rggen_sw_action::WRITE_0_CLEAR
+          SW_WRITE_ACTION:  rggen_sw_action::WRITE_0_CLEAR,
+          HW_SET:           true,
+          EXTERNAL_MASK:    false
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -549,7 +555,9 @@ RSpec.describe 'bit_field/type/w0c' do
           WIDTH:            8,
           INITIAL_VALUE:    INITIAL_VALUE,
           SW_READ_ACTION:   rggen_sw_action::READ_DEFAULT,
-          SW_WRITE_ACTION:  rggen_sw_action::WRITE_0_CLEAR
+          SW_WRITE_ACTION:  rggen_sw_action::WRITE_0_CLEAR,
+          HW_SET:           true,
+          EXTERNAL_MASK:    true
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -566,7 +574,9 @@ RSpec.describe 'bit_field/type/w0c' do
           WIDTH:            64,
           INITIAL_VALUE:    INITIAL_VALUE,
           SW_READ_ACTION:   rggen_sw_action::READ_DEFAULT,
-          SW_WRITE_ACTION:  rggen_sw_action::WRITE_0_CLEAR
+          SW_WRITE_ACTION:  rggen_sw_action::WRITE_0_CLEAR,
+          HW_SET:           true,
+          EXTERNAL_MASK:    false
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -583,7 +593,9 @@ RSpec.describe 'bit_field/type/w0c' do
           WIDTH:            4,
           INITIAL_VALUE:    INITIAL_VALUE,
           SW_READ_ACTION:   rggen_sw_action::READ_DEFAULT,
-          SW_WRITE_ACTION:  rggen_sw_action::WRITE_0_CLEAR
+          SW_WRITE_ACTION:  rggen_sw_action::WRITE_0_CLEAR,
+          HW_SET:           true,
+          EXTERNAL_MASK:    false
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -600,7 +612,9 @@ RSpec.describe 'bit_field/type/w0c' do
           WIDTH:            4,
           INITIAL_VALUE:    INITIAL_VALUE,
           SW_READ_ACTION:   rggen_sw_action::READ_DEFAULT,
-          SW_WRITE_ACTION:  rggen_sw_action::WRITE_0_CLEAR
+          SW_WRITE_ACTION:  rggen_sw_action::WRITE_0_CLEAR,
+          HW_SET:           true,
+          EXTERNAL_MASK:    true
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -617,7 +631,9 @@ RSpec.describe 'bit_field/type/w0c' do
           WIDTH:            4,
           INITIAL_VALUE:    INITIAL_VALUE,
           SW_READ_ACTION:   rggen_sw_action::READ_DEFAULT,
-          SW_WRITE_ACTION:  rggen_sw_action::WRITE_0_CLEAR
+          SW_WRITE_ACTION:  rggen_sw_action::WRITE_0_CLEAR,
+          HW_SET:           true,
+          EXTERNAL_MASK:    false
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -634,7 +650,9 @@ RSpec.describe 'bit_field/type/w0c' do
           WIDTH:            4,
           INITIAL_VALUE:    INITIAL_VALUE,
           SW_READ_ACTION:   rggen_sw_action::READ_DEFAULT,
-          SW_WRITE_ACTION:  rggen_sw_action::WRITE_0_CLEAR
+          SW_WRITE_ACTION:  rggen_sw_action::WRITE_0_CLEAR,
+          HW_SET:           true,
+          EXTERNAL_MASK:    true
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -651,7 +669,9 @@ RSpec.describe 'bit_field/type/w0c' do
           WIDTH:            4,
           INITIAL_VALUE:    INITIAL_VALUE,
           SW_READ_ACTION:   rggen_sw_action::READ_DEFAULT,
-          SW_WRITE_ACTION:  rggen_sw_action::WRITE_0_CLEAR
+          SW_WRITE_ACTION:  rggen_sw_action::WRITE_0_CLEAR,
+          HW_SET:           true,
+          EXTERNAL_MASK:    false
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -668,7 +688,9 @@ RSpec.describe 'bit_field/type/w0c' do
           WIDTH:            4,
           INITIAL_VALUE:    INITIAL_VALUE,
           SW_READ_ACTION:   rggen_sw_action::READ_DEFAULT,
-          SW_WRITE_ACTION:  rggen_sw_action::WRITE_0_CLEAR
+          SW_WRITE_ACTION:  rggen_sw_action::WRITE_0_CLEAR,
+          HW_SET:           true,
+          EXTERNAL_MASK:    true
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -685,7 +707,9 @@ RSpec.describe 'bit_field/type/w0c' do
           WIDTH:            4,
           INITIAL_VALUE:    INITIAL_VALUE,
           SW_READ_ACTION:   rggen_sw_action::READ_DEFAULT,
-          SW_WRITE_ACTION:  rggen_sw_action::WRITE_0_CLEAR
+          SW_WRITE_ACTION:  rggen_sw_action::WRITE_0_CLEAR,
+          HW_SET:           true,
+          EXTERNAL_MASK:    false
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,
@@ -702,7 +726,9 @@ RSpec.describe 'bit_field/type/w0c' do
           WIDTH:            4,
           INITIAL_VALUE:    INITIAL_VALUE,
           SW_READ_ACTION:   rggen_sw_action::READ_DEFAULT,
-          SW_WRITE_ACTION:  rggen_sw_action::WRITE_0_CLEAR
+          SW_WRITE_ACTION:  rggen_sw_action::WRITE_0_CLEAR,
+          HW_SET:           true,
+          EXTERNAL_MASK:    true
         )(
           i_clk:            i_clk,
           i_rst:            i_rst,

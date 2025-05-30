@@ -350,7 +350,8 @@ RSpec.describe 'bit_field/type/rohw' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:            1,
           INITIAL_VALUE:    INITIAL_VALUE,
-          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE
+          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE,
+          HW_WRITE:         true
         )(
           i_clk:              i_clk,
           i_rst:              i_rst,
@@ -365,7 +366,8 @@ RSpec.describe 'bit_field/type/rohw' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:            1,
           INITIAL_VALUE:    INITIAL_VALUE,
-          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE
+          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE,
+          HW_WRITE:         true
         )(
           i_clk:              i_clk,
           i_rst:              i_rst,
@@ -380,7 +382,8 @@ RSpec.describe 'bit_field/type/rohw' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:            2,
           INITIAL_VALUE:    INITIAL_VALUE,
-          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE
+          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE,
+          HW_WRITE:         true
         )(
           i_clk:              i_clk,
           i_rst:              i_rst,
@@ -395,7 +398,8 @@ RSpec.describe 'bit_field/type/rohw' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:            2,
           INITIAL_VALUE:    INITIAL_VALUE,
-          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE
+          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE,
+          HW_WRITE:         true
         )(
           i_clk:              i_clk,
           i_rst:              i_rst,
@@ -410,7 +414,8 @@ RSpec.describe 'bit_field/type/rohw' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:            4,
           INITIAL_VALUE:    INITIAL_VALUE,
-          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE
+          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE,
+          HW_WRITE:         true
         )(
           i_clk:              i_clk,
           i_rst:              i_rst,
@@ -425,7 +430,8 @@ RSpec.describe 'bit_field/type/rohw' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:            4,
           INITIAL_VALUE:    INITIAL_VALUE,
-          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE
+          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE,
+          HW_WRITE:         true
         )(
           i_clk:              i_clk,
           i_rst:              i_rst,
@@ -440,7 +446,8 @@ RSpec.describe 'bit_field/type/rohw' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:            4,
           INITIAL_VALUE:    INITIAL_VALUE,
-          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE
+          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE,
+          HW_WRITE:         true
         )(
           i_clk:              i_clk,
           i_rst:              i_rst,
@@ -455,7 +462,8 @@ RSpec.describe 'bit_field/type/rohw' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:            4,
           INITIAL_VALUE:    INITIAL_VALUE,
-          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE
+          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE,
+          HW_WRITE:         true
         )(
           i_clk:              i_clk,
           i_rst:              i_rst,
@@ -470,7 +478,8 @@ RSpec.describe 'bit_field/type/rohw' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:            4,
           INITIAL_VALUE:    INITIAL_VALUE,
-          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE
+          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE,
+          HW_WRITE:         true
         )(
           i_clk:              i_clk,
           i_rst:              i_rst,
@@ -485,7 +494,8 @@ RSpec.describe 'bit_field/type/rohw' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:            4,
           INITIAL_VALUE:    INITIAL_VALUE,
-          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE
+          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE,
+          HW_WRITE:         true
         )(
           i_clk:              i_clk,
           i_rst:              i_rst,
@@ -500,7 +510,8 @@ RSpec.describe 'bit_field/type/rohw' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:            4,
           INITIAL_VALUE:    INITIAL_VALUE,
-          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE
+          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE,
+          HW_WRITE:         true
         )(
           i_clk:              i_clk,
           i_rst:              i_rst,
@@ -515,7 +526,8 @@ RSpec.describe 'bit_field/type/rohw' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:            4,
           INITIAL_VALUE:    INITIAL_VALUE,
-          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE
+          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE,
+          HW_WRITE:         true
         )(
           i_clk:              i_clk,
           i_rst:              i_rst,

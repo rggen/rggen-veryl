@@ -4,6 +4,9 @@ inst u_bit_field: rggen::rggen_bit_field #(
   SW_READ_ACTION:     rggen_sw_action::<%= sw_read_action %>,
   SW_WRITE_ACTION:    rggen_sw_action::<%= sw_write_action %>,
   SW_WRITE_ONCE:      <%= write_once? %>,
+  HW_WRITE:           <%= bit_field.hw_write? %>,
+  HW_SET:             <%= bit_field.hw_set? %>,
+  HW_CLEAR:           <%= bit_field.hw_clear? %>,
   STORAGE:            <%= storage? %>,
   EXTERNAL_READ_DATA: <%= external_read_data? %>,
   TRIGGER:            <%= trigger? %>

@@ -313,6 +313,7 @@ RSpec.describe 'bit_field/type/rwl' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:                    1,
           INITIAL_VALUE:            INITIAL_VALUE,
+          SW_WRITE_CONTROL:         true,
           SW_WRITE_ENABLE_POLARITY: rggen_polarity::ACTIVE_LOW
         )(
           i_clk:              i_clk,
@@ -327,6 +328,7 @@ RSpec.describe 'bit_field/type/rwl' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:                    1,
           INITIAL_VALUE:            INITIAL_VALUE,
+          SW_WRITE_CONTROL:         true,
           SW_WRITE_ENABLE_POLARITY: rggen_polarity::ACTIVE_LOW
         )(
           i_clk:              i_clk,
@@ -341,6 +343,7 @@ RSpec.describe 'bit_field/type/rwl' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:                    2,
           INITIAL_VALUE:            INITIAL_VALUE,
+          SW_WRITE_CONTROL:         true,
           SW_WRITE_ENABLE_POLARITY: rggen_polarity::ACTIVE_LOW
         )(
           i_clk:              i_clk,
@@ -355,6 +358,7 @@ RSpec.describe 'bit_field/type/rwl' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:                    2,
           INITIAL_VALUE:            INITIAL_VALUE,
+          SW_WRITE_CONTROL:         true,
           SW_WRITE_ENABLE_POLARITY: rggen_polarity::ACTIVE_LOW
         )(
           i_clk:              i_clk,
@@ -369,6 +373,7 @@ RSpec.describe 'bit_field/type/rwl' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:                    4,
           INITIAL_VALUE:            INITIAL_VALUE,
+          SW_WRITE_CONTROL:         true,
           SW_WRITE_ENABLE_POLARITY: rggen_polarity::ACTIVE_LOW
         )(
           i_clk:              i_clk,
@@ -383,6 +388,7 @@ RSpec.describe 'bit_field/type/rwl' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:                    4,
           INITIAL_VALUE:            INITIAL_VALUE,
+          SW_WRITE_CONTROL:         true,
           SW_WRITE_ENABLE_POLARITY: rggen_polarity::ACTIVE_LOW
         )(
           i_clk:              i_clk,
@@ -397,6 +403,7 @@ RSpec.describe 'bit_field/type/rwl' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:                    4,
           INITIAL_VALUE:            INITIAL_VALUE,
+          SW_WRITE_CONTROL:         true,
           SW_WRITE_ENABLE_POLARITY: rggen_polarity::ACTIVE_LOW
         )(
           i_clk:              i_clk,
@@ -411,6 +418,7 @@ RSpec.describe 'bit_field/type/rwl' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:                    4,
           INITIAL_VALUE:            INITIAL_VALUE,
+          SW_WRITE_CONTROL:         true,
           SW_WRITE_ENABLE_POLARITY: rggen_polarity::ACTIVE_LOW
         )(
           i_clk:              i_clk,
@@ -425,6 +433,7 @@ RSpec.describe 'bit_field/type/rwl' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:                    4,
           INITIAL_VALUE:            INITIAL_VALUE,
+          SW_WRITE_CONTROL:         true,
           SW_WRITE_ENABLE_POLARITY: rggen_polarity::ACTIVE_LOW
         )(
           i_clk:              i_clk,
@@ -439,6 +448,7 @@ RSpec.describe 'bit_field/type/rwl' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:                    4,
           INITIAL_VALUE:            INITIAL_VALUE,
+          SW_WRITE_CONTROL:         true,
           SW_WRITE_ENABLE_POLARITY: rggen_polarity::ACTIVE_LOW
         )(
           i_clk:              i_clk,
@@ -453,6 +463,7 @@ RSpec.describe 'bit_field/type/rwl' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:                    1,
           INITIAL_VALUE:            INITIAL_VALUE,
+          SW_WRITE_CONTROL:         true,
           SW_WRITE_ENABLE_POLARITY: rggen_polarity::ACTIVE_LOW
         )(
           i_clk:              i_clk,
@@ -467,6 +478,7 @@ RSpec.describe 'bit_field/type/rwl' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:                    4,
           INITIAL_VALUE:            INITIAL_VALUE,
+          SW_WRITE_CONTROL:         true,
           SW_WRITE_ENABLE_POLARITY: rggen_polarity::ACTIVE_LOW
         )(
           i_clk:              i_clk,
@@ -481,6 +493,7 @@ RSpec.describe 'bit_field/type/rwl' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:                    4,
           INITIAL_VALUE:            INITIAL_VALUE,
+          SW_WRITE_CONTROL:         true,
           SW_WRITE_ENABLE_POLARITY: rggen_polarity::ACTIVE_LOW
         )(
           i_clk:              i_clk,

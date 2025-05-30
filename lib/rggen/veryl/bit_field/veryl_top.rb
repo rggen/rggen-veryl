@@ -21,7 +21,7 @@ RgGen.define_simple_feature(:bit_field, :veryl_top) do
         name: 'bit_field_sub_if', interface_type: 'rggen::rggen_bit_field_if',
         param_values: { WIDTH: bit_field.width },
         variables: [
-          'valid', 'read_mask', 'write_mask', 'write_data', 'read_data', 'value'
+          'read_valid', 'write_valid', 'mask', 'write_data', 'read_data', 'value'
         ]
       }
     end

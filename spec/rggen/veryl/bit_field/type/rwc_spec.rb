@@ -294,6 +294,7 @@ RSpec.describe 'bit_field/type/rwc' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:          1,
           INITIAL_VALUE:  INITIAL_VALUE,
+          HW_CLEAR:       true,
           HW_CLEAR_WIDTH: 1
         )(
           i_clk:        i_clk,
@@ -308,6 +309,7 @@ RSpec.describe 'bit_field/type/rwc' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:          1,
           INITIAL_VALUE:  INITIAL_VALUE,
+          HW_CLEAR:       true,
           HW_CLEAR_WIDTH: 1
         )(
           i_clk:        i_clk,
@@ -322,6 +324,7 @@ RSpec.describe 'bit_field/type/rwc' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:          2,
           INITIAL_VALUE:  INITIAL_VALUE,
+          HW_CLEAR:       true,
           HW_CLEAR_WIDTH: 1
         )(
           i_clk:        i_clk,
@@ -336,6 +339,7 @@ RSpec.describe 'bit_field/type/rwc' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:          2,
           INITIAL_VALUE:  INITIAL_VALUE,
+          HW_CLEAR:       true,
           HW_CLEAR_WIDTH: 1
         )(
           i_clk:        i_clk,
@@ -350,6 +354,7 @@ RSpec.describe 'bit_field/type/rwc' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:          4,
           INITIAL_VALUE:  INITIAL_VALUE,
+          HW_CLEAR:       true,
           HW_CLEAR_WIDTH: 1
         )(
           i_clk:        i_clk,
@@ -364,6 +369,7 @@ RSpec.describe 'bit_field/type/rwc' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:          4,
           INITIAL_VALUE:  INITIAL_VALUE,
+          HW_CLEAR:       true,
           HW_CLEAR_WIDTH: 1
         )(
           i_clk:        i_clk,
@@ -378,6 +384,7 @@ RSpec.describe 'bit_field/type/rwc' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:          4,
           INITIAL_VALUE:  INITIAL_VALUE,
+          HW_CLEAR:       true,
           HW_CLEAR_WIDTH: 1
         )(
           i_clk:        i_clk,
@@ -392,6 +399,7 @@ RSpec.describe 'bit_field/type/rwc' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:          4,
           INITIAL_VALUE:  INITIAL_VALUE,
+          HW_CLEAR:       true,
           HW_CLEAR_WIDTH: 1
         )(
           i_clk:        i_clk,
@@ -406,6 +414,7 @@ RSpec.describe 'bit_field/type/rwc' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:          4,
           INITIAL_VALUE:  INITIAL_VALUE,
+          HW_CLEAR:       true,
           HW_CLEAR_WIDTH: 1
         )(
           i_clk:        i_clk,
@@ -420,6 +429,7 @@ RSpec.describe 'bit_field/type/rwc' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:          4,
           INITIAL_VALUE:  INITIAL_VALUE,
+          HW_CLEAR:       true,
           HW_CLEAR_WIDTH: 1
         )(
           i_clk:        i_clk,
@@ -434,6 +444,7 @@ RSpec.describe 'bit_field/type/rwc' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:          4,
           INITIAL_VALUE:  INITIAL_VALUE,
+          HW_CLEAR:       true,
           HW_CLEAR_WIDTH: 1
         )(
           i_clk:        i_clk,
@@ -448,6 +459,7 @@ RSpec.describe 'bit_field/type/rwc' do
         inst u_bit_field: rggen::rggen_bit_field #(
           WIDTH:          4,
           INITIAL_VALUE:  INITIAL_VALUE,
+          HW_CLEAR:       true,
           HW_CLEAR_WIDTH: 1
         )(
           i_clk:        i_clk,
