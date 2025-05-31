@@ -246,7 +246,8 @@ RSpec.describe 'bit_field/type/rs' do
           WIDTH:            1,
           INITIAL_VALUE:    INITIAL_VALUE,
           SW_READ_ACTION:   rggen_sw_action::READ_SET,
-          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE
+          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE,
+          HW_CLEAR:         true
         )(
           i_clk:        i_clk,
           i_rst:        i_rst,
@@ -261,7 +262,8 @@ RSpec.describe 'bit_field/type/rs' do
           WIDTH:            16,
           INITIAL_VALUE:    INITIAL_VALUE,
           SW_READ_ACTION:   rggen_sw_action::READ_SET,
-          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE
+          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE,
+          HW_CLEAR:         true
         )(
           i_clk:        i_clk,
           i_rst:        i_rst,
@@ -276,7 +278,8 @@ RSpec.describe 'bit_field/type/rs' do
           WIDTH:            64,
           INITIAL_VALUE:    INITIAL_VALUE,
           SW_READ_ACTION:   rggen_sw_action::READ_SET,
-          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE
+          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE,
+          HW_CLEAR:         true
         )(
           i_clk:        i_clk,
           i_rst:        i_rst,
@@ -291,7 +294,8 @@ RSpec.describe 'bit_field/type/rs' do
           WIDTH:            4,
           INITIAL_VALUE:    INITIAL_VALUE,
           SW_READ_ACTION:   rggen_sw_action::READ_SET,
-          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE
+          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE,
+          HW_CLEAR:         true
         )(
           i_clk:        i_clk,
           i_rst:        i_rst,
@@ -306,7 +310,8 @@ RSpec.describe 'bit_field/type/rs' do
           WIDTH:            4,
           INITIAL_VALUE:    INITIAL_VALUE,
           SW_READ_ACTION:   rggen_sw_action::READ_SET,
-          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE
+          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE,
+          HW_CLEAR:         true
         )(
           i_clk:        i_clk,
           i_rst:        i_rst,
@@ -321,7 +326,8 @@ RSpec.describe 'bit_field/type/rs' do
           WIDTH:            4,
           INITIAL_VALUE:    INITIAL_VALUE,
           SW_READ_ACTION:   rggen_sw_action::READ_SET,
-          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE
+          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE,
+          HW_CLEAR:         true
         )(
           i_clk:        i_clk,
           i_rst:        i_rst,
@@ -336,7 +342,8 @@ RSpec.describe 'bit_field/type/rs' do
           WIDTH:            4,
           INITIAL_VALUE:    INITIAL_VALUE,
           SW_READ_ACTION:   rggen_sw_action::READ_SET,
-          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE
+          SW_WRITE_ACTION:  rggen_sw_action::WRITE_NONE,
+          HW_CLEAR:         true
         )(
           i_clk:        i_clk,
           i_rst:        i_rst,

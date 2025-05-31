@@ -2,7 +2,9 @@ inst u_bit_field: rggen::rggen_bit_field #(
   WIDTH:            <%= width %>,
   INITIAL_VALUE:    <%= initial_value %>,
   SW_READ_ACTION:   rggen_sw_action::<%= read_action %>,
-  SW_WRITE_ACTION:  rggen_sw_action::<%= write_action %>
+  SW_WRITE_ACTION:  rggen_sw_action::<%= write_action %>,
+  HW_SET:           true,
+  EXTERNAL_MASK:    <%= external_mask %>
 )(
   i_clk:            <%= clock %>,
   i_rst:            <%= reset %>,
