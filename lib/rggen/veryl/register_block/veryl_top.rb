@@ -23,6 +23,7 @@ RgGen.define_simple_feature(:register_block, :veryl_top) do
     write_file '<%= register_block.name %>.veryl' do |f|
       f.body do |code|
         code << module_definition(register_block.name) do |m|
+          m.attributes attributes
           m.package_imports packages
           m.params params
           m.ports ports
@@ -44,6 +45,10 @@ RgGen.define_simple_feature(:register_block, :veryl_top) do
 
     def bus_width
       register_block.bus_width
+    end
+
+    def attributes
+      { fmt: :skip }
     end
 
     def packages
