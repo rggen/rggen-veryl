@@ -3,6 +3,10 @@
 RSpec.describe RgGen::Veryl::Utility::ModuleDefinition do
   include RgGen::Veryl::Utility
 
+  let(:attributes) do
+    { allow: :unused_variable, fmt: :skip }
+  end
+
   let(:packages) do
     [:foo_pkg, :bar_pkg]
   end
@@ -53,12 +57,23 @@ RSpec.describe RgGen::Veryl::Utility::ModuleDefinition do
 
     expect(
       module_definition(:foo) do |m|
+        m.attributes attributes
+      end
+    ).to match_string(<<~'VERYL')
+    #[allow(unused_variable)]
+    #[fmt(skip)]
+    pub module foo {
+    }
+    VERYL
+
+    expect(
+      module_definition(:foo) do |m|
         m.package_imports packages
       end
     ).to match_string(<<~'VERYL')
-      import foo_pkg::*;
-      import bar_pkg::*;
       pub module foo {
+        import foo_pkg::*;
+        import bar_pkg::*;
       }
     VERYL
 
@@ -123,6 +138,7 @@ RSpec.describe RgGen::Veryl::Utility::ModuleDefinition do
 
     expect(
       module_definition(:foo) do |m|
+        m.attributes attributes
         m.package_imports packages
         m.generics generics
         m.params params
@@ -132,8 +148,8 @@ RSpec.describe RgGen::Veryl::Utility::ModuleDefinition do
         m.body { |code| code << 'assign bar = 1;' }
       end
     ).to match_string(<<~'VERYL')
-      import foo_pkg::*;
-      import bar_pkg::*;
+      #[allow(unused_variable)]
+      #[fmt(skip)]
       pub module foo::<
         FOO: proto_foo,
         BAR: const = 0
@@ -144,6 +160,8 @@ RSpec.describe RgGen::Veryl::Utility::ModuleDefinition do
         i_foo: input logic,
         o_bar: output logic
       ){
+        import foo_pkg::*;
+        import bar_pkg::*;
         var foo: logic;
         var bar: logic;
         assign foo = 0;

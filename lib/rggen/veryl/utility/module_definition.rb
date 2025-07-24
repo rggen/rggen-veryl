@@ -5,6 +5,7 @@ module RgGen
     module Utility
       class ModuleDefinition < SystemVerilog::Common::Utility::StructureDefinition
         define_attribute :name
+        define_attribute :attributes
         define_attribute :package_imports
         define_attribute :generics
         define_attribute :params
@@ -14,7 +15,7 @@ module RgGen
         private
 
         def header_code(code)
-          package_import_declaration(code)
+          attribute_declarations(code)
           module_header_begin(code)
           generic_declarations(code)
           param_declarations(code)
@@ -22,9 +23,9 @@ module RgGen
           module_header_end(code)
         end
 
-        def package_import_declaration(code)
-          package_imports&.each do |package|
-            code << "import #{package}::*;" << nl
+        def attribute_declarations(code)
+          attributes&.each do |name, value|
+            code << "#[#{name}(#{value})]" << nl
           end
         end
 
@@ -65,7 +66,14 @@ module RgGen
           code << '{' << nl
         end
 
+        def package_import_declaration(code)
+          package_imports&.each do |package|
+            code << "import #{package}::*;" << nl
+          end
+        end
+
         def pre_body_code(code)
+          package_import_declaration(code)
           add_declarations_to_body(code, Array(variables))
         end
 
