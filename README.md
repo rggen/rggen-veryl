@@ -2,7 +2,7 @@
 [![CI](https://github.com/rggen/rggen-veryl/actions/workflows/ci.yml/badge.svg)](https://github.com/rggen/rggen-veryl/actions/workflows/ci.yml)
 [![Maintainability](https://qlty.sh/badges/7537364e-4631-4c9a-b873-5bceb9418ed0/maintainability.svg)](https://qlty.sh/gh/rggen/projects/rggen-veryl)
 [![codecov](https://codecov.io/gh/rggen/rggen-veryl/graph/badge.svg?token=iYlaqhSjat)](https://codecov.io/gh/rggen/rggen-veryl)
-[![Gitter](https://badges.gitter.im/rggen/rggen.svg)](https://gitter.im/rggen/rggen?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Discord](https://img.shields.io/discord/1406572699467124806?style=flat&logo=discord)](https://discord.com/invite/KWya83ZZxr)
 
 # RgGen::Veryl
 
@@ -52,7 +52,7 @@ Feedbacks, bus reports, questions and etc. are welcome! You can post them by usi
 
 * [GitHub Issue Tracker](https://github.com/rggen/rggen/issues)
 * [GitHub Discussions](https://github.com/rggen/rggen/discussions)
-* [Chat Room](https://gitter.im/rggen/rggen)
+* [Discord](https://discord.com/invite/KWya83ZZxr)
 * [Mailing List](https://groups.google.com/d/forum/rggen)
 * [Mail](mailto:rggen@googlegroups.com)
 
