@@ -4,6 +4,8 @@ module RgGen
   module Veryl
     module Utility
       class Modport < SystemVerilog::Common::Utility::InterfacePort
+        define_attribute :generics
+
         def declaration
           [
             "#{name}:",
@@ -15,7 +17,13 @@ module RgGen
         private
 
         def port_type
-          "#{@interface_type}::#{@modport_name}#{array_size_notation}"
+          "#{@interface_type}#{generics_notation}::#{@modport_name}#{array_size_notation}"
+        end
+
+        def generics_notation
+          return unless @generics
+
+          "::<#{@generics.join(', ')}>"
         end
 
         def array_size_notation
