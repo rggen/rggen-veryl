@@ -25,6 +25,7 @@ RgGen.define_simple_feature(:register_block, :veryl_top) do
         code << module_definition(register_block.name) do |m|
           m.attributes attributes
           m.package_imports packages
+          m.generics generics
           m.params params
           m.ports ports
           m.variables variables
@@ -53,6 +54,10 @@ RgGen.define_simple_feature(:register_block, :veryl_top) do
 
     def packages
       ['rggen::rggen_rtl_pkg', *register_block.package_imports(:register_block)]
+    end
+
+    def generics
+      register_block.declarations[:generic]
     end
 
     def params
