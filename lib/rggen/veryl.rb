@@ -36,6 +36,7 @@ RgGen.setup_plugin :'rggen-veryl' do |plugin|
     'veryl/register/type',
     'veryl/register/type/external',
     'veryl/register/type/indirect',
+    'veryl/register/type/maskable',
     'veryl/register/type/rw',
     'veryl/bit_field/veryl_top',
     'veryl/bit_field/type',
