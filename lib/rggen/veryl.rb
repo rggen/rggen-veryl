@@ -40,6 +40,7 @@ RgGen.setup_plugin :'rggen-veryl' do |plugin|
     'veryl/register/type/rw',
     'veryl/bit_field/veryl_top',
     'veryl/bit_field/type',
+    'veryl/bit_field/type/counter',
     'veryl/bit_field/type/custom',
     'veryl/bit_field/type/rc_w0c_w1c_wc_woc',
     'veryl/bit_field/type/ro_rotrg',
