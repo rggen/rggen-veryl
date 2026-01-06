@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description = 'Veryl writer plugin for RgGen'
   spec.homepage = 'https://github.com/rggen/rggen-veryl'
   spec.license = 'MIT'
-  spec.required_ruby_version = '>= 3.1'
+  spec.required_ruby_version = '>= 3.2'
 
   spec.metadata = {
     'bug_tracker_uri' => 'https://github.com/rggen/rggen/issues',
