@@ -35,7 +35,7 @@ RSpec.describe 'register_block/protocol/axi4lite' do
     expect(register_block)
       .to have_param(
         :write_first,
-        name: 'WRITE_FIRST', type: :bool, default: true
+        name: 'WRITE_FIRST', type: :bbool, default: true
       )
   end
 

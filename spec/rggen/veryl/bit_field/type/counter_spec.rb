@@ -49,7 +49,7 @@ RSpec.describe 'bit_field/type/counter' do
     )
     expect(bit_fields[0]).to have_param(
       :register_block, :wrap_around,
-      name: 'REGISTER_0_BIT_FIELD_0_WRAP_AROUND', type: :bool, default: false
+      name: 'REGISTER_0_BIT_FIELD_0_WRAP_AROUND', type: :bbool, default: false
     )
 
     expect(bit_fields[2]).to have_param(
@@ -62,7 +62,7 @@ RSpec.describe 'bit_field/type/counter' do
     )
     expect(bit_fields[2]).to have_param(
       :register_block, :wrap_around,
-      name: 'REGISTER_1_BIT_FIELD_0_WRAP_AROUND', type: :bool, default: false
+      name: 'REGISTER_1_BIT_FIELD_0_WRAP_AROUND', type: :bbool, default: false
     )
 
     expect(bit_fields[4]).to have_param(
@@ -75,7 +75,7 @@ RSpec.describe 'bit_field/type/counter' do
     )
     expect(bit_fields[4]).to have_param(
       :register_block, :wrap_around,
-      name: 'REGISTER_2_BIT_FIELD_0_WRAP_AROUND', type: :bool, default: false
+      name: 'REGISTER_2_BIT_FIELD_0_WRAP_AROUND', type: :bbool, default: false
     )
   end
 
@@ -143,22 +143,22 @@ RSpec.describe 'bit_field/type/counter' do
     it 'パラメータ#use_clearを持つ' do
       expect(bit_fields[0]).to have_param(
         :register_block, :use_clear,
-        name: 'REGISTER_0_BIT_FIELD_0_USE_CLEAR', type: :bool, default: true
+        name: 'REGISTER_0_BIT_FIELD_0_USE_CLEAR', type: :bbool, default: true
       )
 
       expect(bit_fields[1]).to have_param(
         :register_block, :use_clear,
-        name: 'REGISTER_0_BIT_FIELD_1_USE_CLEAR', type: :bool, default: true
+        name: 'REGISTER_0_BIT_FIELD_1_USE_CLEAR', type: :bbool, default: true
       )
 
       expect(bit_fields[2]).to have_param(
         :register_block, :use_clear,
-        name: 'REGISTER_1_BIT_FIELD_0_USE_CLEAR', type: :bool, default: true
+        name: 'REGISTER_1_BIT_FIELD_0_USE_CLEAR', type: :bbool, default: true
       )
 
       expect(bit_fields[3]).to have_param(
         :register_block, :use_clear,
-        name: 'REGISTER_1_BIT_FIELD_1_USE_CLEAR', type: :bool, default: true
+        name: 'REGISTER_1_BIT_FIELD_1_USE_CLEAR', type: :bbool, default: true
       )
     end
 
@@ -191,12 +191,12 @@ RSpec.describe 'bit_field/type/counter' do
     it 'パラメータ#use_clearを持たない' do
       expect(bit_fields[4]).to not_have_param(
         :register_block, :use_clear,
-        name: 'REGISTER_2_BIT_FIELD_0_USE_CLEAR', type: :bool, default: true
+        name: 'REGISTER_2_BIT_FIELD_0_USE_CLEAR', type: :bbool, default: true
       )
 
       expect(bit_fields[5]).to not_have_param(
         :register_block, :use_clear,
-        name: 'REGISTER_2_BIT_FIELD_1_USE_CLEAR', type: :bool, default: true
+        name: 'REGISTER_2_BIT_FIELD_1_USE_CLEAR', type: :bbool, default: true
       )
     end
 

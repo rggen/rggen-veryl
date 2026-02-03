@@ -48,7 +48,7 @@ RSpec.describe 'register_block/protocol/native' do
     expect(register_block)
       .to have_param(
         :use_read_strobe,
-        name: 'USE_READ_STROBE', type: :bool, default: false
+        name: 'USE_READ_STROBE', type: :bbool, default: false
       )
   end
 

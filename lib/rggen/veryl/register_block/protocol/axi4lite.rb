@@ -7,7 +7,7 @@ RgGen.define_list_item_feature(:register_block, :protocol, :axi4lite) do
         name: 'ID_WIDTH', type: :u32, default: 0
       }
       param :write_first, {
-        name: 'WRITE_FIRST', type: :bool, default: true
+        name: 'WRITE_FIRST', type: :bbool, default: true
       }
       modport :axi4lite_if, {
         name: 'axi4lite_if',
