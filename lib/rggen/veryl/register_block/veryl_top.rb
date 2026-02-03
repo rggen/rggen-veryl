@@ -49,7 +49,7 @@ RgGen.define_simple_feature(:register_block, :veryl_top) do
     end
 
     def attributes
-      { fmt: :skip }
+      { fmt: :skip, allow: :unassign_variable }
     end
 
     def packages
