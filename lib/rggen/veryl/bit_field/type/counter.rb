@@ -10,11 +10,11 @@ RgGen.define_list_item_feature(:bit_field, :type, :counter) do
         name: "#{full_name}_down_width".upcase, type: :u32, default: 1
       }
       param :wrap_around, {
-        name: "#{full_name}_wrap_around".upcase, type: :bool, default: false
+        name: "#{full_name}_wrap_around".upcase, type: :bbool, default: false
       }
       if external_clear?
         param :use_clear, {
-          name: "#{full_name}_use_clear".upcase, type: :bool, default: true
+          name: "#{full_name}_use_clear".upcase, type: :bbool, default: true
         }
       end
 
